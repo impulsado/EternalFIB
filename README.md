@@ -1,2 +1,3 @@
 # EternalFIB
-Computer Engineering Free Resources
+# ⚠️ WORK IN PROGRESS ⚠️
+**Come visit in February**
