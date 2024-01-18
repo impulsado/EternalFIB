@@ -1,21 +1,34 @@
 # EternalFIB
-# ⚠️ WORK IN PROGRESS ⚠️
-**Come visit in February**
+Repositori amb guies, apunts, programes per cada assignatura de la FIB fet personalment. <br>
+Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
 
+<br>
+
+# ASSIGNATURES
+## Quatrimestre 1
+- Física
+- Fonaments Matemàtics
+- Introducció als Computadors
+- Programació 1
+
+<br>
 
 # WEBS
 # General
-https://gitlab.com/Toomoch/fiberhub.cat
-https://fibernalia.blogspot.com/
-https://github.com/RepoFIBtori/RepoFIBtori/tree/master
-https://gradecalc.mauri.app/
-https://fibers.cat/
-https://upcommons.upc.edu/handle/2117/134992
+- RepoFIBtori <br>
+https://github.com/RepoFIBtori/RepoFIBtori/tree/master <br>
 
-# MATES
-https://wolfreealpha.gitlab.io/input/
-https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm
+- GradeCalc <br>
+https://gradecalc.mauri.app/ <br>
 
-# IC
-https://www.youtube.com/@electronicadigital9594/videos
-https://youtu.be/5KTGDnyeR7U?si=h8q9i2-qyoMqfcbk
+- FIBerHub <br>
+https://gitlab.com/Toomoch/fiberhub.cat <br>
+
+- FIBernalia <br>
+https://fibernalia.blogspot.com/ <br>
+
+- FIBers <br> 
+https://fibers.cat/ <br>
+
+- UPCCommons <br>
+https://upcommons.upc.edu/handle/2117/134992 <br>
