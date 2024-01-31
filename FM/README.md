@@ -21,17 +21,18 @@ Podria considerar-se que té 4 grans blocs:
 Al final acaben molt relacionats i serveixen per entendre l'encriptació RSA, un concepte fonamental en la informàtica d'avui en dia.
 
 ## Exàmens
-Els exàmens no són difícils, són més exercicis dels ja vistos en el document d'exercicis. Recomano fer els exercicis del curs fixa't-se sobretot amb la claredat alhora que s'expliquen les coses i la rigorositat. Els conceptes els acabes entenent fàcilment però una fletxa d'implicació mal ficada pot anul·lar-te tot l'exercici.
+Els exàmens no són difícils, són més exercicis dels ja vistos en el document d'exercicis. Recomano fer els exercicis del curs fixant-se sobretot amb la claredat alhora que s'expliquen les coses i la rigorositat. Els conceptes els acabes entenent fàcilment, però una fletxa d'implicació mal ficada pot anul·lar-te tot l'exercici (Per això recalco la rigurositat).
 <br>
 
 ## Recomanacions
 1. Tindre molta curiositat.
-2. Estar atent a les explicacions i fer servir el laboratori per fer TOTES LES PREGUNTES. Estàs pagant perquè t'expliquin, no tinguis gens de vergonya de fer-ho malament, els teus companys ho agrairan.
+2. Estar atent a les explicacions i fer servir el laboratori per fer TOTES LES PREGUNTES. Estàs pagant perquè t'expliquin, no tinguis cap vergonya de fer-ho malament, els teus companys ho agrairan.
 3. ChatGPT pot ajudar-te MOLT en les demostracions.
 4. Buscar vídeo de demostracions en YouTube pot fer-te veure altres maneres de demostrar coses i mecanismes que no expliquen en classe, recomano molt els vídeos de la comunitat anglesa donat que és on més contingut hi ha.
 
 <br>
 NOTA: Aquest 5.3 ha sigut donat que en tots dos exàmens vaig cometre errors de lectura, ha sigut l'assignatura que més he gaudit i més utilitat (juntament amb programació) li veig.
+NOTA 2: Inducció és pot ser el tema que més costa d'entendre a l'inici com s'ha de fer, però quan ho entenguis, es probablement l'exercici més fàcil de treure bona nota. NO RECOMANO demostrar per a 'k+1' (Tot i que tots els vídeos ho facin d'aquesta manera) donat que a M1 tindràs més problemes. Recomano suposar 'k-1' i demostrar per 'k'.
 
 <br>
 

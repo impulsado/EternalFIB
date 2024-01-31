@@ -19,6 +19,7 @@ Respecte als exàmens, aquests són molta part mental. Els exercicis proposats a
 3. ChatGPT pot ser perillós si t'acostumes.
 4. Dibuixa, dibuixa, dibuixa. Tindre un paper i escriure que faràs i trobar patrons i punts claus farà que milloris molt.
 5. No et frustris si ets nou programant. La programació requereix temps i dedicació. Al principi la corba d'aprenentatge és prou inclinada, però a la llarga, quan comencis a entendre com funciona, veuràs que t'ajudarà en el dia a dia aquesta nova mentalitat i resoldràs exercicis molt més ràpid.
+6. Si busques el codi de l'exercici per internet probablement trobis algún repositori que el tingui resolt.
 
 <br>
 
