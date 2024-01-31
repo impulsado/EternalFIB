@@ -1,10 +1,14 @@
 # EternalFIB
-Repositori amb guies, apunts, programes per cada assignatura de la FIB fet personalment. <br>
+Repositori personal amb `guies`, `apunts`, `programes` i `recursos` per cada assignatura de la FIB.<br>
 Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
+
+<div align="center">
+  <img src="./logo.jpg" alt="EternalFIB Logo">
+</div>
 
 <br>
 
-# ASSIGNATURES
+# 📚 ASSIGNATURES
 ## Quatrimestre 1
 - [Física](https://github.com/impulsado/EternalFIB/tree/main/F)
 - [Fonaments Matemàtics](https://github.com/impulsado/EternalFIB/tree/main/FM)
@@ -13,7 +17,7 @@ Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
 
 <br>
 
-# WEBS
+# 🌐 WEBS
 ## General
 - GradeCalc <br>
 https://gradecalc.mauri.app/ <br>
