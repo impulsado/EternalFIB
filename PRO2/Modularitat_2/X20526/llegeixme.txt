@@ -1,0 +1,125 @@
+Aquest document descriu com produir l'executable del programa pro2 i com fer proves amb el codi.
+
+Els fonts que us subministrem els podeu veure com un projecte de programació amb 3 mòduls: pro2.cc (amb el main), Estudiant i Cjt_estudiants 
+amb la particularitat que la implementació del mòdul Cjt_estudiants esta dividida en dos fitxers: Cjt_estudiants.cc i el solucio.cc que heu de produir.   
+
+Com generar l'executable
+========================
+
+Se suposa que treballareu en la mateixa carpeta on descomprimiu el fitxer 
+.tar que conté els tots els fitxers que acompanyen l'enunciat. 
+
+Per obtenir un executable del programa, recomanem compilar en línia de comandes mitjançant una sola instrucció:
+
+	 g++ -o pro2.exe *.cc -D_GLIBCXX_DEBUG
+
+Aquesta comanda necessita pro2.cc, Estudiant.cc, Cjt_estudiants.cc i solucio.cc.
+
+També podeu compilar en dos passos com heu fet a les classe de laboratori. Pas 1: compilar (produir els fitxers .o) amb la comanda
+
+	 g++ -c *.cc -D_GLIBCXX_DEBUG
+	
+Pas 2: enllaçar (generar l'executable amb els .o resultants del pas anterior)
+
+	 g++ -o pro2.exe *.o
+
+Aquesta comanda necessita pro2.o, Estudiant.o, Cjt_estudiants.o i solucio.o.
+
+JP públic
+========= 
+
+Entrada: primer es llegeix el conjunt inicial i després es llegeixen les operacions
+(codi d'operació i dades de l'operació) fins acabar amb un codi -5.
+Estudieu amb cura el fitxer pro2.cc per a deduir el significat de cada
+codai. 
+
+3
+111 4.22
+222 6.66
+333 545
+-3
+-4
+-1 444 5.02
+-3
+-4
+-2 111
+-1 111 7.13
+-3
+-4
+-2 222
+-3
+-4
+-1 555 9.5
+-1 445 44
+-3
+-4
+-1 445 4.4
+-2 333
+-3
+-4
+-5
+
+Sortida: només generen resultats les operacions -3 i -4.
+
+Conjunt:
+111 4.22
+222 6.66
+333 NP
+
+Nota mitjana: 5.44
+
+Conjunt:
+111 4.22
+222 6.66
+333 NP
+444 5.02
+
+Nota mitjana: 5.3
+
+Conjunt:
+111 7.13
+222 6.66
+333 NP
+444 5.02
+
+Nota mitjana: 6.27
+
+Conjunt:
+111 7.13
+333 NP
+444 5.02
+
+Nota mitjana: 6.075
+
+Conjunt:
+111 7.13
+333 NP
+444 5.02
+445 NP
+555 9.5
+
+Nota mitjana: 7.21667
+
+L'estudiant 445 ja hi era
+
+Conjunt:
+111 7.13
+444 5.02
+445 NP
+555 9.5
+
+Nota mitjana: 7.21667
+
+Com provar l'executable
+========================
+
+Podeu capturar la sortida del vostre programa amb la comanda
+
+         ./pro2.exe <entrada.txt >la_teva_sortida.txt
+
+La nostra correcció serà equivalent a executar la comanda
+
+         diff -bB sortida_correcta.txt la_teva_sortida.txt
+
+El resultat del programa és correcte si la comanda anterior produeix 0 diferències.
+

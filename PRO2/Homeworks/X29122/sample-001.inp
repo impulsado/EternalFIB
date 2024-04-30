@@ -1,0 +1,4 @@
+INLINEFORMAT
+=(x,1)
+while(x,list(if(*(2,x),list(print(x,),print(*(3,x),))),=(x,+(x,1))))
+print(x,)
