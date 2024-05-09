@@ -3,24 +3,24 @@
 TODO
 
 # Sobre el programa
-Mode Document: Permet text i funcions interactives juntament amb càlculs.
-Mode Worksheet: Enfocat només a fer càlculs.
+- Mode Document: Permet text i funcions interactives juntament amb càlculs.
+- Mode Worksheet: Enfocat només a fer càlculs.
 
 ## Simbologia General
-":" Realitzar càlcul sense mostrar resultat
-";" Realitzar càlcul i mostrar-lo. Separador d'instruccions a l'hora de programar.
-":=" Assignar valor. Exemple "p:=sqrt(2)" assigna a la variable "p" l'arrel quadrada de 2. No el valor númeric.
-"p:='p'" Dessasignar valor. "p" torna a ser una variable.
-"f:=x->2x" Construïr expressio.
-"%" Guarda valor de l'última operació realitzada.
+- ":" Realitzar càlcul sense mostrar resultat
+- ";" Realitzar càlcul i mostrar-lo. Separador d'instruccions a l'hora de programar.
+- ":=" Assignar valor. Exemple "p:=sqrt(2)" assigna a la variable "p" l'arrel quadrada de 2. No el valor númeric.
+- "p:='p'" Dessasignar valor. "p" torna a ser una variable.
+- "f:=x->2x" Construïr expressio.
+- "%" Guarda valor de l'última operació realitzada.
 
 ## Simbologia Matemàtica
-"expand()" Desenvolupar expressió. Per defecte no ho fa.
-"evalf(p)" Calcular avaluació númerica d'una expressió.
-"evalf[100](pi)" Determinar nombre de dígits de l'avaluació.
-"subs(x=valor,expressio)" Substitueix el valor de x en l'expressió. No el calcula si no fas evalf().
-"solve(expressio,x)" Resol expressió respecte x.
-"solve({x+2*y=1,x-y=3},{x,y});" Resol sistema d'equacions.
+- "expand()" Desenvolupar expressió. Per defecte no ho fa.
+- "evalf(p)" Calcular avaluació númerica d'una expressió.
+- "evalf[100](pi)" Determinar nombre de dígits de l'avaluació.
+- "subs(x=valor,expressio)" Substitueix el valor de x en l'expressió. No el calcula si no fas evalf().
+- "solve(expressio,x)" Resol expressió respecte x.
+- "solve({x+2*y=1,x-y=3},{x,y});" Resol sistema d'equacions.
 
 # Aplicacións a M2 
 ## Equacions i inequacions amb nombres reals.
