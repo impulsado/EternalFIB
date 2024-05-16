@@ -1,0 +1,22 @@
+push 2
+push 1.5
+push 1.2
+size
+front
+*= 2
+front
+pop
+front
+push -5
+push 0
+*= 1.5
+front
+pop
+front
+size
+pop
+front
+pop
+front
+pop
+size

@@ -1,0 +1,35 @@
+push bb
+push aa
+[1]
+size
+front
+size
+front
+push aa
+push ba
+[1]
+size
+size
+size
+front
+front
+front
+push a
+pop 
+push b
+push ab
+[3]
+push baa
+push b
+push aa
+[5]
+size
+push bb
+size
+[6]
+push bb
+push b
+pop 
+[0]
+[1]
+size

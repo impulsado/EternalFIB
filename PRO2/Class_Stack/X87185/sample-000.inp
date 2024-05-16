@@ -1,0 +1,24 @@
+removeFirstOccurrence e
+removeFirstOccurrence a
+push a
+top
+removeFirstOccurrence a
+push b
+size
+top
+removeFirstOccurrence c
+top
+push d
+push f
+size
+removeFirstOccurrence d
+top 
+push f
+top
+removeFirstOccurrence f
+size
+top 
+removeFirstOccurrence a
+top
+removeFirstOccurrence b
+top

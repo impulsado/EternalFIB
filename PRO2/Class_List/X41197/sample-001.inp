@@ -1,0 +1,41 @@
+push_back rb
+push_back b
+push_back ar
+push_back k
+pop_front 
+pop_front 
+push_back dq
+it--
+it--
+push_front jm
+moveToEnd
+it--
+moveToEnd
+pop_front 
+push_back yb
+it++
+it--
+*it
+push_front a
+pop_front 
+pop_back 
+moveToEnd
+it--
+*it
+pop_back 
+push_front g
+push_front pk
+it--
+moveToEnd
+it--
+it--
+it++
+moveToEnd
+*it
+it--
+moveToEnd
+pop_front 
+moveToEnd
+moveToEnd
+pop_front 
+*it

@@ -1,0 +1,105 @@
+push l
+front 
+size
+push bm
+front 
+size
+pop 
+front
+size
+moveFrontToLast
+front
+size
+moveFrontToLast
+front
+size
+push ar
+front 
+size
+push w
+front 
+size
+push y
+front 
+size
+push d
+front 
+size
+moveFrontToLast
+front
+size
+push c
+front 
+size
+push rj
+front 
+size
+push w
+front 
+size
+moveFrontToLast
+front
+size
+push sj
+front 
+size
+push ld
+front 
+size
+push f
+front 
+size
+push r
+front 
+size
+push yn
+front 
+size
+pop 
+front
+size
+pop 
+front
+size
+moveFrontToLast
+front
+size
+push g
+front 
+size
+moveFrontToLast
+front
+size
+moveFrontToLast
+front
+size
+moveFrontToLast
+front
+size
+pop 
+front
+size
+push r
+front 
+size
+push ln
+front 
+size
+pop 
+front
+size
+push p
+front 
+size
+push wk
+front 
+size
+push p
+front 
+size
+pop 
+front
+size
+pop 
+front
+size

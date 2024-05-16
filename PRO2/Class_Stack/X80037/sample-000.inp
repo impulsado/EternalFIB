@@ -1,0 +1,37 @@
+s0 += s0
+<< s0
+s0.push 1
+<< s0
+s0 += s0
+<< s0
+s0.push 3
+<< s1
+s0 += s1
+<< s0
+<< s1
+s1 += s0
+<< s0
+<< s1
+s1.push 3
+s1.push 2
+s2.push 1
+s2.push 2
+s2.push 3
+<< s0
+<< s1
+<< s2
+s2 += s1
+s1 += s2
+s0 += s1
+s2 += s0
+<< s0
+<< s1
+<< s2
+s1.pop
+<< s1
+s2 += s1
+<< s2
+s2.pop
+<< s2
+s2.pop
+<< s2

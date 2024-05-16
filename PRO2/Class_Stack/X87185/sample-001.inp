@@ -1,0 +1,61 @@
+push ab
+pop 
+removeFirstOccurrence ba
+push c
+push ad
+size
+removeFirstOccurrence c
+size
+size
+size
+push c
+pop 
+push ca
+pop 
+push a
+pop 
+push c
+removeFirstOccurrence c
+top 
+top 
+push bc
+size
+top 
+removeFirstOccurrence bc
+size
+size
+push ab
+size
+removeFirstOccurrence ad
+push ad
+size
+top 
+push bc
+pop 
+pop 
+size
+push da
+pop 
+pop 
+push a
+push ba
+removeFirstOccurrence b
+removeFirstOccurrence a
+pop 
+size
+push bc
+top 
+push c
+top 
+push dc
+push d
+top 
+top 
+removeFirstOccurrence dc
+top 
+push b
+size
+pop 
+pop 
+removeFirstOccurrence c
+top

@@ -1,0 +1,27 @@
+size
+pop2
+size
+push a
+top 
+size
+pop2
+size
+push b
+top
+push c
+top
+pop2
+top 
+size
+pop2 
+size
+push a
+push b
+push c
+push d
+pop2
+top
+pop 
+top
+pop2 
+top

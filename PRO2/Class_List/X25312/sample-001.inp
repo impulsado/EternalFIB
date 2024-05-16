@@ -1,0 +1,83 @@
+push_back rb
+push_back b
+it--
+pop_front 
+moveSecondToLast
+push_front ow
+pop_front 
+it++
+push_front d
+it--
+push_back d
+moveSecondToLast
+push_front o
+pop_front 
+it--
+push_front j
+pop_front 
+it--
+push_front ef
+push_back cb
+push_front c
+pop_back 
+push_back x
+pop_back 
+it--
+it++
+push_back el
+pop_back 
+pop_back 
+it++
+push_back qf
+pop_front 
+it++
+moveSecondToLast
+push_front m
+pop_front 
+it++
+*it
+moveSecondToLast
+moveSecondToLast
+pop_front 
+push_back e
+*it
+moveSecondToLast
+it++
+pop_front 
+push_back bu
+push_back jj
+push_front w
+it++
+it--
+*it
+push_front xi
+moveSecondToLast
+*it
+pop_back 
+push_front bl
+moveSecondToLast
+it--
+push_front n
+pop_back 
+pop_front 
+push_back jm
+*it
+push_back rr
+push_back f
+it++
+it--
+it++
+moveSecondToLast
+pop_front 
+it--
+push_front fb
+*it
+it++
+it++
+pop_back 
+push_front c
+push_back h
+push_front vf
+it--
+*it
+print

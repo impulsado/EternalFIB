@@ -1,0 +1,79 @@
+push 8.6
+front 
+size
+*= 3.6
+*= 0.6
+push 19.872
+front 
+size
+*= 0.2
+push 1.1664
+front 
+size
+push 2.5488
+front 
+size
+push 1.1232
+front 
+size
+pop 
+front
+size
+push 3.1104
+front 
+size
+pop 
+front
+size
+push 2.9376
+front 
+size
+push 1.2528
+front 
+size
+push 1.296
+front 
+size
+push 0.9936
+front 
+size
+push 1.512
+front 
+size
+*= 8.3
+push 20.7965
+front 
+size
+*= 0.8
+*= 0.7
+push 8.43333
+front 
+size
+*= 0.4
+*= 4
+pop 
+front
+size
+*= 0.9
+pop 
+front
+size
+push 20.24
+front 
+size
+*= 0.7
+push 16.192
+front 
+size
+pop 
+front
+size
+*= 0.3
+push 5.82912
+front 
+size
+*= 2.6
+*= 0.5
+push 2.8417
+front 
+size

@@ -1,0 +1,41 @@
+push_front de
+swapFirstLast
+it--
+push_back q
+swapFirstLast
+swapFirstLast
+push_front e
+push_back p
+push_front tf
+it--
+pop_front 
+*it
+push_front rq
+push_front s
+it--
+it++
+it--
+it--
+push_back w
+push_back ou
+push_front uu
+it++
+pop_back 
+push_back gs
+push_back ok
+push_front s
+it++
+swapFirstLast
+it++
+*it
+push_back j
+pop_front 
+push_back xg
+push_front lo
+push_front j
+pop_back 
+swapFirstLast
+push_back i
+push_front ir
+swapFirstLast
+*it

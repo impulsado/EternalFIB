@@ -1,0 +1,30 @@
+push_front a
+it--
+*it
+moveToEnd
+*it
+push_back b
+it++
+*it
+moveToEnd
+*it
+it--
+*it
+moveToEnd
+*it
+it--
+*it
+push_front c
+*it
+it--
+*it
+moveToEnd
+*it
+it--
+*it
+moveToEnd
+*it
+it--
+*it
+moveToEnd
+*it

@@ -1,0 +1,36 @@
+push tq
+push t
+pop 
+top 
+push a
+push v
+push pm
+push y
+pop2 
+top 
+push os
+pop2 
+top 
+push b
+push ex
+push d
+pop 
+top 
+pop2 
+top 
+pop2 
+top 
+pop 
+top 
+pop 
+top 
+push wi
+push ux
+pop2 
+top 
+push sl
+pop2 
+top 
+size
+push hz
+top

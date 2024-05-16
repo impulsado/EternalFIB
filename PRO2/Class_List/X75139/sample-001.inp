@@ -1,0 +1,41 @@
+push_front de
+push_front eg
+push_front gz
+push_back aw
+pop_back 
+push_front tf
+it--
+pop_front 
+*it
+push_front rq
+push_front s
+it--
+it++
+it--
+it--
+push_back w
+push_back ou
+pop_front 
+push_front u
+it++
+pop_back 
+push_back gs
+push_back ok
+push_front s
+it++
+moveTowardsEnd
+it++
+*it
+push_back j
+pop_front 
+push_back xg
+push_front lo
+push_front j
+pop_back 
+moveTowardsEnd
+push_back i
+push_front ir
+moveTowardsEnd
+*it
+push_back wg
+*it

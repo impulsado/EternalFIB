@@ -1,0 +1,42 @@
+it--
+push_front d
+pop_front 
+++it
+it++
+it++
+--it
+push_back a
+--it
+*it
+++it
+pop_front 
+it++
+push_front b
+pop_front 
+push_back d
+pop_back 
+push_front b
+pop_back 
+--it
+push_front a
+push_back c
+it++
+*it
+pop_back 
+it++
+push_front b
+++it
+*it
+pop_back 
+++it
+pop_back 
+push_back c
+pop_back 
+++it
+it++
+it++
+push_back c
+push_back d
+pop_front 
+it++
+*it

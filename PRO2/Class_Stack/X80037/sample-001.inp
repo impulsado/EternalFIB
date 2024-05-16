@@ -1,0 +1,70 @@
+s0 += s0
+<< s0
+s1.push 0
+<< s1
+s1.push 9
+<< s1
+s1.push -7
+<< s1
+s0.push 4
+<< s0
+s2.push -5
+<< s2
+s1.push -5
+<< s1
+s0 += s0
+<< s0
+s3.push 6
+<< s3
+s1 += s1
+<< s1
+s4 += s4
+<< s4
+s4.push 7
+<< s4
+s1.pop
+<< s1
+s5.push -9
+<< s5
+s6 += s2
+<< s6
+s5 += s3
+<< s5
+s4 += s3
+<< s4
+s3 += s2
+<< s3
+s2.pop
+<< s2
+s7.push -7
+<< s7
+s2.push -10
+<< s2
+s8.push 2
+<< s8
+s8.push -9
+<< s8
+s0.push 8
+<< s0
+s2.push 2
+<< s2
+s9 += s2
+<< s9
+s2 += s6
+<< s2
+s6 += s1
+<< s6
+s10.push 9
+<< s10
+s11 += s3
+<< s11
+s12 += s1
+<< s12
+s13.push 8
+<< s13
+s5.push 4
+<< s5
+s1.pop
+<< s1
+s3 += s4
+<< s3

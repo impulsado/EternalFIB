@@ -1,0 +1,33 @@
+moveSecondToLast
+push_front a
+it--
+*it
+moveSecondToLast
+*it
+push_back b
+it++
+*it
+moveSecondToLast
+*it
+it--
+moveSecondToLast
+*it
+it++
+*it
+push_front c
+print
+moveSecondToLast
+*it
+push_back d
+print
+moveSecondToLast
+*it
+moveSecondToLast
+*it
+print
+moveSecondToLast
+it++
+*it
+it++
+*it
+print

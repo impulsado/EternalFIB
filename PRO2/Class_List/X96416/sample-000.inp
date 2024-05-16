@@ -1,0 +1,37 @@
+swapFirstLast
+push_front a
+it--
+*it
+swapFirstLast
+*it
+push_back b
+it++
+*it
+swapFirstLast
+*it
+it++
+*it
+swapFirstLast
+*it
+it++
+*it
+push_front c
+*it
+it--
+*it
+it--
+*it
+swapFirstLast
+*it
+it--
+*it
+swapFirstLast
+*it
+it++
+*it
+swapFirstLast
+*it
+it++
+*it
+it++
+*it

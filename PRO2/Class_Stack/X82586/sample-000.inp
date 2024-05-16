@@ -1,0 +1,25 @@
+push a
+top 
+push b
+push a
+push c
+top 
+swap2Topmost 
+top 
+push a
+pop 
+pop 
+top
+swap2Topmost 
+top
+push e
+top
+swap2Topmost 
+top
+pop 
+pop 
+top 
+pop 
+push d
+swap2Topmost 
+top

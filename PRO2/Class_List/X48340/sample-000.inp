@@ -1,0 +1,49 @@
+it--
+--it
+it++
+++it
+push_front a
+it++
+*it
+++it
+++it
+*it
+it++
+it++
+*it
+--it
+--it
+*it
+it--
+it--
+*it
+++it
+pop_back
+push_back b
+--it
+*it
+push_back c
+*it
+--it
+it--
+*it
+--it
+pop_back
+*it
+push_back d
+*it
+--it
+push_back e
+it--
+*it
+push_back f
+++it
+*it
+push_front g
+it++
+it++
+*it
+++it
+*it
+it++
+*it

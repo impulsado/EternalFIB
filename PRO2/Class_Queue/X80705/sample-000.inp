@@ -1,0 +1,21 @@
+size
+push a
+size
+push b
+[0]
+[1]
+front
+pop
+size
+[0]
+push abc
+push bb
+[0]
+[1]
+[2]
+size
+pop
+front
+[0]
+[1]
+size
