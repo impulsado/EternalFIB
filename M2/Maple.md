@@ -1,6 +1,9 @@
 # Maple
 # Introducció
-TODO
+Maple és un programa relacionat amb les matemàtiques que podem fer servir per a fer més sencill l'aprenentage i resolució de problemes.<br>
+
+❗Per ser estudiant de l'UPC disposses del **Maple GRATUÏT**❗ <br>
+[MÉS INFORMACIÓ](https://serveistic.upc.edu/ca/distsoft/el-servei/programari-per-a-estudiantsi-professors#autotoc-item-autotoc-9)
 
 # Sobre el programa
 - Mode Document: Permet text i funcions interactives juntament amb càlculs.
@@ -17,12 +20,12 @@ TODO
 ## Simbologia Matemàtica
 - "expand()" Desenvolupar expressió. Per defecte no ho fa.
 - "evalf(p)" Calcular avaluació númerica d'una expressió.
-- "evalf[100](pi)" Determinar nombre de dígits de l'avaluació.
+- "evalf\[100](pi)" Determinar nombre de dígits de l'avaluació.
 - "subs(x=valor,expressio)" Substitueix el valor de x en l'expressió. No el calcula si no fas evalf().
 - "solve(expressio,x)" Resol expressió respecte x.
 - "solve({x+2*y=1,x-y=3},{x,y});" Resol sistema d'equacions.
 
-## Funcióv.s. Expressió algebraica
+## Funció v.s. Expressió algebraica
 Tot i que siguin molt semblants, maple treballa diferent depenent de com ho haguem definit.
 ### Funció
 Definida amb la notació "->"
@@ -56,28 +59,60 @@ gradient_en_P := [subs({x=0, y=0}, df_dx), subs({x=0, y=0}, df_dy)];
 # Aplicacións a M2 
 ## Equacions i inequacions amb nombres reals.
 ```
+# Definir expressió
 expr := (x - 1)/(x + 1) <= (x + 1)/(x - 1);
-                             x - 1    x + 1
-                     expr := ----- <= -----
-                             x + 1    x - 1
 
+# Saber els valors de x que compleixen
 solve(expr, x);
-      RealRange(Open(-1), 0), RealRange(Open(1), infinity)
 ```
 
 ## Successions de nombres reals.
 ```
+# Definir expressió
 f := 5*(n + 1)^(n + 1)/((3*n^2 + 1)*n^(n - 1));
-                                   (n + 1)  
-                          5 (n + 1)         
-                    f := -------------------
-                         /   2    \  (n - 1)
-                         \3 n  + 1/ n       
 
+# Calcular límit
 limit(f, n = infinity);
-                            5       
-                            - exp(1)
-                            3       
+```
+
+## Zero de funcions
+Escribim ``maxiterations = 100`` perquè per defecte amb `output = information` son 10 iteracions i podria ser que no fossin suficients.
+Si volem veure el resultat comodament s'ha de treure el parametre de ``output``.
+```
+# Preeliminars
+restart;
+with(Student[NumericalAnalysis]):
+
+# Definir expressió
+f := 2*x^4 - 9.41*x^3 + 14.44*x^2 - 19.77*x + 21.51;
+
+# Mètodes
+## Bisecció
+Bisection(f, x = [1, 2], tolerance = 10^(-3), output = information, maxiterations = 100);
+## Secant
+Secant(f, x = [1, 2], tolerance = 10^(-3), output = information, maxiterations = 100);
+## Newton/Tangent
+Newton(f, x = 4.004, tolerance = 10^(-5), output = information, maxiterations = 100)
+```
+
+## Fórmula de Taylor
+```
+# Preeliminars
+restart;
+with(Student[NumericalAnalysis]):
+
+# Definir expressió
+f := 21/5*exp(x + 5);
+
+# Calulcar polinomi de Taylor
+pol_f := TaylorPolynomial(f, x = 1, order = 3);
+
+# Caluclar Residu de Lagrange
+TaylorPolynomial(f, x = 1, order = 3, errorboundvar = 'ξ')  # La lletra pot ser qualsevol.
+
+# Mostrar les funcions conjuntes
+plot([f, pol_f], x = 1 .. 3);
+
 ```
 
 ## Funcions de diverses variables
