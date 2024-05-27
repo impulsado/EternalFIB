@@ -129,9 +129,9 @@ plot([f, pol_f], x = 1 .. 3);
 ```
 
 ## Integració
-### Mètodes
-Per calcular el valor numèric d'una integral amb algun mètode no hi ha una comanda explícita. S'ha d'anar a:
-Tools -> Tutors -> "Calculus - Single Variable" -> "Riemann Sums..."
+### Mètodes Númerics
+Per calcular el valor numèric d'una integral amb algun mètode no hi ha una comanda explícita. S'ha d'anar a: <br>
+Tools -> Tutors -> "Calculus - Single Variable" -> "Riemann Sums..." <br>
 I escriure la nostra integral amb el seu interval i seleccionar el mètode.
 
 ### Fòrmula de l'error
@@ -151,15 +151,95 @@ a := 1/4; b := 13/4; g := 2;
 val_error := 10^(-9);
 
 # Calcular derivada i el seu màxim en l'interval
-f_deri := diff(f,[x$g]);
-max_value := maximize(f_deri, x = a..b);
+f_deri := diff(f,x$g);
+val_max := maximize(f_deri, x = a..b);
 
 # Calcular número iteracions
-iteracions := solve((b-a)^(g+1)/(12*n^2)*max_value < val_error, n);
-evalf(iteracions);
+iteracions := solve((b-a)^(g+1)/(12*n^g)*val_max < val_error, n);
+evalf[20](iteracions);
+```
+
+### Àrea delimitada
+```
+# Definir expressions
+f1 := (1/9)*x^2 + (3/10)*x - 17/2;
+f2 := (3/10)*x - 9/4;
+
+# Calcular punts d'intersecció
+interseccio := solve(f1=f2);
+
+# Calcular valor de l'area (x0<x1)
+area := int(f2-f1, x=x0..x1);
 ```
 
 ## Funcions de diverses variables
+### Calcular derivada parcial
+```
+# Definir expressió
+f := x^2 * y *z^4 + exp(x*y);
+
+# Calcular derivada parcial
+f_deri := diff(f,x$2,y,z$4);
+```
+
+### Classificar Punts Crítics
+Per a fer-ho podem fer dues coses:
+- Visualitzar el punt en la funció per a no haver d'arribar tot el criteri del Hessià.
+- Fer el criteri del Hessià.
+#### Visualitzar Funcio + Punt
+```
+# Preeliminars
+restart;
+with(plots):
+
+# Definir funció
+f := (x,y)->x^2 + x*y - 2*x - y^2 + 4*y -5;
+
+# Definir Punt
+punt := [1,-4,f(1,-4)];
+
+# Guardar gràfica funció
+grafica_f := plot3d(f(x,y));
+
+# Guardar punt
+grafica_punt := pointplot3d([p]);
+
+# Mostrar gràfica funció + Punt
+display([grafica_f,grafica_punts]);
+```
+
+#### Criteri del Hessià
+Tot i que no resolgui automaticament quin tipus de punt és, simplement s'ha de comprovar:
+```c++
+if (hessia == 0) continue;
+else if (hessia < 0) punt_sella;
+else if (hessia > 0) {
+    if (a_11>0) mínim;
+    else if (a_11<0) màxim; 
+} 
+```
+
+```
+# Definir expressió
+f := x^3 - 3*x*y^2 + 2;
+
+# Definir el punt
+punt := {x = 0, y = 0};
+
+# Calcular les segones derivades parcials
+fxx := diff(f, x$2);
+fyy := diff(f, y$2);
+fxy := diff(f, x, y);
+
+# Evaluar las segones derivades en el punt donat
+fxx_en_punt := subs(punt, fxx);
+fyy_en_punt := subs(punt, fyy);
+fxy_en_punt := subs(punt, fxy);
+
+# Calcular el determinante de la matriu Hessiana
+determinant := fxx_en_punt * fyy_en_punt - fxy_en_punt^2;
+```
+
 ### Camp vectors gradients
 ```
 # Preeliminars
@@ -168,7 +248,7 @@ with(VectorCalculus):
 with(plots):
 
 # Definir funció
-f:=(x,y)->x^2 + y^2;
+f := (x,y)->x^2 + y^2;
 
 # Calcular Gradient
 grad_f := Gradient(f(x,y),[x,y]);
@@ -184,7 +264,7 @@ restart;
 with(plots):
 
 # Definir funció
-f:=(x,y)->x^2 + y^2;
+f := (x,y)->x^2 + y^2;
 
 # Mostrar corbes de nivell
 contourplot(f(x,y), x=-10..10, y=-10..10, contours=[0,1,2,3,4,5,6,7,9,10,15]);
