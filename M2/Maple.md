@@ -155,8 +155,8 @@ fx := diff(f,x$g);
 val_max := maximize(fx, x = a..b);
 
 # Calcular número iteracions
-iteracions := solve((b-a)^(g+1)/(12*n^g)*val_max < val_error, n);  # Trapezis
-iteracions := solve((b-a)^(g+1)/(180*n^g)*val_max < val_error, n);  # Simpson
+iteracions := solve((b-a)^(g+1)/(12*n^g)*val_max >= val_error, n);  # Trapezis
+iteracions := solve((b-a)^(g+1)/(180*n^g)*val_max >= val_error, n);  # Simpson
 evalf[20](iteracions);
 ```
 
