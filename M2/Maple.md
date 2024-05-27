@@ -67,6 +67,20 @@ solve(expr, x);
 ```
 
 ## Successions de nombres reals.
+### Successions
+```
+# Definir successió
+a := n -> if n=1 then 3; else sqrt(5 + a(n-1)); end if;
+
+# Veure valors per determinar [Creixent/Decreixent]
+seq(evalf(a(n)), n=1..10);
+
+# Calcular límit
+valor_limit := solve(L = sqrt(5 + L), L);
+```
+
+### Límits
+NOTA: Aixìo també és pot fer amb els símbols de la secció lateral esquerra.
 ```
 # Definir expressió
 f := 5*(n + 1)^(n + 1)/((3*n^2 + 1)*n^(n - 1));
@@ -107,12 +121,42 @@ f := 21/5*exp(x + 5);
 # Calulcar polinomi de Taylor
 pol_f := TaylorPolynomial(f, x = 1, order = 3);
 
-# Caluclar Residu de Lagrange
-TaylorPolynomial(f, x = 1, order = 3, errorboundvar = 'ξ')  # La lletra pot ser qualsevol.
+# Calcular Residu de Lagrange
+res_f := TaylorPolynomial(f, x = 1, order = 3, errorboundvar = 'ξ')  # La lletra pot ser qualsevol.
 
 # Mostrar les funcions conjuntes
 plot([f, pol_f], x = 1 .. 3);
+```
 
+## Integració
+### Mètodes
+Per calcular el valor numèric d'una integral amb algun mètode no hi ha una comanda explícita. S'ha d'anar a:
+Tools -> Tutors -> "Calculus - Single Variable" -> "Riemann Sums..."
+I escriure la nostra integral amb el seu interval i seleccionar el mètode.
+
+### Fòrmula de l'error
+Per a fer-ho més senzill faré servir `g` per a referirme al grau:
+```c++
+if (Trapezzis) g = 2; else g = 4;
+```
+
+```
+# Preeliminars
+restart;
+with(Optimization):
+
+# Definir variables
+f := exp(3*x - 1); 
+a := 1/4; b := 13/4; g := 2;
+val_error := 10^(-9);
+
+# Calcular derivada i el seu màxim en l'interval
+f_deri := diff(f,[x$g]);
+max_value := maximize(f_deri, x = a..b);
+
+# Calcular número iteracions
+iteracions := solve((b-a)^(g+1)/(12*n^2)*max_value < val_error, n);
+evalf(iteracions);
 ```
 
 ## Funcions de diverses variables
