@@ -169,8 +169,8 @@ f2 := (3/10)*x - 9/4;
 # Calcular punts d'intersecció
 interseccio := solve(f1=f2);
 
-# Calcular valor de l'area (x0<x1)
-area := int(f2-f1, x=x0..x1);
+# Calcular valor de l'area (a<b)
+area := int(f2-f1, x=a..b);
 ```
 
 ## Funcions de diverses variables
