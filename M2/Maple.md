@@ -151,11 +151,12 @@ a := 1/4; b := 13/4; g := 2;
 val_error := 10^(-9);
 
 # Calcular derivada i el seu màxim en l'interval
-f_deri := diff(f,x$g);
-val_max := maximize(f_deri, x = a..b);
+fx := diff(f,x$g);
+val_max := maximize(fx, x = a..b);
 
 # Calcular número iteracions
-iteracions := solve((b-a)^(g+1)/(12*n^g)*val_max < val_error, n);
+iteracions := solve((b-a)^(g+1)/(12*n^g)*val_max < val_error, n);  # Trapezis
+iteracions := solve((b-a)^(g+1)/(180*n^g)*val_max < val_error, n);  # Simpson
 evalf[20](iteracions);
 ```
 
@@ -179,7 +180,7 @@ area := int(f2-f1, x=x0..x1);
 f := x^2 * y *z^4 + exp(x*y);
 
 # Calcular derivada parcial
-f_deri := diff(f,x$2,y,z$4);
+fx := diff(f, x$2, y, z$4);
 ```
 
 ### Classificar Punts Crítics
@@ -251,7 +252,7 @@ with(plots):
 f := (x,y)->x^2 + y^2;
 
 # Calcular Gradient
-grad_f := Gradient(f(x,y),[x,y]);
+grad_f := Gradient(f(x,y), [x,y]);
 
 # Mostrar camp de vectors gradients
 fieldplot(grad_f, x=-10..10, y=-10..10);
