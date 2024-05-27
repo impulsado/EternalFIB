@@ -248,15 +248,21 @@ restart;
 with(VectorCalculus):
 with(plots):
 
-# Definir funció
-f := (x,y)->x^2 + y^2;
+# Definir expressió
+f := x^2 + y^2;
 
 # Calcular Gradient
-grad_f := Gradient(f(x,y), [x,y]);
+grad_f := Gradient(f, [x,y]);
 
 # Mostrar camp de vectors gradients
 fieldplot(grad_f, x=-10..10, y=-10..10);
 ```
+```c++
+if (tots apunten al centre) màxim;
+else if (tots apuntes al exterior) mínim;
+else punt_sella;
+```
+
 
 ### Corbes de nivell
 ```
@@ -264,11 +270,11 @@ fieldplot(grad_f, x=-10..10, y=-10..10);
 restart;
 with(plots):
 
-# Definir funció
-f := (x,y)->x^2 + y^2;
+# Definir expressió
+f := x^2 + y^2;
 
 # Mostrar corbes de nivell
-contourplot(f(x,y), x=-10..10, y=-10..10, contours=[0,1,2,3,4,5,6,7,9,10,15]);
+contourplot(f, x=-10..10, y=-10..10, contours=[0,1,2,3,4,5,6,7,9,10,15]);
 ```
 
 # Recursos
