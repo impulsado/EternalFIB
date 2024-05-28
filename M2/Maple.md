@@ -101,6 +101,7 @@ with(Student[NumericalAnalysis]):
 f := 2*x^4 - 9.41*x^3 + 14.44*x^2 - 19.77*x + 21.51;
 
 # Mètodes
+Nota: Podem fer servir "output = animation" si no tenim clares el num d'iteracions.
 ## Bisecció
 Bisection(f, x = [1, 2], tolerance = 10^(-3), output = information, maxiterations = 100);
 ## Secant
@@ -182,6 +183,15 @@ f := x^2 * y *z^4 + exp(x*y);
 # Calcular derivada parcial
 fx := diff(f, x$2, y, z$4);
 ```
+
+### Punt A del plà tangent
+
+$$
+\text{Plà tangent --> } \pi : ax + by -z + A = 0 \\
+\text{Punt --> }  P = (x_0, y_0, z_0) \\
+\text{Eq. forma cartessiana --> } a(x-x_0) + b(y-y_0) + c(z-z_0) = 0\\
+\text{Valor } A = [(-a*x_0)+(-b*y_0)+(-c*z_0)]
+$$
 
 ### Classificar Punts Crítics
 Per a fer-ho podem fer dues coses:
