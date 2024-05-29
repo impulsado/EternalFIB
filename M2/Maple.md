@@ -216,7 +216,7 @@ grafica_f := plot3d(f(x,y));
 grafica_punt := pointplot3d([p]);
 
 # Mostrar gràfica funció + Punt
-display([grafica_f,grafica_punts]);
+display([grafica_f,grafica_punt]);
 ```
 
 #### Criteri del Hessià
@@ -273,7 +273,6 @@ else if (tots apuntes al exterior) mínim;
 else punt_sella;
 ```
 
-
 ### Corbes de nivell
 ```
 # Preeliminars
@@ -286,6 +285,15 @@ f := x^2 + y^2;
 # Mostrar corbes de nivell
 contourplot(f, x=-10..10, y=-10..10, contours=[0,1,2,3,4,5,6,7,9,10,15]);
 ```
+
+## Extrems
+Maple té una eina integrada per a resoldre aquests exercicis sense haver de fer ús de comandes:<br>
+"Tools" -> "Tutors" -> "Optimization" -> "Optimization" <br>
+1. Fem click en "**Edit...**" en els apartats de "Objective Function" per ficar la nostra funció i en "Constraints and Bounds" per a ficar en cada entrada, les nostres restriccions.
+2. Un cop ficada la nostra funció i restriccions en l'esquerra seleccionem "**Minimize**" o "**Maximize**".
+3. Ara que ja està tot configurat, fem click en "**Solve**".
+
+<br>
 
 # Recursos
 ## CheatSheet
