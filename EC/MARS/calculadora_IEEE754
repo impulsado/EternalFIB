@@ -1,0 +1,43 @@
+.data
+    num1: .word 0x417AC000
+    num2: .word 0x3F140000
+    newline: .asciiz "\n"
+
+.text
+.globl main
+    main:
+        # Carregar Números
+        la $t0, num1
+        lwc1 $f1, 0($t0)
+        lwc1 $f2, 4($t0)
+
+        # Operar
+        add.s $f0, $f1, $f2 # Suma $f1 y $f2, resultado en $f0
+	
+	# Mostrar resultat
+	## Primer Operand
+	mov.s $f12, $f1 
+        li $v0, 2
+        syscall
+        
+        ## Espai
+        la $a0,newline
+        li $v0, 4
+        syscall
+	
+	## Segon Operand
+	mov.s $f12, $f2 
+        li $v0, 2
+        syscall
+        
+        ## Espai
+        la $a0,newline
+        li $v0, 4
+        syscall
+	
+	## Resultat
+	mov.s $f12, $f0     # Mueve el contenido de $f0 a $f12, que es el registro para argumentos flotantes
+        li $v0, 2           # syscall para imprimir número de punto flotante
+        syscall
+	
+        jr $ra
