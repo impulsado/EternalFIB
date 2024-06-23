@@ -12,8 +12,8 @@ Matemàtiques 2 és també conegut com a "Càlcul". En aquesta assignatura es fa
 - Diverses variables (tot i que generalment seran dues).
 
 La primera part es veu "Estudi de funcions", "Límits", "Derivades", "Integrals" i de les coses més importants: "Polinomi de Taylor".
-En la segona part es veu com funcionen les funcions de diverses variables de forma simple (donat que es toca límits ni integrals) i s'acaba veient com fer "optimització" (La ja vista en batxillerat) en diverses variables.
-En aquest cas l'assignatura està molt enfocada al càlcul relacionat amb la informàtica (mètodes numèrics i polinomi de Taylor) així que és molt important entendre com funciona Maple.
+En la segona part es veu com funcionen les funcions de diverses variables de forma simple (donat que no es toca "límits" ni "integrals") i s'acaba veient com fer "Polinomi de Taylor" i "Optimització" en diverses variables.
+En aquest cas l'assignatura està molt enfocada al càlcul relacionat amb la informàtica (mètodes numèrics i polinomi de Taylor) així que és molt important entendre com funciona Maple i ajuda a entendre com funcionen les matemàtiques en les màquines.
 
 El laboratori tracta de resoldre més exercicis de l'assignatura de forma una mica més detallada que en teoria.
 
