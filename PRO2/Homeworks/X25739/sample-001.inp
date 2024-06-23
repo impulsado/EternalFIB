@@ -1,0 +1,32 @@
+string
+sum
+push a
+top
+print
+sum
+push bb
+top
+print
+sum
+push ccc
+top
+print
+sum
+pop
+top
+print
+sum
+push dd
+top
+print
+sum
+push eeee
+top
+print
+sum
+pop
+pop
+sum
+pop
+pop
+sum

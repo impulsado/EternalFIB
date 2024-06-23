@@ -1,0 +1,108 @@
+cout << l
+it1--
+--it1
+it1++
+++it1
+it2--
+--it2
+it2++
+cout << l
+push_back a
+push_back b
+push_back c
+cout << l
+it1 = begin
+cout << l
+it1--
+cout << l
+--it1
+cout << l
+it1--
+cout << l
+++it1
+cout << l
+--it1
+cout << l
+it1--
+cout << l
+it1++
+cout << l
+it1--
+cout << l
+it1--
+cout << l
+it1--
+cout << l
+it1++
+cout << l
+it1++
+cout << l
+it1++
+cout << l
+it1--
+cout << l
+it1 = begin
+it2 = end
+cout << l
+it2++
+cout << l
+it2++
+cout << l
+cout << *it1
+cout << *it2
+push_front i
+push_back j
+push_front k
+push_back l
+cout << l
+it1 = end
+it1++
+it1--
+--it1
+it1--
+it2++
+++it2
+it2--
+--it2
+--it2
+cout << l
+it1 = begin
+it2 = end
+it2++
+++it2
+cout << l
+cout << *it1
+cout << *it2
+it2++
+++it2
+it1--
+it1--
+cout << l
+cout << *it1
+cout << *it2
+insert it1 o
+insert it2 p
+cout << l
+pop_front
+pop_back
+cout << l
+it1--
+--it1
+it2++
+cout << l
+it1 = erase it1
+cout << l
+++it2
+cout << l
+it2 = erase it2
+cout << l
+*it1 = x
+cout << l
+*it2 = y
+cout << l
+it1++
+++it2
+cout << l
+it1--
+it2--
+cout << l

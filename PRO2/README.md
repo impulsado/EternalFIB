@@ -2,22 +2,31 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Programació 2](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/PRO2) | PRO2 | Q2 | 7.5 | X/10 | X/10 | X |
+| [Programació 2](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/PRO2) | PRO2 | Q2 | 7.5 | 5/10 | 6/10 | X |
 
 <br>
 
 # EXPLICACIÓ
-- [ ] TODO
+Programació 2 s'endinsa en la POO (o OPP en angles) però aquesta serà a grans trets i no s'entrarà en conceptes molt difícils. S'explicaran el funcionament de les estructures de dades bàsiques, junt amb com s'implementen, i com funcionen els punters. Tots els conceptes són senzills, però que requeriran prova i error per a entendre'ls correctament.
+La part més important d'aquesta assignatura és la pràctica (tot i que no sigui la que més nota compta). Aquesta consta d'un enunciat amb una sèrie de funcions a implementar fent ús de la programació orientada a objectes.
 
 ## Exàmens
-- [ ] TODO
+L'examen és similar al de PRO1. Antigament, hi havia un examen de la pràctica i eren escrits, en data de juny-2024, no hi ha examen de la pràctica i els exàmens tenen la mateixa dinàmica que en PRO1.
+
+## Pràctica
+Repositori amb la pràctica: <br>
+https://github.com/impulsado/PRAC-PRO2
+
 
 ## Recomanacions
-- [ ] TODO
+1. Pensar a paper i escriure en pseudocodi la practica. Si no ho fas, perdràs MOLTA estona refent funcions.
+2. Fer la pràctica porta de temps, si us plau, comença a fer-ho des del dia que pengin l'enunciat i ves provant que funciona tot.
+3. Debuggar.
+4. Buscar un professor on les seves classes siguin "entretingudes" per entendre bé els conceptes de les estructures de dades.
+
 <br>
 
 # DEBUGAR
-- [ ] Explicar com debugar multiples fitxers
 **! SI US PLAU ! DEBUGA !** <br>
 Debugar ajuda molt a veure com s'està executant el codi i on poden haver errades. Adjunto tutorial de com configurar-ho. Pot salvarte MOLTES vegades i està permés a l'exàmen.
 <br>

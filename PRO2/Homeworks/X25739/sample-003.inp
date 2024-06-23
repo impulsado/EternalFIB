@@ -1,0 +1,42 @@
+string
+push a
+top 
+push b
+push acc
+top 
+top 
+sum
+top 
+push a
+pop 
+pop 
+sum
+push cc
+pop 
+top 
+pop 
+push d
+sum
+push b
+push ccc
+push ccb
+pop 
+top 
+push cab
+push d
+pop 
+sum
+push c
+sum
+sum
+pop 
+push ddc
+push bc
+push bc
+top 
+sum
+pop 
+push aa
+sum
+top 
+top

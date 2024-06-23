@@ -1,0 +1,11 @@
+ and and and false # # true # # or false # # false # # and true # # false # #
+ or and true # # true # # not true # # #
+ and not true # # # and false # # false # #
+ false # #
+ or or and true # # true # # false # # or false # # true # #
+ not or or true # # false # # true # # #
+ or false # # or not false # # # and false # # false # #
+ and or or and false # # true # # and true # # true # # and and true # # true # # true # # and or or false # # true # # and true # # false # # or and true # # false # # or false # # true # #
+ or true # # false # #
+ or or and true # # false # # or and false # # true # # or true # # false # # true # #
+#

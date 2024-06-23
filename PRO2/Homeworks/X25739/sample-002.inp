@@ -1,0 +1,42 @@
+int
+push 3
+push -10
+push 15
+pop 
+push 17
+push 20
+sum
+top 
+top 
+sum
+top 
+push 18
+top 
+pop 
+pop 
+sum
+push 12
+push -7
+pop 
+top 
+pop 
+push 19
+sum
+sum
+push -16
+sum
+push 0
+sum
+push -4
+push 12
+push -19
+pop 
+pop 
+top 
+push -4
+sum
+top 
+pop 
+push 10
+push 5
+top

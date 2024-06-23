@@ -1,0 +1,41 @@
+([])
+([])
+a b c ([])
+(a) b c []
+(a) b c []
+a (b) c []
+a b (c) []
+a (b) c []
+a b (c) []
+a b c ([])
+a b (c) []
+a b c ([])
+a b c ([])
+a b (c) []
+a b c ([])
+a b c ([])
+a b (c) []
+a b c ([])
+(a) b c []
+(a) b c []
+(a) b [c]
+a
+c
+k i (a) b [c] j l
+k i a b c ([j]) l
+(k) i a b c j [l]
+k
+l
+k (i) a b [c] j l
+i
+c
+k o (i) a b p [c] j l
+o (i) a b p [c] j
+o i a (b) [p] c j
+o i a ([p]) c j
+o i [a] (p) c j
+o i ([p]) c j
+o i ([x]) c j
+o i ([y]) c j
+o ([i]) y c j
+o i ([y]) c j

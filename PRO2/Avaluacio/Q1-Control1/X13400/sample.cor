@@ -1,0 +1,47 @@
+Conjunt:
+111 4.22
+222 6.66
+333 NP
+
+Estudiants interval 5: 0
+
+Conjunt:
+111 4.22
+222 6.66
+333 NP
+444 5.02
+
+Estudiants interval 5: 1
+
+Conjunt:
+111 4.22
+222 6.66
+333 4.13
+444 5.02
+
+Estudiants interval 4: 2
+
+Conjunt:
+111 4.22
+333 4.13
+444 5.02
+
+Estudiants interval 6: 0
+
+Conjunt:
+111 4.22
+333 4.13
+444 5.02
+445 NP
+555 9.5
+
+Estudiants interval 9: 1
+
+L'estudiant 445 ja hi era
+
+Conjunt:
+111 4.22
+444 5.02
+445 NP
+555 9.5
+

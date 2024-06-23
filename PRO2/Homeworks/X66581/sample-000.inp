@@ -1,0 +1,237 @@
+List<int> l0 , l1 ;
+List<int>::iterator a , b , c , d ;
+
+l0 .push_back( 1 );     // l0: 1,
+l0 .push_back( 2 );     // l0: 1,2,
+l0 .push_back( 3 );     // l0: 1,2,3,
+l1 .push_back( 4 );     // l1: 4,
+l1 .push_back( 5 );     // l1: 4,5,
+l1 .push_back( 6 );     // l1: 4,5,6,
+
+a = l0 .begin();      // l0: 1a,2,3,
+b = l0 .end();        // l0: 1a,2,3,b
+c = l1 .begin();      // l1: 4c,5,6,
+d = l1 .end();        // l1: 4c,5,6,d
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 1a,2,3,b
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 1,2a,3,b
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b ++;                 // l0: 1,2a,3,b
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b --;                 // l0: 1,2a,3b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a .hook();            // l0: 1,2[a],3b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 2[a],1,3b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 2[a],1,3b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 1,2[a],3b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 1,3b,2[a],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 1,3b,2[a],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 1,2[a],3b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b --;                 // l0: 1,2[a]b,3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 1,3,2[a]b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 1,3,2[a]b,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 1,2[a]b,3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 2[a]b,1,3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 2[a]b,1,3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b --;                 // l0: 2[a]b,1,3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b ++;                 // l0: 2[a],1b,3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b .hook();              // l0: 2[a],1[b],3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b --;                 // l0: 1[b],2[a],3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 2[a],1[b],3,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+b ++;                 // l0: 2[a],3,1[b],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a .stopHook();        // l0: 2a,3,1[b],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a --;                 // l0: 2a,3,1[b],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 2,3a,1[b],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 2,3,1a[b],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+a ++;                 // l0: 2,3,1[b],a
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c .hook();            // l1: 4[c],5,6,d
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c ++;                 // l1: 5,4[c],6,d
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c ++;                 // l1: 5,6,4[c],d
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c ++;                 // l1: 5,6,4[c],d
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+d --;                 // l1: 5,6,4[c]d,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+d .hook();            // l1: 5,6,4[c][d],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+d --;                 // l1: 5,4[c][d],6,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c --;                 // l1: 4[c][d],5,6,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+d --;                 // l1: 4[c][d],5,6,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c --;                 // l1: 4[c][d],5,6,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+d ++;                 // l1: 5,4[c][d],6,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c .stopHook();          // l1: 5,4c[d],6,
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+d ++;                 // l1: 5,6,4c[d],
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c ++;                 // l1: 5,6,4[d],c
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+c ++;                 // l1: 5,6,4[d],c
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;
+
+d ++;                 // l1: 5,6,4[d],c
+
+cout<< l0 <<endl;
+cout<< l1 <<endl;

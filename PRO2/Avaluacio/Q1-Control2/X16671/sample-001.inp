@@ -1,0 +1,81 @@
+push b
+push b
+push_mark ca
+top 
+size
+top 
+push_mark ad
+size
+push c
+pop 
+pop 
+push aab
+push ccb
+push bb
+top 
+push a
+pop_mark
+top 
+push bbc
+size
+size
+pop 
+push c
+push cb
+push bd
+pop 
+size
+push_mark ddb
+push_mark c
+pop_mark
+push db
+push c
+size
+top 
+top 
+pop 
+push ca
+size
+push_mark b
+top 
+size
+size
+size
+push bc
+push dcc
+push ac
+top 
+top 
+push cc
+push aa
+pop 
+size
+size
+size
+pop 
+push db
+size
+top 
+push da
+pop 
+size
+top 
+push c
+size
+push a
+push dd
+top 
+push ddb
+push acd
+push_mark d
+push_mark c
+push a
+pop_mark
+top 
+push a
+pop 
+push cbc
+size
+top 
+pop_mark
+print

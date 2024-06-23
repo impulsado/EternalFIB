@@ -1,0 +1,32 @@
+int
+sum
+push 10
+top
+print
+sum
+push 20
+top
+print
+sum
+push 30
+top
+print
+sum
+pop
+top
+print
+sum
+push 31
+top
+print
+sum
+push -40
+top
+print
+sum
+pop
+pop
+sum
+pop
+pop
+sum

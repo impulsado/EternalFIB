@@ -1,0 +1,83 @@
+pop_mark
+size
+pop_mark
+push_mark z
+pop_mark
+size
+pop
+pop_mark
+size
+push a
+push b
+size
+pop_mark
+size
+pop_mark
+size
+push_mark a
+top
+print
+size
+push b
+top
+print
+size
+push c
+top
+print
+size
+push d
+top
+print
+size
+push_mark bb
+top
+print
+size
+push ccc
+top
+print
+size
+push dd
+top
+print
+size
+push ee
+top
+print
+size
+pop
+top
+print
+size
+pop_mark
+top
+print
+size
+pop_mark
+top
+print
+size
+pop
+top
+print
+size
+pop_mark
+top
+print
+size
+push dd
+top
+print
+size
+push eeee
+top
+print
+size
+pop_mark
+top
+print
+size
+pop
+print
+size

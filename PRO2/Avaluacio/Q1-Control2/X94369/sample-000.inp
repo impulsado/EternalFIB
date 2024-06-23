@@ -1,0 +1,45 @@
+size
+size
+push_front a
+front 
+size
+push_front b
+front 
+size
+pop
+front
+size
+pop
+size
+push c
+front
+size
+push d
+front
+size
+push_front e
+front 
+size
+front
+size
+push f
+front 
+size
+pop 
+front
+size
+front
+size
+pop 
+front
+size
+pop 
+front
+size
+front
+size
+front
+size
+pop
+size
+size
