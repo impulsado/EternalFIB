@@ -28,7 +28,10 @@ Els exàmens consten d'un exercici per tema (més o menys) on quasi sempre tenen
 <br>
 
 # WEBS
-- Apunts de Maple<br>
+- Pàgina principal <br>
+https://web.mat.upc.edu/fib/matematiques2/
+
+- Apunts de Maple <br>
 https://github.com/impulsado/EternalFIB/blob/main/M2/Maple.md
 
 - Fòrmula a text <br>
