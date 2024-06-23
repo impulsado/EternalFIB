@@ -15,6 +15,12 @@ Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
 - [Introducció als Computadors](https://github.com/impulsado/EternalFIB/tree/main/IC)
 - [Programació 1](https://github.com/impulsado/EternalFIB/tree/main/PRO1)
 
+## Quatrimestre 2
+- [Estructura de Computadors](https://github.com/impulsado/EternalFIB/tree/main/EC)
+- [Matemàtiques 1](https://github.com/impulsado/EternalFIB/tree/main/M1)
+- [Matemàtiques 2](https://github.com/impulsado/EternalFIB/tree/main/M2)
+- [Programació 2](https://github.com/impulsado/EternalFIB/tree/main/PRO2)
+
 <br>
 
 # 🌐 WEBS
