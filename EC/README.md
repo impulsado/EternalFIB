@@ -2,7 +2,7 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Estructura de Computadors](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/EC) | EC | Q2 | 7.5 | 6/10 | 5/10 | X |
+| [Estructura de Computadors](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/EC) | EC | Q2 | 7.5 | 6/10 | 5/10 | 7.2 |
 
 <br>
 

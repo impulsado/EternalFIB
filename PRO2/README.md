@@ -2,7 +2,7 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Programació 2](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/PRO2) | PRO2 | Q2 | 7.5 | 5/10 | 6/10 | X |
+| [Programació 2](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/PRO2) | PRO2 | Q2 | 7.5 | 5/10 | 6/10 | 9.0 |
 
 <br>
 
