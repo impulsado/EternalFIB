@@ -2,7 +2,7 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Matemàtiques 1](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/M1) | M1 | Q2 | 7.5 | 6.5/10 | 4/10 | 6.9 |
+| [Matemàtiques 1](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/M1) | M1 | Q2 | 7.5 | 6.5/10 | 4/10 | 7.0 |
 
 <br>
 
