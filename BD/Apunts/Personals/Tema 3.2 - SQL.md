@@ -108,6 +108,8 @@ SELECT *
 FROM tPokedex
 WHERE 
 	NOT(pkmn_id=1) 
-	AND
+	AND(pkmn_name IN('Gengar','Mimikyu') OR pokm_name LIKE 'C%')
+	AND pkmn_attack IS NOT NULL
+	AND pkmn
 	
 ```
