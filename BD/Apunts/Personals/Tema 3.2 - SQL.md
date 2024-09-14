@@ -127,4 +127,11 @@ ORDER BY pkmn_attack DESC, pkmn_name
 
 ### Agregació
 - **COUNT:**
-	- **COUNT(*)** Número de files que compleixen condició del WHERE
+	- **COUNT(\*):**  Número de files que compleixen condició del ``WHERE``.
+	- **COUNT(DISTINCT col_name):** Número de valors diferents de la columna (sense comptar NULL).
+	- **COUNT(col_name):** Número de valors de la columna que compleixen. Sense comptar NULL.
+
+#### Exemple
+```PostgreSQL
+SELECT 
+```
