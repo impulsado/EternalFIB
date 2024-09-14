@@ -51,7 +51,7 @@ CREATE TABLE t1 (
 ```PostgreSQL
 CREATE TABLE tPokedex (
 	pkmn_id INTEGER PRIMARY KEY,
-	pkmn_name CHAR(255) UNIQUE,
+	pkmn_name CHAR(255) UNIQUE NOT NULL,
 	pkmn_type CHAR(255),
 	pkmn_hp INTEGER DEFAULT 100 CHECK (pkmn_hp>0),
 	pkmn_attack INTEGER,
@@ -67,5 +67,5 @@ En el futur podrem veure que el valor que s'introdueix pot vindre donat de subco
 ### Exemples
 ```PostgreSQL
 INSERT INTO tPokedex
-VALUES (1, Charmander, Fire, )
+VALUES (1, Bulbasur, Fire, )
 ```
