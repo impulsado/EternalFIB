@@ -2,6 +2,9 @@
 ``PRIMARY_KEY`` = Clau que permet identificar de forma única a una tupla (fila) dins una taula.
 ``FOREIGN_KEY`` = Clau que permet relacionar tuples entre taules diferents.
 
+## CHAR(n) VS VARCHAR(n)
+CHAR(n) defineix mida fixa. Si fas CHAR(100) i només ocupes 10 --> 10+90 
+
 # Creació Taules
 ```PostgreSQL
 CREATE TABLE <table_name> (
@@ -50,9 +53,8 @@ CREATE TABLE t1 (
 ### Complet
 ```PostgreSQL
 CREATE TABLE tPokedex (
-	pkmn_id INTEGER PRIMARY KEY,
+	pkmn_id SERIAL PRIMARY KEY,
 	pkmn_name CHAR(255) UNIQUE NOT NULL,
-	pkmn_type CHAR(255),
 	pkmn_hp INTEGER DEFAULT 100 CHECK (pkmn_hp>0),
 	pkmn_attack INTEGER,
 	FOREIGN KEY pkmn_type REFERENCES tTypes(type_name),
