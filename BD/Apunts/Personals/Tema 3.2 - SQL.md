@@ -22,10 +22,27 @@ CREATE TABLE <table_name> (
 | NOT NULL                                   | Ha de tindre algun valor                                     |
 - **table_constraints:**
 
-| Reestriccions                              | Explicació                                                   |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| UNIQUE                                     | Les cols. especificades han de tindre valors únics           |
-| PRIMARY KEY                                | Les cols. especificades han de tindre valors únics           |
-| REFERENCES <ref_table_name> (ref_col_name) | La col. és foreign key a la columna de la taula especificada |
-| CHECK (conditions)                         | Col. ha de complir les condicions                            |
-| NOT NULL                                   | Ha de tindre algun valor                                     |
+| Reestriccions                              | Explicació                                         |
+| ------------------------------------------ | -------------------------------------------------- |
+| UNIQUE                                     | Les cols. especificades han de tindre valors únics |
+| PRIMARY KEY                                | Les cols. especificades son les primary keys       |
+| REFERENCES <ref_table_name> (ref_col_name) | Les cols. especificades son les foreign keys       |
+| CHECK (conditions)                         | La taula ha de complir les condicions              |
+
+## Exemples
+
+### col_constraint VS table_constraint
+Tots dos codis són equivalents
+```PostgreSQL
+CREATE TABLE t1 (
+	id INTEGER PRIMARY KEY,
+	name VARCHAR(255)
+);
+```
+
+```PostgreSQL
+CREATE TABLE t1 (
+	id INTEGER,
+	name VARCHAR(255)
+);
+```
