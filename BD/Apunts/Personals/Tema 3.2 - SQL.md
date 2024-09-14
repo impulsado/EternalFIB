@@ -69,6 +69,19 @@ En el futur podrem veure que el valor que s'introdueix pot vindre donat de subco
 
 ### Exemples
 ```PostgreSQL
-INSERT INTO tPokedex
-VALUES (1,Bulbasur,49,45)
+INSERT INTO tPokedex(pkmn_id, pkmn_name, pkmn_hp, pkmn_attack)
+VALUES (1, Bulbasur, 49, 45),
+VALUES (2, Ivysaur, 62, 60);
+```
+
+## Esborrat de Files
+```PostgreSQL
+DELETE FROM table_name
+WHERE <conditions>;
+```
+
+### Exemples
+```PostgreSQL
+DELETE FROM tPokedex
+WHERE pkmn
 ```
