@@ -30,19 +30,26 @@ CREATE TABLE <table_name> (
 | CHECK (conditions)                         | La taula ha de complir les condicions              |
 
 ## Exemples
-
 ### col_constraint VS table_constraint
 Tots dos codis són equivalents
 ```PostgreSQL
 CREATE TABLE t1 (
-	id INTEGER PRIMARY KEY,
-	name VARCHAR(255)
+	id INTEGER UNIQUE,
+	name VARCHAR(255) UNIQUE
 );
 ```
 
 ```PostgreSQL
 CREATE TABLE t1 (
 	id INTEGER,
-	name VARCHAR(255)
+	name VARCHAR(255),
+	UNIQUE (id, name)
+);
+```
+
+### Complet
+```PostgreSQL
+CREATE TABLE pokedex (
+	name 
 );
 ```
