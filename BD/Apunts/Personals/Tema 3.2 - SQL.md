@@ -127,11 +127,16 @@ ORDER BY pkmn_attack DESC, pkmn_name
 
 ### Agregació
 - **COUNT:**
-	- **COUNT(\*):**  Número de files que compleixen condició del ``WHERE``.
+	- **COUNT(\*):**  Número de files que compleixen condició del ``WHERE``. Compta les NULL.
 	- **COUNT(DISTINCT col_name):** Número de valors diferents de la columna (sense comptar NULL).
 	- **COUNT(col_name):** Número de valors de la columna que compleixen. Sense comptar NULL.
+
+La diferencia entre ``COUNT(col_name)`` i ``COUNT(\*)`` és per quan ``col_name`` pot ser NULL. 
 
 #### Exemple
 ```PostgreSQL
 SELECT 
+	COUNT(DISTINCT pkm_id) AS quant_total,
+	COUNT()
+	
 ```
