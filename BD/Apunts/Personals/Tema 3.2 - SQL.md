@@ -35,7 +35,7 @@ CREATE TABLE <table_name> (
 
 ## Exemples
 ### col_constraint VS table_constraint
-Tots dos codis són equivalents
+Tots dos codis són equivalents:
 ```PostgreSQL
 CREATE TABLE t1 (
 	id INTEGER UNIQUE,
@@ -83,5 +83,13 @@ WHERE <conditions>;
 ### Exemples
 ```PostgreSQL
 DELETE FROM tPokedex
-WHERE pkmn
+WHERE pkmn_hp=30 AND pkmn_attack<=30;
+```
+
+## Modificació de Files
+És modifiquen les columnes que estiguin especificades en el **SET** que compleixin la condició **WHERE** de la taula **UPDATE**.
+```PostgreSQL
+UPDATE tName
+SET col_name = {expression/NULL}, col_name = {expression/NULL}, ...
+WHERE conditions;
 ```
