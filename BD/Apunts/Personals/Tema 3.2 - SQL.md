@@ -50,6 +50,11 @@ CREATE TABLE t1 (
 ### Complet
 ```PostgreSQL
 CREATE TABLE pokedex (
-	name 
+	pok INTEGER PRIMARY KEY,
+	pokemon_name CHAR(255) UNIQUE,
+	pokemon_type CHAR(255),
+	pokemon_hp INTEGER DEFAULT 100 CHECK (pokemon_hp>0),
+	pokemon_attack INTEGER,
+	
 );
 ```
