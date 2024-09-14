@@ -22,3 +22,10 @@ CREATE TABLE <table_name> (
 | NOT NULL                                   | Ha de tindre algun valor                                     |
 - **table_constraints:**
 
+| Reestriccions                              | Explicació                                                   |
+| ------------------------------------------ | ------------------------------------------------------------ |
+| UNIQUE                                     | Les cols. especificades han de tindre valors únics           |
+| PRIMARY KEY                                | Les cols. especificades han de tindre valors únics           |
+| REFERENCES <ref_table_name> (ref_col_name) | La col. és foreign key a la columna de la taula especificada |
+| CHECK (conditions)                         | Col. ha de complir les condicions                            |
+| NOT NULL                                   | Ha de tindre algun valor                                     |
