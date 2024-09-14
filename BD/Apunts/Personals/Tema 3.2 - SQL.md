@@ -3,7 +3,8 @@
 ``FOREIGN_KEY`` = Clau que permet relacionar tuples entre taules diferents.
 
 ## CHAR(n) VS VARCHAR(n)
-CHAR(n) defineix mida fixa. Si fas CHAR(100) i només ocupes 10 --> 10+90 
+CHAR(n) reserves mida fixa. Si no ocupes tot, continua reservat.
+VARCHAR(n) reserves mida dinàmica amb màxim `n`. Si només ocupes la meitat, es reserva la meitat.
 
 # Creació Taules
 ```PostgreSQL
@@ -54,7 +55,7 @@ CREATE TABLE t1 (
 ```PostgreSQL
 CREATE TABLE tPokedex (
 	pkmn_id SERIAL PRIMARY KEY,
-	pkmn_name CHAR(255) UNIQUE NOT NULL,
+	pkmn_name VARCHAR(255) UNIQUE NOT NULL,
 	pkmn_hp INTEGER DEFAULT 100 CHECK (pkmn_hp>0),
 	pkmn_attack INTEGER,
 	FOREIGN KEY pkmn_type REFERENCES tTypes(type_name),
@@ -69,5 +70,5 @@ En el futur podrem veure que el valor que s'introdueix pot vindre donat de subco
 ### Exemples
 ```PostgreSQL
 INSERT INTO tPokedex
-VALUES (1, Bulbasur, Fire, )
+VALUES (1,Bulbasur,49,45)
 ```
