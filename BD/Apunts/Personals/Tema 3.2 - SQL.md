@@ -116,7 +116,6 @@ WHERE
 
 ### Ordenació
 Si no s'especifica ``DESC`` s'entén que és `ASC`.
-
 #### Exemple
 En aquest cas, s'ordena per menor attack (mínim 100) i en cas d'empat, s'ordena per nom ascendent.
 ```PostgreSQL
@@ -125,3 +124,7 @@ FROM tPokedex
 WHERE pkmn_attack>=100
 ORDER BY pkmn_attack DESC, pkmn_name
 ```
+
+### Agregació
+- **COUNT:**
+	- **COUNT(*)** Número de files que compleixen condició del WHERE
