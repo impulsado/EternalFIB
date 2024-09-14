@@ -137,6 +137,9 @@ La diferencia entre ``COUNT(col_name)`` i ``COUNT(\*)`` és per quan ``col_name`
 ```PostgreSQL
 SELECT 
 	COUNT(DISTINCT pkm_id) AS quant_total,
-	COUNT()
-	
+	AVG(pkmn_hp) AS avg_vida,
+	SUM(pkmn_attack) AS total_attack
+FROM tPokedex
 ```
+
+### Agrupació de Files
