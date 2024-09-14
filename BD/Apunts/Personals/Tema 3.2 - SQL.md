@@ -115,10 +115,13 @@ WHERE
 ```
 
 ### Ordenació
+Si no s'especifica ``DESC`` s'entén que és `ASC`.
+
 #### Exemple
+En aquest cas, s'ordena per menor attack (mínim 100) i en cas d'empat, s'ordena per nom ascendent.
 ```PostgreSQL
-SELECT pkmn_ipkmn_name
+SELECT pkmn_id, pkmn_name, pkmn_attack
 FROM tPokedex
 WHERE pkmn_attack>=100
-ORDER BY pkmn
+ORDER BY pkmn_attack DESC, pkmn_name
 ```
