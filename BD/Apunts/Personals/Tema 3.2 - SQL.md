@@ -91,5 +91,23 @@ WHERE pkmn_hp=30 AND pkmn_attack<=30;
 ```PostgreSQL
 UPDATE tName
 SET col_name = {expression/NULL}, col_name = {expression/NULL}, ...
-WHERE conditions;
+WHERE <conditions>;
+```
+
+### Exemples
+```PostgreSQL
+UPDATE tPokedex
+SET pkmn_hp = pkmn_hp+50, pkmn_attack = 100
+WHERE pkmn_id = 100;
+```
+
+## Consultar Taula
+### Exemple
+```PostgreSQL
+SELECT *
+FROM tPokedex
+WHERE 
+	NOT(pkmn_id=1) 
+	AND
+	
 ```
