@@ -101,8 +101,9 @@ SET pkmn_hp = pkmn_hp+50, pkmn_attack = 100
 WHERE pkmn_id = 100;
 ```
 
-## Consultar Taula
-### Exemple
+## Consultes sobre una Taula
+### Format Bàsic
+#### Exemple
 ```PostgreSQL
 SELECT *
 FROM tPokedex
@@ -110,6 +111,14 @@ WHERE
 	NOT(pkmn_id=1) 
 	AND(pkmn_name IN('Gengar','Mimikyu') OR pokm_name LIKE 'C%')
 	AND pkmn_attack IS NOT NULL
-	AND pkmn
-	
+	AND pkmn_hp BETWEEN 100 AND 200;
+```
+
+### Ordenació
+#### Exemple
+```PostgreSQL
+SELECT pkmn_ipkmn_name
+FROM tPokedex
+WHERE pkmn_attack>=100
+ORDER BY pkmn
 ```
