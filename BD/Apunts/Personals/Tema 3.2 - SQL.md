@@ -60,4 +60,12 @@ CREATE TABLE tPokedex (
 );
 ```
 
-## 
+## Inserció de Files
+Si no es fiquen les columnes on van les dades que s'han d'introduir, s'han de ficar en ordre tal com està definida la taula. Altrament, s'ha de respectar l'ordre de menció del nom de les taules.
+En el futur podrem veure que el valor que s'introdueix pot vindre donat de subconsultes.
+
+### Exemples
+```PostgreSQL
+INSERT INTO tPokedex
+VALUES (1, Charmander, Fire, )
+```
