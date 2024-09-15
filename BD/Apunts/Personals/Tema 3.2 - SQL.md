@@ -143,3 +143,5 @@ FROM tPokedex
 ```
 
 ### Agrupació de Files
+Agrupar resultats depenent d'una columna.
+#### Exem
