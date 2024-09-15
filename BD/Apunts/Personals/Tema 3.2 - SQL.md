@@ -144,4 +144,18 @@ FROM tPokedex
 
 ### Agrupació de Files
 Agrupar resultats depenent d'una columna.
-#### Exem
+#### Exemple
+```PostgreSQL
+SELECT pkmn_type, COUNT(*) AS quant_pkmns
+FROM tPokedex
+GROUP BY pkmn_type
+```
+
+I això mostraria algo com:
+
+| pkmn_type | quant_pkmns |
+| --------- | ----------- |
+| water     | 2           |
+| fire      | 10          |
+
+
