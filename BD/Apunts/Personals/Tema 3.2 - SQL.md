@@ -211,6 +211,7 @@ WHERE pa.id NOT EXISTS (
 
 # Subconsultes en `DELETE`, `UPDATE` i `SELECT`
 ## `DELETE`
+Eliminar de la taula `pokemons` els que no siguin llegendaris:
 ```postgreSQL
 DELETE FROM pokemons p
 WHERE NOT EXISTS (
@@ -218,4 +219,14 @@ WHERE NOT EXISTS (
 	FROM pokemon_legendary pl
 	WHERE p.id = pl.id
 );
+```
+
+## `UPDATE`
+Pujar 50 punts d'attack aquells que tinguin més vida que la vida mitjana dels llegendaris:
+```postgreSQL
+UPDATE pokemons p
+SET p.attk = p.attk + 50
+WHERE p.hp >= (
+	SELECT 
+)
 ```
