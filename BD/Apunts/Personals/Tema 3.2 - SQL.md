@@ -246,5 +246,7 @@ HAVING COUNT(pt.id) >= 2;
 ```
 
 ```ad-important
-Recorda que si fas un `GROUP BY, totes les columnes del `SELECT` 
+Recorda que si fas un `GROUP BY`, totes les columnes del `SELECT` que no siguin funcions (SUM(), AVG(), ...) han d'estar especificades.
+És per això que s'ha de ficar `pl.id` i `pl.name` i no solament un d'aquests.
 ```
+
