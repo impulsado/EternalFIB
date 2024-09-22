@@ -239,6 +239,8 @@ Afegir a la taula de pokemons normal els pokemons llegendaris que tinguin 2 o mÃ
 INSERT INTO pokemons
 (
 	SELECT *
-	FROM pokemons_legendary pl INNER JOIN pokemons_tipos pt ON pl.id = tipos
+	FROM pokemons_legendary pl INNER JOIN pokemons_tipos pt ON pl.id = pt.id
+	GROUP BY pt.id
+	HAVING COUNT(*) >= 2
 );
 ```
