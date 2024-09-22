@@ -161,4 +161,8 @@ I això mostraria algo com:
 
 # Consultes sobre diverses Taules
 ## Diferencia "WHERE" i "HAVING"
-- `WHERE`: Filtrar Abans de
+- `WHERE`: Filtrar **abans** d'agrupar-se.
+- `HAVING`: Filtrar **després** d'agrupar-se. Útil amb `SUM()`, `COUNT()`,...
+
+## Unió
+Resultat és la unió de dues sentències `SELECT`.
