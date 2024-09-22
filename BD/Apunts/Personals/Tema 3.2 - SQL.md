@@ -181,6 +181,8 @@ FROM pokemons_gen2;
 ```
 
 ## Diferència
-
+Dues formes diferents de fer-ho: 
+- `NOT IN`: 
+- `NOT EXISTS`:
 
 
