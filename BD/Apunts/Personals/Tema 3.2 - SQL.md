@@ -197,7 +197,8 @@ WHERE pa.id NOT IN (
 ```
 
 ### Exemple `NOT EXISTS`
-[//]
+[//]: `SELECT 1` només fa que retorni 1, per la sub-consulta. NO és més eficient.
+
 ```postgreSQL
 SELECT pa.name
 FROM pokemons_all pa
@@ -205,5 +206,16 @@ WHERE pa.id NOT EXISTS (
 	SELECT 1
 	FROM pokemon_legendary pl
 	WHERE pa.id = pl.id 
+);
+```
+
+# Subconsultes en `DELETE`, `UPDATE` i `SELECT`
+## `DELETE`
+```postgreSQL
+DELETE FROM pokemons p
+WHERE NOT EXISTS (
+	SELECT 1
+	FROM pokemon_legendary pl
+	WHERE p.id = pl.id
 );
 ```
