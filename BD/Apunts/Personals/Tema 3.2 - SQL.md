@@ -182,7 +182,7 @@ FROM pokemons_gen2;
 
 ## Diferència
 Dues formes diferents de fer-ho: 
-- `NOT IN`: 
+- `NOT IN`: Compara els valors d'una columna de la consulta principal amb els valors de la sub-consulta. Cuidado per què amb NULL falla.
 - `NOT EXISTS`:
 
 
