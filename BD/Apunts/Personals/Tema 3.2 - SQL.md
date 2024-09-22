@@ -182,11 +182,11 @@ FROM pokemons_gen2;
 
 ## Diferència
 Dues formes diferents de fer-ho: 
-- `NOT IN`: Compara els valors d'una columna de la consulta principal amb els valors de la sub-consulta. Cuidado per què amb NULL falla.
+- `NOT IN`: Compara els valors d'una columna de la consulta principal amb els valors de la sub-consulta. **! Compte per què amb NULL falla !**
 - `NOT EXISTS`: Verifica si una condició és verdadera o falsa per cada fila.
 
 ### Exemple `NOT IN`
-Mostrar pokemons d
+Mostrar Pokèmons que no són llegendaris:
 ```postgreSQL
 SELECT pa.name
 FROM pokemons_all pa
@@ -196,4 +196,14 @@ WHERE pa.id NOT IN (
 );
 ```
 
-
+### Exemple `NOT EXISTS`
+[//]
+```postgreSQL
+SELECT pa.name
+FROM pokemons_all pa
+WHERE pa.id NOT EXISTS (
+	SELECT 1
+	FROM pokemon_legendary pl
+	WHERE pa.id = pl.id 
+);
+```
