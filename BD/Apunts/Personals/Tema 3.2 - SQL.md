@@ -233,13 +233,18 @@ WHERE p.hp >= (
 ```
 
 # Subconsultes en `INSERT`
-Afegir a la taula de pokemons normal els pokemons llegendaris que tinguin 2 o més tipus:
+Afegir a la taula de pokemons normal els pokemons llegendaris que tinguin 2 o més tipus.
+[//]: Per fer més fàcil la consulta, el tipus que reben aquest nous pokemons és "Multi-tipo".
 
 ```postgreSQL
 INSERT INTO pokemons (id, name, type)
-	SELECT pl.id, pl.name, 'Multi-tipo'
-	FROM pokemons_legendary pl 
-		INNER JOIN pokemons_tipos pt ON pl.id = pt.id
-	GROUP BY pl.id, pl.name
-	HAVING COUNT(pt.id) >= 2
+SELECT pl.id, pl.name, 'Multi-tipo'
+FROM pokemons_legendary pl 
+	INNER JOIN pokemons_tipos pt ON pl.id = pt.id
+GROUP BY pl.id, pl.name
+HAVING COUNT(pt.id) >= 2;
+```
+
+```ad-important
+Recorda que si fas un `GROUP BY, totes les columnes del `SELECT` 
 ```
