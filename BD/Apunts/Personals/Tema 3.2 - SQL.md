@@ -166,3 +166,21 @@ I això mostraria algo com:
 
 ## Unió
 Resultat és la unió de dues sentències `SELECT`.
+
+```ad-important
+El resultat de totes les consultes han de tindre MATEIX # DE COLS i han de ser del MATEIX TIPUS.
+```
+
+### Exemple
+```postgreSQL
+SELECT pkmn_name
+FROM pokemons_gen1
+UNION
+SELECT pkmn_name
+FROM pokemons_gen2;
+```
+
+## Diferència
+
+
+
