@@ -63,30 +63,30 @@ CREATE TABLE tPokedex (
 );
 ```
 
-## Inserció de Files
+# Inserció de Files
 Si no es fiquen les columnes on van les dades que s'han d'introduir, s'han de ficar en ordre tal com està definida la taula. Altrament, s'ha de respectar l'ordre de menció del nom de les taules.
 En el futur podrem veure que el valor que s'introdueix pot vindre donat de subconsultes.
 
-### Exemples
+## Exemples
 ```PostgreSQL
 INSERT INTO tPokedex(pkmn_id, pkmn_name, pkmn_hp, pkmn_attack)
 VALUES (1, Bulbasur, 49, 45),
 VALUES (2, Ivysaur, 62, 60);
 ```
 
-## Esborrat de Files
+# Esborrat de Files
 ```PostgreSQL
 DELETE FROM table_name
 WHERE <conditions>;
 ```
 
-### Exemples
+## Exemples
 ```PostgreSQL
 DELETE FROM tPokedex
 WHERE pkmn_hp=30 AND pkmn_attack<=30;
 ```
 
-## Modificació de Files
+# Modificació de Files
 És modifiquen les columnes que estiguin especificades en el **SET** que compleixin la condició **WHERE** de la taula **UPDATE**.
 ```PostgreSQL
 UPDATE tName
@@ -94,16 +94,16 @@ SET col_name = {expression/NULL}, col_name = {expression/NULL}, ...
 WHERE <conditions>;
 ```
 
-### Exemples
+## Exemples
 ```PostgreSQL
 UPDATE tPokedex
 SET pkmn_hp = pkmn_hp+50, pkmn_attack = 100
 WHERE pkmn_id = 100;
 ```
 
-## Consultes sobre una Taula
-### Format Bàsic
-#### Exemple
+# Consultes sobre una Taula
+## Format Bàsic
+### Exemple
 ```PostgreSQL
 SELECT *
 FROM tPokedex
@@ -114,9 +114,9 @@ WHERE
 	AND pkmn_hp BETWEEN 100 AND 200;
 ```
 
-### Ordenació
+## Ordenació
 Si no s'especifica ``DESC`` s'entén que és `ASC`.
-#### Exemple
+### Exemple
 En aquest cas, s'ordena per menor attack (mínim 100) i en cas d'empat, s'ordena per nom ascendent.
 ```PostgreSQL
 SELECT pkmn_id, pkmn_name, pkmn_attack
@@ -125,7 +125,7 @@ WHERE pkmn_attack>=100
 ORDER BY pkmn_attack DESC, pkmn_name
 ```
 
-### Agregació
+## Agregació
 - **COUNT:**
 	- **COUNT(\*):**  Número de files que compleixen condició del ``WHERE``. Compta les NULL.
 	- **COUNT(DISTINCT col_name):** Número de valors diferents de la columna (sense comptar NULL).
@@ -133,7 +133,7 @@ ORDER BY pkmn_attack DESC, pkmn_name
 
 La diferencia entre ``COUNT(col_name)`` i ``COUNT(\*)`` és per quan ``col_name`` pot ser NULL. 
 
-#### Exemple
+### Exemple
 ```PostgreSQL
 SELECT 
 	COUNT(DISTINCT pkm_id) AS quant_total,
@@ -142,9 +142,9 @@ SELECT
 FROM tPokedex
 ```
 
-### Agrupació de Files
+## Agrupació de Files
 Agrupar resultats depenent d'una columna.
-#### Exemple
+### Exemple
 ```PostgreSQL
 SELECT pkmn_type, COUNT(*) AS quant_pkmns
 FROM tPokedex
@@ -159,3 +159,6 @@ I això mostraria algo com:
 | fire      | 10          |
 
 
+# Consultes sobre diverses Taules
+## Diferencia "WHERE" i "HAVING"
+- `WHERE`: Filtrar Abans de
