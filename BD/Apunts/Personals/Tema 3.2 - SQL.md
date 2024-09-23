@@ -210,10 +210,15 @@ WHERE pa.id NOT EXISTS (
 ```
 
 # Subconsultes en `DELETE`, `UPDATE` i `SELECT`
+
+```ad-caution
+NO FUNCIONEN ELS ALIAS DE LES TAULES
+```
+
 ## Exemple `DELETE`
 Eliminar de la taula `pokemons` els que no siguin llegendaris:
 ```postgreSQL
-DELETE FROM pokemons p
+DELETE FROM pokemons
 WHERE NOT EXISTS (
 	SELECT 1
 	FROM pokemons_legendary pl
@@ -224,9 +229,9 @@ WHERE NOT EXISTS (
 ## Exemple `UPDATE`
 Pujar 50 punts d'atac aquells que tinguin més vida que la vida mitjana dels llegendaris:
 ```postgreSQL
-UPDATE pokemons p
-SET p.attk = p.attk + 50
-WHERE p.hp >= (
+UPDATE pokemons
+SET attk = attk + 50
+WHERE hp >= (
 	SELECT AVG(pl.hp)
 	FROM pokemons_legendary pl
 );
