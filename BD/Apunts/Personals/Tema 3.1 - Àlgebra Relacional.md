@@ -49,6 +49,12 @@ $$
 - Tots el i attributs han de ser del mateix domini.
 ```
 
+
+## Reanomenament (ρ)
+$$
+\text{trainers} = \rho_{\text{trainer\_id/id}} (\text{trainers})
+$$
+
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
@@ -68,10 +74,6 @@ $$
 4. Finalment mostrem només el nom de l'entrenador i el nom del pokemon 
 $$
 \Pi_{\text{trainers.name, pokemons.name}}(FORTS)
-$$
-
-$$
-\text{trainers} = \rho_{\text{trainer_id/id}} (\text{trainers})
 $$
 
 # Links
