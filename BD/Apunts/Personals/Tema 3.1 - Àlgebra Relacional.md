@@ -39,8 +39,9 @@ Actual igual la diferència en "Teoria de Conjunts".
 Agafa les tuples (files) que estan en una relació i no en l'altra.
 Exemple:
 $$
-\Pi  { name}
+\Pi_{name} (\sigma_{main-type='fire'}(\text{Pokemons}) - \Pi_{name} (\sigma_{attack>=100}(\text{Pokemons}))
 $$
+
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
