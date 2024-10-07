@@ -52,14 +52,14 @@ $$
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
-**Exemple**: Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipu
+**Exemple**: Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
 1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
 $$
 \text{TOTES\_COMB} = (\text{trainers} \times \text{pokemons})
 $$
 2. Ara seleccionem aquells tuples on la especialitat de l'entrenador sigui la mateixa que el tipus principal del pokemon.
 $$
-\text{NOMES\_ESPECIALITES} = \sigma_{\text{trainers.type} = \text{pokemons.main-type}} (\text{TOTES\_COMB})
+\text{NOMES\_ESPECIALISTES} = \sigma_{\text{trainers.specialty} = \text{pokemons.main-type}} (\text{TOTES\_COMB})
 $$
 3. Seleccionem aquells pokemons que siguin forts.
 $$
