@@ -34,7 +34,13 @@ $$
 - Tots el i attributs han de ser del mateix domini.
 ```
 
-
+## Diferència (-)
+Actual igual la diferència en "Teoria de Conjunts".
+Agafa les tuples (files) que estan en una relació i no en l'altra.
+Exemple:
+$$
+\Pi  { name}
+$$
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
