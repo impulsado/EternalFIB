@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 3.1 - Algebra Relacional.md",
+                "file": "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 3.1 - Algebra Relacional.md",
+                "file": "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 3.1 - Algebra Relacional.md",
+                "file": "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 3.1 - Algebra Relacional.md"
+                "file": "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md"
               }
             }
           }
@@ -147,10 +147,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3b711df1bfea0580",
+  "active": "b136daf344eb0d0f",
   "lastOpenFiles": [
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
-    "BD/Apunts/Personals/Tema 3.1 - Algebra Relacional.md",
+    "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "BD/README.md",
     "BD/Apunts/Personals",
     "BD/Apunts",
