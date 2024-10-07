@@ -51,7 +51,7 @@ $$
 
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
-
+Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi 
 
 # Links
 - Relational Algebra Simplified
