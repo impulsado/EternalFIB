@@ -54,10 +54,11 @@ Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
 1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
 $$
+\text{TOTES\_COMB} = (\text{trainers} \times \text{pokemons})
 $$
-
+2. Ara seleccionem aquells tuples on la especialitat de l'entrenador sigui la mateixa que el tipus principal del pokemon.
 $$
-\sigma_{\text{trainer.type} \neq \text{pokemon.main-type}} (\text{TOTS})
+\sigma_{\text{trainers.type} = \text{pokemons.main-type}} (\text{TOTES\_COMB})
 $$
 
 
@@ -65,5 +66,4 @@ $$
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
 - Llenguatges: Àlgebra Relacional (FIB)
-https://learnsql2.fib.upc.edu/moodle/file.php/26/0_Material_general_assignatura/tema3algebra.pdf
-
+https://learnsql2.fib.upc.edu/moodle/file.php/26/0_Material_general_assignatura/tema3algebr
