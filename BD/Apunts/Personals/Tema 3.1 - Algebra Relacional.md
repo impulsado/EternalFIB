@@ -23,8 +23,9 @@ Elimina tuples repetides.
 Actua com la unió en "Teoria de Conjunts".
 Elimina tuples repetides (Si estan en la intersecció per exemple).
 Recorda que qualsevol relació es un conjunt (set).
+Important que els atributs siguin els mateixos.
 **Format**: `Π_<attribute1,attriubte2,...> (Relation_1) ∪ Π_<attribute1,attriubte2,...> (Relation_2)`
-
+**Exemple**: `Π_name (σ_type='fire' ) ∪ Π_<attribute1,attriubte2,...> (Relation_2)`
 
 # Links
 - Relational Algebra Simplified
