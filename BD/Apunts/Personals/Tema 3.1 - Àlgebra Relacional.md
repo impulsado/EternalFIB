@@ -52,6 +52,7 @@ $$
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
+**Exemple**: Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipu
 1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
 $$
 \text{TOTES\_COMB} = (\text{trainers} \times \text{pokemons})
@@ -62,11 +63,12 @@ $$
 $$
 3. Seleccionem aquells pokemons que siguin forts.
 $$
-\text{FORTS} = \sigma_{\text{pokemons.attack>=150} \}
+\text{FORTS} = \sigma_{\text{pokemons.attack>=150} \wedge \text{pokemons.hp>200}} (\text{NOMES\_ESPECIALISTES})
 $$
-
-5. Finalment mostrem només el nom de l'entrenador i el nom del pokemon 
-
+4. Finalment mostrem només el nom de l'entrenador i el nom del pokemon 
+$$
+\Pi_{\text{trainers.name, pokemons.name}}(FORTS)
+$$
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
