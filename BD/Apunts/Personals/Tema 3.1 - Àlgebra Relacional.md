@@ -52,18 +52,14 @@ $$
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
-**Exemple**: Trobar nom de tots els professors que estan en el departament de "Física" juntament amb tots els "id" dels cursos que han ensenyat.  
-1. Primer (a falta de saber més símbols per resoldre-ho) agafem totes les possibles combinacions.
+1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
 $$
-\sigma_{Dept\_name='Física'(\text{Professors} \times \text{Departament})} = R_1
 $$
-2. D'aquestes totes possibles combinacions, només ens interessen aquelles que on el id del departament del professor sigui el mateix que el id del departament  
-
-
 
 $$
-\Pi_{name}( \sigma_{Dept\_Name = 'Física'} (\sigma(\text{Professors}) \cap \sigma(\text{Departament})) \times \Pi_{course}
+\sigma_{\text{trainer.type} \neq \text{pokemon.main-type}} (\text{TOTS})
 $$
+
 
 # Links
 - Relational Algebra Simplified
