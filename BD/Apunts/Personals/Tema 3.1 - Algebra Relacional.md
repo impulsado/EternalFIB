@@ -28,9 +28,11 @@ Important que els atributs siguin els mateixos.
 **Exemple**: 
 $$
 \Pi_{\text{name}} \left( \sigma_{\text{main-type} = 'fire' \land \text{attack} < 100} (\text{Pokemons}) \right) \cup \Pi_{\text{name}} \left( \sigma_{\text{sec-type} = 'bug' \lor \text{type} = 'steel'} (\text{Pokemons}) \right)
-\]
 $$
-
+```ad-important
+Nº attributs en les relacions han de ser les mateixes.
+Tots el i attributs han de ser del mateix domini.
+```
 
 # Links
 - Relational Algebra Simplified
