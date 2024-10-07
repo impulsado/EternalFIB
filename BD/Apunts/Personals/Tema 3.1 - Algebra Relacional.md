@@ -1,3 +1,10 @@
+## Símbols
+**AND**: ∧  
+**OR**: ∨  
+**NOT**: ¬
+**NULL**: ω
+**full outer join**: ⟗  
+**antijoin**: ▷
 ## SELECT (σ)
 Selecciona les tuples (files) que compleixen la condició.
 **Format**: ``σ_<select_cond> (Relation)``
