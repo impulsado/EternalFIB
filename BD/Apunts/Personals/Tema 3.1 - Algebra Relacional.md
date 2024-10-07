@@ -20,8 +20,10 @@ Elimina tuples repetides.
 **Exemple2**: ``Π_name(σ_type='fire' (Pokemons))``
 
 ## Unió (∪)
-
-Format: `E_1 ∪ E_2`
+Actua com la unió en "Teoria de Conjunts".
+Elimina tuples repetides (Si estan en la intersecció per exemple).
+Recorda que qualsevol relació es un conjunt (set).
+**Format**: `Π_<attribute1,attriubte2,...> (Relation_1) ∪ Π_<attribute1,attriubte2,...> (Relation_2)`
 
 
 # Links
