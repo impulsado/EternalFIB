@@ -54,7 +54,7 @@ Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
 **Exemple**: Trobar nom de tots els professors que estan en el departament de "Física" juntament amb tots els "id" dels cursos que han ensenyat.  
 $$
-\sigma_{Dept\_name='Física'()}
+\sigma_{Dept\_name='Física'(\text{Professors} \times \text{Departament})} = R
 $$
 $$
 \Pi_{name}( \sigma_{Dept\_Name = 'Física'} (\sigma(\text{Professors}) \cap \sigma(\text{Departament})) \times \Pi_{course}
