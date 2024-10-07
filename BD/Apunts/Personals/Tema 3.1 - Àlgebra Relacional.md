@@ -49,6 +49,8 @@ $$
 - Tots el i attributs han de ser del mateix domini.
 ```
 
+## Producte Cartesià (×)
+Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 
 
 # Links
