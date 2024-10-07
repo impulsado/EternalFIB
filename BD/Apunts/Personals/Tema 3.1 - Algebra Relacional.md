@@ -17,4 +17,16 @@ Només mostra els atributs (columnes) especificades.
 Elimina tuples repetides.
 **Format**: ``Π_<attribute1,attriubte2,...> (Relation)``
 **Exemple**: ``Π_name (Pokemons)``
-**Exemple2**: ``Π_name(σ_type=fire (Pokemons))``
+**Exemple2**: ``Π_name(σ_type='fire' (Pokemons))``
+
+## Unió (∪)
+
+Format: `E_1 ∪ E_2`
+
+
+# Links
+- Relational Algebra Simplified
+https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
+- Llenguatges: Àlgebra Relacional (FIB)
+https://learnsql2.fib.upc.edu/moodle/file.php/26/0_Material_general_assignatura/tema3algebra.pdf
+
