@@ -1,5 +1,4 @@
-# Àlgebra Relacional
-## Símbols
+# Símbols
 **AND**: ∧  
 **OR**: ∨  
 **NOT**: ¬
@@ -7,6 +6,7 @@
 **full outer join**: ⟗  
 **antijoin**: ▷
 
+# Operadors Unàris
 ## Select (σ)
 Selecciona les tuples (files) que compleixen la condició.
 Mostra totes les columnes, com si fos un "SELECT \*"
@@ -20,6 +20,7 @@ Elimina tuples repetides.
 **Exemple**: ``Π_name (Pokemons)``
 **Exemple2**: ``Π_name(σ_type='fire' (Pokemons))``
 
+# Operadors Binaris
 ## Unió (∪)
 Actua com la unió en "Teoria de Conjunts".
 Elimina tuples repetides (Si estan en la intersecció per exemple).
@@ -29,6 +30,7 @@ Recorda que qualsevol relació es un conjunt (set).
 $$
 \Pi_{\text{name}} \left( \sigma_{\text{main-type} = 'fire' \land \text{attack} < 100} (\text{Pokemons}) \right) \cup \Pi_{\text{name}} \left( \sigma_{\text{sec-type} = 'bug' \lor \text{type} = 'steel'} (\text{Pokemons}) \right)
 $$
+
 ```ad-important
 - Nº attributs en les relacions han de ser les mateixes.
 - Tots el i attributs han de ser del mateix domini.
@@ -37,10 +39,17 @@ $$
 ## Diferència (-)
 Actual igual la diferència en "Teoria de Conjunts".
 Agafa les tuples (files) que estan en una relació i no en l'altra.
-Exemple:
+**Exemple**:
 $$
 \Pi_{name} (\sigma_{main-type='fire'}(\text{Pokemons}) - \Pi_{name} (\sigma_{attack>=100}(\text{Pokemons}))
 $$
+
+```ad-important
+- Nº attributs en les relacions han de ser les mateixes.
+- Tots el i attributs han de ser del mateix domini.
+```
+
+
 
 # Links
 - Relational Algebra Simplified
