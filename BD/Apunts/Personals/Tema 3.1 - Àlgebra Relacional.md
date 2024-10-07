@@ -63,12 +63,17 @@ $$
 $$
 3. Seleccionem aquells pokemons que siguin forts.
 $$
-\text{FORTS} = \sigma_{\text{pokemons.attack>=150} \wedge \text{pokemons.hp>200}} (\text{NOMES\_ESPECIALISTES})
+\text{FORTS} = \sigma_{\text{pokemons.attac} \geq 150 \wedge \text{pokemons.hp>200}} (\text{NOMES\_ESPECIALISTES})
 $$
 4. Finalment mostrem només el nom de l'entrenador i el nom del pokemon 
 $$
 \Pi_{\text{trainers.name, pokemons.name}}(FORTS)
 $$
+
+$$
+\text{trainers} = \rho_{\text{trainer_id/id}} (\text{trainers})
+$$
+
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
