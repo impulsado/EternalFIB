@@ -53,9 +53,14 @@ $$
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
 **Exemple**: Trobar nom de tots els professors que estan en el departament de "Física" juntament amb tots els "id" dels cursos que han ensenyat.  
+1. Primer (a falta de saber més símbols per resoldre-ho) agafem totes les possibles combinacions.
 $$
-\sigma_{Dept\_name='Física'(\text{Professors} \times \text{Departament})} = R
+\sigma_{Dept\_name='Física'(\text{Professors} \times \text{Departament})} = R_1
 $$
+2. D'aquestes totes possibles combinacions, només ens interessen aquelles que on el id de professor i  
+
+
+
 $$
 \Pi_{name}( \sigma_{Dept\_Name = 'Física'} (\sigma(\text{Professors}) \cap \sigma(\text{Departament})) \times \Pi_{course}
 $$
