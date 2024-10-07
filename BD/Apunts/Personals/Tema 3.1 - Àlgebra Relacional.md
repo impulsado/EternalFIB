@@ -58,12 +58,18 @@ $$
 $$
 2. Ara seleccionem aquells tuples on la especialitat de l'entrenador sigui la mateixa que el tipus principal del pokemon.
 $$
-\sigma_{\text{trainers.type} = \text{pokemons.main-type}} (\text{TOTES\_COMB})
+\text{NOMES\_ESPECIALITES} = \sigma_{\text{trainers.type} = \text{pokemons.main-type}} (\text{TOTES\_COMB})
+$$
+3. Seleccionem aquells pokemons que siguin forts.
+$$
+\text{FORTS} = \sigma_{\text{pokemons.attack>=150} \}
 $$
 
+5. Finalment mostrem només el nom de l'entrenador i el nom del pokemon 
 
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
 - Llenguatges: Àlgebra Relacional (FIB)
-https://learnsql2.fib.upc.edu/moodle/file.php/26/0_Material_general_assignatura/tema3algebr
+https://learnsql2.fib.upc.edu/moodle/file.php/26/0_Material_general_assignatura/tema3algebra.pdf
+
