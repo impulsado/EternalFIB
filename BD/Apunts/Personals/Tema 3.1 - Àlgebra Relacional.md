@@ -57,7 +57,7 @@ Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es veg
 $$
 \sigma_{Dept\_name='Física'(\text{Professors} \times \text{Departament})} = R_1
 $$
-2. D'aquestes totes possibles combinacions, només ens interessen aquelles que on el id de professor i  
+2. D'aquestes totes possibles combinacions, només ens interessen aquelles que on el id del departament del professor sigui el mateix que el id del departament  
 
 
 
