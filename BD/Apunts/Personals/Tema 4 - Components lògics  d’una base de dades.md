@@ -9,7 +9,6 @@ Unitat administrativa per agrupar un conjunt components.
 ```SQL
 SELECT *
 FROM assignacions a INNER JOIN professors p ON p.idProf = a.idProf
-GROUP BY a.idAssig, a.quadrimestre
+GROUP BY a.idAssig, a.quadrimestre  -- assignats a una assignatura
 HAVING COUNT(DISTINCT p.codiDept)>1
-
 ```
