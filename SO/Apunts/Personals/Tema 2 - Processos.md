@@ -1,5 +1,6 @@
 ## Seqüencials v.s. Concurrents
 ### Sequencial
+Fins que no mor un fill, no pasa a  
 ```C
 for (i = 0; i<num_hijos; i++) {
 	int pid = fork();
@@ -7,6 +8,6 @@ for (i = 0; i<num_hijos; i++) {
 		printf("HIJO: %d PID", pid);
 		exit(0);
 	}
-	waitpid(pid, NULL)  // Esperar a la mort del fill
-	}
+	waitpid(pid, NULL, 0);  // Esperar a la mort del fill
+}
 ```
