@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7325111aac8f52ee",
@@ -148,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "275c6f6f8bbef44c",
+  "active": "7db1ba6c3f01a7ed",
   "lastOpenFiles": [
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
