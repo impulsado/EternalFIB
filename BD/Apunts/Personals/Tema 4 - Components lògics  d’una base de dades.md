@@ -17,14 +17,14 @@ Desde la vista es poden modificar les dades de la taula. Si modifiquem una dada 
 Per a evitar-ho, hi ha **algunes** vistes que **no** són **actualitzables**. 
 Si és permet quan:
 - Vista basada en una única taula o una vista si actualitzable. Aquesta no pot tindre `DISTINCT` ni funcions d'agregació (`MAX()`, `COUNT()`, ...).
-- El `SELECT` Ha d'incloure tots els camps de la taula que tinguin restriccions de `NOT NULL` i no tinguin valor per defecte.
+- El `SELECT` ha d'incloure tots els camps de la taula que tinguin restriccions de `NOT NULL` i no tinguin valor per defecte.
 - No poden haver `GROUP BY`.
-- 
 
 ```SQL
 CREATE VIEW _view_name_ [nom_col1, nom_col2, ...] AS  
 SELECT _column1_, _column2_, ...  
 FROM _table_name_  
-WHERE _condition_;
+WHERE _condition_
+[WITH CHECK OPTIONS];
 ```
 
