@@ -31,3 +31,4 @@ WHERE _condition_
 ```
 
 ## Esquema d'Informació
+Catàleg conté un esquema d'informacio
