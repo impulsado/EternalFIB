@@ -31,4 +31,12 @@ WHERE _condition_
 ```
 
 ## Esquema d'Informació
-Catàleg conté un esquema d'informacio
+Cada catàleg conté un esquema d'informacio.
+Conté noms i atributs de taules, índexs, restriccions de columna,...
+És un esquema dels esquemes.
+Conté vistes accesibles pels usuaris per exemple:
+- SCHEMATA: Informació  de cada esquema del catàleg
+- DOMAINS: Informació del domini.
+- TABLES: Informació sobre les taules.
+
+![[Pasted image 20241008154551.png]]
