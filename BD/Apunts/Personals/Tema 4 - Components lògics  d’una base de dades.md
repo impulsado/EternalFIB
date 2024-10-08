@@ -14,8 +14,12 @@ No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 Permeten independencia lògica de les dades.
 No es fica ``ORDER BY`` en la vista. 
 Desde la vista es poden modificar les dades de la taula. Si modifiquem una dada i al treïem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
-Per a evitar-ho, hi ha **algunes** vistes que **no** són **actualitzables**. C:
-- Vista basada 
+Per a evitar-ho, hi ha **algunes** vistes que **no** són **actualitzables**. 
+Si és permet quan:
+- Vista basada en una única taula o una vista si actualitzable. Aquesta no pot tindre `DISTINCT` ni funcions d'agregació (`MAX()`, `COUNT()`, ...).
+- El `SELECT` Ha d'incloure tots els camps de la taula que tinguin restriccions de `NOT NULL` i no tinguin valor per defecte.
+- No poden haver `GROUP BY`.
+- 
 
 ```SQL
 CREATE VIEW _view_name_ [nom_col1, nom_col2, ...] AS  
