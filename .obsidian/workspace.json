@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "BD/Apunts/Personals/Tema 4 -.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "BD/Apunts/Personals/Tema 4 -.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "BD/Apunts/Personals/Tema 4 -.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
+                "file": "BD/Apunts/Personals/Tema 4 -.md"
               }
             }
           }
@@ -149,12 +149,13 @@
   },
   "active": "7db1ba6c3f01a7ed",
   "lastOpenFiles": [
-    "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
+    "BD/Apunts/Personals/Tema 3.2 - SQL.md",
+    "BD/Apunts/Personals/Tema 4 -.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
+    "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "SO/Apunts/Personals",
     "SO/Apunts",
     "SO",
-    "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/README.md",
     "BD/Apunts/Personals",
     "BD/Apunts",
