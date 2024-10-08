@@ -10,6 +10,8 @@ Unitat administrativa per agrupar un conjunt components.
 No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 ```
 
+## Connexions
+
 ## Vistes
 Permeten independencia lògica de les dades.
 No es fica ``ORDER BY`` en la vista. 
@@ -28,3 +30,4 @@ WHERE _condition_
 [WITH CHECK OPTIONS];
 ```
 
+## Esquema d'Informació
