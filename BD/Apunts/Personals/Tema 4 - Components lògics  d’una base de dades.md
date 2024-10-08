@@ -14,7 +14,7 @@ No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 Permeten independencia lògica de les dades.
 No es fica ``ORDER BY`` en la vista. 
 ```SQL
-CREATE VIEW _view_name_ (nom_col1, nom_col2, ...) AS  
+CREATE VIEW _view_name_ [nom_col1, nom_col2, ...] AS  
 SELECT _column1_, _column2_, ...  
 FROM _table_name_  
 WHERE _condition_;
