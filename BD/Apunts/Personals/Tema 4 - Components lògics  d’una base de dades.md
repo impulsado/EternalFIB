@@ -14,6 +14,9 @@ No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 Permeten independencia lògica de les dades.
 No es fica ``ORDER BY`` en la vista. 
 Desde la vista es poden modificar les dades de la taula. Si modifiquem una dada i al treïem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
+Per a evitar-ho, hi ha **algunes** vistes que **no** són **actualitzables**:
+- [ ] Mirar quines són les vistes que si permeten act.
+
 ```SQL
 CREATE VIEW _view_name_ [nom_col1, nom_col2, ...] AS  
 SELECT _column1_, _column2_, ...  
