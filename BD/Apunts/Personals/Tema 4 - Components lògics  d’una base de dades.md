@@ -1,6 +1,6 @@
-# Conceptes
+# Preliminars
 - Catàleg: 
 - Esquema
 - Servidor:
 
-# Esquemes
+# Components
