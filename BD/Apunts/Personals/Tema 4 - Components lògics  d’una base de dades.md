@@ -10,3 +10,8 @@ Unitat administrativa per agrupar un conjunt components.
 No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 ```
 
+## Vistes
+Permeten independencia lògica de les dades.
+```SQL
+CREATE VIEW nom_vistsa [(col1)]
+```
