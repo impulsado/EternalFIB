@@ -63,7 +63,12 @@ Un signal es pot:
 - **Capturar**: Modificar la forma, per defecte, de com es gestiona.
 
 Els farem servir per:
-- **Sincronització de processos**: Pare invoca a fill per fer un càlcul. Quan fill acaba envia un SIGCHLD al pare que estava esperant. Aquest continua amb el resultat del càlcul.
+- **Sincronització de processos**
+- **Control de temps** (alarmes)
+
+```
+Procés executa codi -> Rep un signal -> Interromp l'execució d'aquest codi -> salta al handler associat al signal -> Executa el handler  
+```
 
 [//]: Recorda que un event és un succés que requereix atenció. Llavors un signal és una forma específica d'event.
 
