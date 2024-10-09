@@ -10,6 +10,8 @@ Codi i definició de dades que al ficar-ho en execució necessitem:
 - Oferir accés als dispositius. (Interactuar amb teclat, pantalla, ...)
 > Si un programa és simplement una suma de dos números i ja, el SO continua havent d'assignar memòria i inicialitzar registres. 
 
+![[programa.png]]
+
 **PCB (Process Control Bank)**
 Conté informació que el sistema necessita per gestionar un procés.
 Depen del sistema i de la màquina (NO portable).
@@ -32,6 +34,8 @@ Els fils comparteixen mateixos recursos, llavors els permet intercanviar informa
 - Grau de paral·lelisme: Nº processos paral·lels. Depen del HW+ Nº processos.
 
 **Estats d'un procés**
+Un procés no pot estar tota l'estona executant-se.
+És per això que hi ha una classificació dels estats.
 
 
 ## Seqüencials v.s. Concurrents
