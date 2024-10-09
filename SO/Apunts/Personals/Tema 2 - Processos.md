@@ -68,6 +68,7 @@ Un signal es pot:
 "SIGUSR1" i "SIGUSR2" són signals que no estan relacionats a un esdeveniment específic.
 ❗"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
 ❗"SIGSEGV", "SIGILL", "SIGFPE" **NO** és poden bloquejar si son per culpa d'una excepció, però si que es poden gestionar.
+Si un procés bloqueja X signal, no el rep i el SO el marca com a pendent de tractar. Quan aquest mateix procés el desbloqueja aquest X signal, el rebrà i el tractarà.
 
 | SIGNAL      | TRACTAMENT DEFAULT | EVENT                                                   | CAPTURABLE? | BLOCK?                                   |
 | ----------- | ------------------ | ------------------------------------------------------- | ----------- | ---------------------------------------- |
@@ -78,5 +79,5 @@ Un signal es pot:
 | **SIGALRM** | Terminate          | Temporitzador definit per la funció `alarm()` ha acabat | SI          | SI                                       |
 | **SIGKILL** | Terminate          | Matar el procés                                         | NO          | NO                                       |
 | **SIGSEGV** | Core               | Invalid Memory Reference                                | SI          | Si és per excepció = NO. Altrament = SI. |
-| SIGUSR1     |                    |                                                         |             |                                          |
-| SIGUSR2     |                    |                                                         |             |                                          |
+| SIGUSR1     | Terminate          | Definit per l'usuari                                    | SI          | SI                                       |
+| SIGUSR2     | Terminate          | Definit per l'usuari                                    | SI          | SI                                       |
