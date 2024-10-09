@@ -67,12 +67,16 @@ Un signal es pot:
 ## Tipus de Signals
 "SIGUSR1" i "SIGUSR2" són signals que no estan relacionats a un esdeveniment específic.
 ❗"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
+❗"SIGSEGV", "SIGILL", "SIGFPE" **NO** és poden bloquejar si son per culpa d'una excepció, però si que es poden gestionar.
 
-| SIGNAL  | TRACTAMENT DEFAULT | EVENT                                                   | CAPTURABLE? | BLOCK? |
-| ------- | ------------------ | ------------------------------------------------------- | ----------- | ------ |
-| SIGCHLD | Ignore             | Procés fill ha acabat o ha estat aturat.                | SI          | SI     |
-| SIGCONT | -                  | Continua si estava aturat                               | SI          | SI     |
-| SIGSTOP | Stop               | Atura el procés                                         | NO          | NO     |
-| SIGINT  | Terminate          | Ctrl + C                                                | SI          | SI     |
-| SIGALRM | Terminate          | Temporitzador definit per la funció `alarm()` ha acabat | SI          | SI     |
-| SIGKILL | Terminate          |                                                         |             |        |
+| SIGNAL      | TRACTAMENT DEFAULT | EVENT                                                   | CAPTURABLE? | BLOCK?                                   |
+| ----------- | ------------------ | ------------------------------------------------------- | ----------- | ---------------------------------------- |
+| **SIGCHLD** | Ignore             | Procés fill ha acabat o ha estat aturat.                | SI          | SI                                       |
+| **SIGCONT** | -                  | Continua si estava aturat                               | SI          | SI                                       |
+| **SIGSTOP** | Stop               | Atura el procés                                         | NO          | NO                                       |
+| **SIGINT**  | Terminate          | Ctrl + C                                                | SI          | SI                                       |
+| **SIGALRM** | Terminate          | Temporitzador definit per la funció `alarm()` ha acabat | SI          | SI                                       |
+| **SIGKILL** | Terminate          | Matar el procés                                         | NO          | NO                                       |
+| **SIGSEGV** | Core               | Invalid Memory Reference                                | SI          | Si és per excepció = NO. Altrament = SI. |
+| SIGUSR1     |                    |                                                         |             |                                          |
+| SIGUSR2     |                    |                                                         |             |                                          |
