@@ -13,7 +13,8 @@ Depen del sistema i de la màquina (NO portable).
 
 **Fils d'execució (Threads)**
 "Thread"/"Subprocés" és una seqüencia de tasques encadenades molt petita.
-Un fil és una tasca que pot ser executada a l'hora a
+Un fil és una tasca que pot ser executada a l'hora amb una altra tasca. (Fer ús paral·lelisme).
+Els fils d'execució comparteixen mateixos recursos, llavors els permet intercanviar informació sense ús de crides a sistema.
 
 ## Seqüencials v.s. Concurrents
 ### Sequencial
