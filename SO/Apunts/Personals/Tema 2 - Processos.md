@@ -1,6 +1,8 @@
 ## PCB
 Conté informació que el sistema necessita per gestionar un procés.
-Depén del sistema i e l
+Depén del sistema i de la màquina (NO portable).
+- Espai d'adreces: Codi, pila, dades, ...
+- Context d'execució
 ## Seqüencials v.s. Concurrents
 ### Sequencial
 Fins que no mor un fill, no pasa a  
