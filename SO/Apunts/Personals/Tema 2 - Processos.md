@@ -68,9 +68,11 @@ Un signal es pot:
 "SIGUSR1" i "SIGUSR2" són signals que no estan relacionats a un esdeveniment específic.
 ❗"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
 
-| SIGNAL  | TRACTAMENT | EVENT                                    | CAPTURABLE? | BLOCK? |
-| ------- | ---------- | ---------------------------------------- | ----------- | ------ |
-| SIGCHLD | Ignore     | Procés fill ha acabat o ha estat aturat. | SI          | SI     |
-| SIGCONT | -          | Continua si estava aturat                | SI          | SI     |
-| SIGSTOP | Stop       | Atura el procés                          | NO          | NO     |
-| SIGINT  | Terminate  | Ctrl + C                                 |             |        |
+| SIGNAL  | TRACTAMENT DEFAULT | EVENT                                                   | CAPTURABLE? | BLOCK? |
+| ------- | ------------------ | ------------------------------------------------------- | ----------- | ------ |
+| SIGCHLD | Ignore             | Procés fill ha acabat o ha estat aturat.                | SI          | SI     |
+| SIGCONT | -                  | Continua si estava aturat                               | SI          | SI     |
+| SIGSTOP | Stop               | Atura el procés                                         | NO          | NO     |
+| SIGINT  | Terminate          | Ctrl + C                                                | SI          | SI     |
+| SIGALRM | Terminate          | Temporitzador definit per la funció `alarm()` ha acabat | SI          | SI     |
+| SIGKILL | Terminate          |                                                         |             |        |
