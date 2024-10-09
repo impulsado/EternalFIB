@@ -1,5 +1,13 @@
 # Conceptes
-P
+**Procés**
+Representació del SO d'un programa en execució.
+> Quan executem un programa -> Crea un procés.
+
+**Programa**
+Codi i definició de dades que al ficar-ho en execució necessitem:
+- Assig. memòria per a codi, pila i dades.
+- Inicialitzar registres de la CPU.
+- Oferir accés als dispositius.
 
 **PCB (Process Control Bank)**
 Conté informació que el sistema necessita per gestionar un procés.
