@@ -23,13 +23,14 @@ Depen del sistema i de la màquina (NO portable).
 
 **Concurrència**
 "Paral·lelisme Virtual". Permet executar diversos processos de forma simultània.
-Grau de concurrència: Nº processos concurrents. Només depen del nº processos.
+Grau de concurrència: Nº processos concurrents. Només depen del Nº processos.
 
 **Fils d'execució (Threads)**
 "Thread"/"Subprocés" és una seqüència de tasques encadenades.
 Un procés està format per:
 - Recursos: Memòria, Fitxers, Permisos, ...
 - Threads: Unitats d'execució que fan ús d'aquests recursos. (Pot ser 1 o +)
+
 Un fil és una tasca que pot ser executada a l'hora amb una altra tasca. (Fer ús paral·lelisme).
 Els fils comparteixen mateixos recursos, llavors els permet intercanviar informació sense ús de crides a sistema.
 Grau de paral·lelisme: Nº processos paral·lels. Depen del HW+ Nº processos.
@@ -37,7 +38,6 @@ Grau de paral·lelisme: Nº processos paral·lels. Depen del HW+ Nº processos.
 **Estats d'un procés**
 Un procés no pot estar tota l'estona executant-se.
 És per això que hi ha una classificació dels estats.
-
 
 # Gestió de Processos
 ## Seqüencials v.s. Concurrents
@@ -56,11 +56,13 @@ for (i = 0; i<num_hijos; i++) {
 
 # Signals
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
-L'altre procés ha de ser del mateix usuari.
+[//]: L'altre procés ha de ser del mateix usuari.
 La comanda `kill` envia un signal, no ha de perquè matar.
 Un signal es pot:
 - **Bloquejar**: Evitar que el procés rebi signal (Els ignori).
 - **Capturar**: Modificar la forma, per defecte, que es gestiona.
+
+[//]: Recorda que un event és un succés que requereix atenció. Llavors un signal és una forma específica d'event.
 
 ## Tipus de Signals
 
