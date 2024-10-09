@@ -62,6 +62,9 @@ Un signal es pot:
 - **Bloquejar**: Evitar que el procés rebi signal (Els ignori).
 - **Capturar**: Modificar la forma, per defecte, de com es gestiona.
 
+Els farem servir per:
+- **Sincronització de processos**: Pare invoca a fill per fer un càlcul. Quan fill acaba envia un SIGCHLD al pare que estava esperant. Aquest continua amb el resultat del càlcul.
+
 [//]: Recorda que un event és un succés que requereix atenció. Llavors un signal és una forma específica d'event.
 
 ## Tipus de Signals
