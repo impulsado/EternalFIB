@@ -112,9 +112,6 @@ kill(int pid, int signal);
 	- `SIG_IGN`: Ignorar signal rebut.
 	- `SIG_DFL`: Handler per defecte.
 	- `custom_handler`: Kernel executa funció específica. El SO s'encarrega de passar el nº de signal. Això permet que diversos signals pugin fer servir mateixa funció.
-	```C
-	void custom_handler(int signal);
-```
 - **sa_mask**: Màscara de signals que volem {Block/Allow}. Fa un OR de la màscara prèvia (Manté els bloquejats previs).
 	- Buida: Només bloqueja el signal que s'està tractant.
 	- A l'acabar el handler, es restaura la sa_mask prèvia.
@@ -123,6 +120,13 @@ kill(int pid, int signal);
 	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mateix signal, "reiniciar" la syscall. 
 
 ```C
+void custom_handler(int sig_num);
+
 struct sigaction sa;
-sa.handler = 
+// Handler específic
+sa.handler = custom_handler;
+// Més opcions del comportament del Handler
+sa.sa_flags = SA_RESTART;
+// Signals block durant execució del Handler
+sigemptyset(&sa.sa_mask);
 ```
