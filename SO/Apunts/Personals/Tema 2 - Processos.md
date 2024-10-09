@@ -1,4 +1,5 @@
 # Conceptes
+P
 
 **PCB (Process Control Bank)**
 Conté informació que el sistema necessita per gestionar un procés.
@@ -10,6 +11,7 @@ Depen del sistema i de la màquina (NO portable).
 
 **Concurrència**
 "Paral·lelisme Virtual". Permet executar diversos processos de forma simultània.
+- Grau de concurrència: Nº processos concurrents. Només depen del nº processos.
 
 **Fils d'execució (Threads)**
 "Thread"/"Subprocés" és una seqüència de tasques encadenades.
@@ -18,6 +20,7 @@ Un procés està format per:
 - Threads: Unitats d'execució que fan ús d'aquests recursos. (Pot ser 1 o +)
 Un fil és una tasca que pot ser executada a l'hora amb una altra tasca. (Fer ús paral·lelisme).
 Els fils comparteixen mateixos recursos, llavors els permet intercanviar informació sense ús de crides a sistema.
+- Grau de paral·lelisme: Nº processos paral·lels. Depen del HW+ Nº processos.
 
 **Estats d'un procés**
 
