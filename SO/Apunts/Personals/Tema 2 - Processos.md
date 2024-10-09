@@ -7,7 +7,8 @@ Representació del SO d'un programa en execució.
 Codi i definició de dades que al ficar-ho en execució necessitem:
 - Assig. memòria per a codi, pila i dades.
 - Inicialitzar registres de la CPU.
-- Oferir accés als dispositius.
+- Oferir accés als dispositius. (Interactuar amb teclat, pantalla, ...)
+> Si un programa és simplement una suma de dos números i ja, el sistema 
 
 **PCB (Process Control Bank)**
 Conté informació que el sistema necessita per gestionar un procés.
