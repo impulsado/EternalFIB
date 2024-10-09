@@ -57,7 +57,7 @@ for (i = 0; i<num_hijos; i++) {
 # Signals
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
 [//]: L'altre procés ha de ser del mateix usuari.
-La comanda `kill` envia un signal, no ha de perquè matar.
+
 Un signal es pot:
 - **Bloquejar**: Evitar que el procés rebi signal (Els ignori).
 - **Capturar**: Modificar la forma, per defecte, de com es gestiona.
@@ -76,8 +76,9 @@ Procés executa codi -> Rep un signal -> Interromp l'execució d'aquest codi -> 
 "SIGUSR1" i "SIGUSR2" són signals que no estan relacionats a un esdeveniment específic.
 ❗"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
 ❗"SIGSEGV", "SIGILL", "SIGFPE" **NO** és poden bloquejar si son per culpa d'una excepció, però si que es poden gestionar.
+Normalment el bloqueig d'un signal es temporal. Dins el mateix procés hi ha un bloqueig i desbloqueig.
 Si un procés bloqueja X signal, no el rep i el SO el marca com a pendent de tractar. Quan aquest mateix procés el desbloqueja aquest X signal, el rebrà i el tractarà.
-Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura de dades `sigset_t` (màscara de senyals)
+Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura de dades `sigset_t` (màscara de senyals).
 
 | SIGNAL      | TRACTAMENT DEFAULT | EVENT                                                   | CAPTURABLE? | BLOCK?                                   |
 | ----------- | ------------------ | ------------------------------------------------------- | ----------- | ---------------------------------------- |
@@ -91,3 +92,7 @@ Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura
 | **SIGUSR1** | Terminate          | Definit per l'usuari                                    | SI          | SI                                       |
 | **SIGUSR2** | Terminate          | Definit per l'usuari                                    | SI          | SI                                       |
 
+## Funcions
+- `kill`: Enviar signal. No ha de perquè matar.
+- `sigaction`: Canviar el tractament d'un signal específic.
+- 
