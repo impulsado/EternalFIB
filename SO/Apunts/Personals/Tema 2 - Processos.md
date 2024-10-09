@@ -55,3 +55,6 @@ for (i = 0; i<num_hijos; i++) {
 ```
 
 # Signals
+Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
+L'altre procés ha de ser del mateix usuari.
+La comanda `kill` envia un signal, no ha de perquè matar. 
