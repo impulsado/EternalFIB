@@ -95,4 +95,5 @@ Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura
 ## Funcions
 - `kill`: Enviar signal. No ha de perquè matar.
 - `sigaction`: Canviar el tractament d'un signal específic.
-- 
+- `sigprocmask`: Bloquejar/Desbloquejar signals. (Depen de l'opció).
+- `sigsuspend`: Canvia la màscara per la passada com a parametre i susp
