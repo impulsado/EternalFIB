@@ -67,7 +67,7 @@ Els farem servir per:
 - **Control de temps** (alarmes)
 
 ```
-Procés executa codi -> Rep un signal -> Interromp l'execució d'aquest codi -> salta al handler associat al signal -> Executa el handler  
+Procés executa codi -> Rep un signal -> Interromp l'execució d'aquest codi -> Salta al handler associat al signal -> Executa el handler -> Quan acaba (si sobreviu) continua on estava. 
 ```
 
 [//]: Recorda que un event és un succés que requereix atenció. Llavors un signal és una forma específica d'event.
@@ -77,6 +77,7 @@ Procés executa codi -> Rep un signal -> Interromp l'execució d'aquest codi -> 
 ❗"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
 ❗"SIGSEGV", "SIGILL", "SIGFPE" **NO** és poden bloquejar si son per culpa d'una excepció, però si que es poden gestionar.
 Si un procés bloqueja X signal, no el rep i el SO el marca com a pendent de tractar. Quan aquest mateix procés el desbloqueja aquest X signal, el rebrà i el tractarà.
+Per determinar quins signals bloqueja i quins permet, es fa ús d'una `sa_mask` (signal mask)
 
 | SIGNAL      | TRACTAMENT DEFAULT | EVENT                                                   | CAPTURABLE? | BLOCK?                                   |
 | ----------- | ------------------ | ------------------------------------------------------- | ----------- | ---------------------------------------- |
