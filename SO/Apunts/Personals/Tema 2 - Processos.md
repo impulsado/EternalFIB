@@ -108,3 +108,11 @@ kill(int pid, int signal);
 ```
 
 ### struct sigaction;
+- **sa_handler**: Especificar tractament que volem (Handler).
+	- `SIG_IGN`: Ignorar signal rebut.
+	- `SIG_DFL`: Handler per defecte.
+	- `custom_handler`: Kernel executa funció específica. El SO s'encarrega de passar el nº de 
+	```C
+	void custom_handler(int signal);
+```
+- 
