@@ -120,4 +120,9 @@ kill(int pid, int signal);
 	- A l'acabar el handler, es restaura la sa_mask prèvia.
 - **sa_flags**: Configurar opcions adicional que modifiquen com es comporta el handler.
 	- `SA_RESETHAND`: Post-tractament, es restaura el handler per defecte.
-	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mat 
+	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mateix signal, "reiniciar" la syscall. 
+
+```C
+struct sigaction sa;
+sa.handler = 
+```
