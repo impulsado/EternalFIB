@@ -119,3 +119,5 @@ kill(int pid, int signal);
 	- Buida: Només bloqueja el signal que s'està tractant.
 	- A l'acabar el handler, es restaura la sa_mask prèvia.
 - **sa_flags**: Configurar opcions adicional que modifiquen com es comporta el handler.
+	- `SA_RESETHAND`: Post-tractament, es restaura el handler per defecte.
+	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mat 
