@@ -128,5 +128,10 @@ sa.handler = custom_handler;
 // Més opcions del comportament del Handler
 sa.sa_flags = SA_RESTART;
 // Signals block durant execució del Handler
-sigemptyset(&sa.sa_mask);
+sigemptyset(&sa.sa_mask);  // Només block el signal que s'està tractant
+sigaddset(&sa.sa_mask, SIGINT);  // Afegir el bloqueig del SIGINT mentre custom_handler
+// Aplicar la configuració a SIGCHLD (Mort d'un fill)
+sigaction
+
+
 ```
