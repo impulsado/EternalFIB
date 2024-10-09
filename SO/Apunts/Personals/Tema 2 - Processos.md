@@ -1,8 +1,12 @@
-## PCB
+# Conceptes
+## PCB (Process Control Bank)
 Conté informació que el sistema necessita per gestionar un procés.
 Depén del sistema i de la màquina (NO portable).
-- Espai d'adreces: Codi, pila, dades, ...
-- Context d'execució
+- Espai d'adreces: (1) Codi, pila, dades, ...
+- Context d'execució:
+	- (2) Software: PID, planificació, informació sobre l'ús del dispositiu, ...
+	- (3) Hardware: TLB, PC, ...
+
 ## Seqüencials v.s. Concurrents
 ### Sequencial
 Fins que no mor un fill, no pasa a  
