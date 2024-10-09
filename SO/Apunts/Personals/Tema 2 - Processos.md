@@ -119,6 +119,11 @@ kill(int pid, int signal);
 	- `SA_RESETHAND`: Post-tractament, es restaura el handler per defecte.
 	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mateix signal, "reiniciar" la syscall. 
 
+### sigaction(...);
+
+
+### Exemple de "struct sigaction" + "sigaction(...)"
+Configurar un handler específic que executarà el pare quan mori un fill. Mentre s'executa aquest ``custom_handler`` no pot ser acabat (Terminate) per un Ctrl+C.
 ```C
 void custom_handler(int sig_num);
 
@@ -130,8 +135,11 @@ sa.sa_flags = SA_RESTART;
 // Signals block durant execució del Handler
 sigemptyset(&sa.sa_mask);  // Només block el signal que s'està tractant
 sigaddset(&sa.sa_mask, SIGINT);  // Afegir el bloqueig del SIGINT mentre custom_handler
+
 // Aplicar la configuració a SIGCHLD (Mort d'un fill)
-sigaction
+if (sigaction(SIGCHLD, &sa, NULL) == -1) {
+
+}
 
 
 ```
