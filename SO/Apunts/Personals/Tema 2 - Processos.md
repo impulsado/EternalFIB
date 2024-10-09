@@ -99,5 +99,12 @@ Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura
 - `sigsuspend(...)`: Canvia la màscara per la passada com a paràmetre i suspèn el procés fins rebre un signal no bloquejat.
 - `alarm(...)`: Programar l'enviament automàtic del signal "SIGALARM". Només pot haver 1 configurada a l'hora.
 
-[//]: `struct sigaction sa` Defineix **com** gestionar un signal (configuració). 
-[//]: `sigaction(...)` Aplica 
+[//]: `struct sigaction sa` Defineix **com gestionar** un signal (configuració). 
+[//]: `sigaction(...)` **Aplica la configuració** a un signal específic.
+
+### kill(...);
+```C
+kill(int pid, int signal);
+```
+
+### struct sigaction;
