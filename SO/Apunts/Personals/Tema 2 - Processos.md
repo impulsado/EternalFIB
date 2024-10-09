@@ -115,7 +115,7 @@ kill(int pid, int signal);
 	```C
 	void custom_handler(int signal);
 ```
-- **sa_mask**: Màscara de signals que volem {Block/Allow}.
+- **sa_mask**: Màscara de signals que volem {Block/Allow}. Fa un OR de la màscara prèvia (Manté els bloquejats previs).
 	- Buida: Només bloqueja el signal que s'està tractant.
 	- A l'acabar el handler, es restaura la sa_mask prèvia.
-	
+- **sa_flags**: Configurar opcions adicional que modifiquen com es comporta el handler.
