@@ -58,8 +58,13 @@ for (i = 0; i<num_hijos; i++) {
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
 L'altre procés ha de ser del mateix usuari.
 La comanda `kill` envia un signal, no ha de perquè matar.
-"SIGUSR1" i "SIGUSR2" són signals que no estan relacionats a un esdeveniment específic.
 Un signal es pot:
 - **Bloquejar**: Evitar que el procés rebi signal (Els ignori).
 - **Capturar**: Modificar la forma, per defecte, que es gestiona.
-"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
+
+## Tipus de Signals
+
+"SIGUSR1" i "SIGUSR2" són signals que no estan relacionats a un esdeveniment específic.
+
+❗"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
+❗"SIGSEGV", "SIGILL", "SIGFPE" **NO** es poden bloquejar si son per culpa d'una excepció, però si que es pot configurar com es gestionen.
