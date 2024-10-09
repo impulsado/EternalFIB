@@ -11,8 +11,9 @@ Depen del sistema i de la màquina (NO portable).
 **Concurrència**
 "Paral·lelisme Virtual". Permet executar diversos processos de forma simultània.
 
-Fils d'execució (Threads)
-
+**Fils d'execució (Threads)**
+"Thread"/"Subprocés" és una seqüencia de tasques encadenades molt petita.
+Un fil és una tasca que pot ser executada a l'hora a
 
 ## Seqüencials v.s. Concurrents
 ### Sequencial
