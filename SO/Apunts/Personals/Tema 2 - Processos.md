@@ -93,8 +93,11 @@ Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura
 | **SIGUSR2** | Terminate          | Definit per l'usuari                                    | SI          | SI                                       |
 
 ## Funcions
-- `kill`: Enviar signal. No ha de perquè matar.
-- `sigaction`: Canviar el tractament d'un signal específic.
-- `sigprocmask`: Canviar màscara per la passada com a paràmetre. Pot {Bloquejar, Desbloquejar} els signals depenent de l'opció.
-- `sigsuspend`: Canvia la màscara per la passada com a paràmetre i suspèn el procés fins rebre un signal no bloquejat.
-- `alarm`: Programar l'enviament automàtic del signal "SIGALARM". Només pot haver 1 configurada a l'hora.
+- `kill(...)`: Enviar signal. No ha de perquè matar.
+- `sigaction(...)`: Canviar el tractament d'un signal específic.
+- `sigprocmask(...)`: Canviar màscara per la passada com a paràmetre. Pot {Bloquejar, Desbloquejar} els signals depenent de l'opció.
+- `sigsuspend(...)`: Canvia la màscara per la passada com a paràmetre i suspèn el procés fins rebre un signal no bloquejat.
+- `alarm(...)`: Programar l'enviament automàtic del signal "SIGALARM". Només pot haver 1 configurada a l'hora.
+
+[//]: `struct sigaction sa` Defineix **com** gestionar un signal (configuració). 
+[//]: `sigaction(...)` Aplica 
