@@ -111,8 +111,11 @@ kill(int pid, int signal);
 - **sa_handler**: Especificar tractament que volem (Handler).
 	- `SIG_IGN`: Ignorar signal rebut.
 	- `SIG_DFL`: Handler per defecte.
-	- `custom_handler`: Kernel executa funció específica. El SO s'encarrega de passar el nº de 
+	- `custom_handler`: Kernel executa funció específica. El SO s'encarrega de passar el nº de signal. Això permet que diversos signals pugin fer servir mateixa funció.
 	```C
 	void custom_handler(int signal);
 ```
-- 
+- **sa_mask**: Màscara de signals que volem {Block/Allow}.
+	- Buida: Només bloqueja el signal que s'està tractant.
+	- A l'acabar el handler, es restaura la sa_mask prèvia.
+	
