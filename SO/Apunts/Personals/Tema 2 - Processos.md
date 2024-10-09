@@ -19,6 +19,9 @@ Un procés està format per:
 Un fil és una tasca que pot ser executada a l'hora amb una altra tasca. (Fer ús paral·lelisme).
 Els fils comparteixen mateixos recursos, llavors els permet intercanviar informació sense ús de crides a sistema.
 
+**Estats d'un procés**
+
+
 ## Seqüencials v.s. Concurrents
 ### Sequencial
 Fins que no mor un fill, no pasa a  
