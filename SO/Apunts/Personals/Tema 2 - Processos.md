@@ -39,6 +39,7 @@ Un procés no pot estar tota l'estona executant-se.
 És per això que hi ha una classificació dels estats.
 
 
+# Gestió de Processos
 ## Seqüencials v.s. Concurrents
 ### Sequencial
 Fins que no mor un fill, no pasa a  
@@ -52,3 +53,5 @@ for (i = 0; i<num_hijos; i++) {
 	waitpid(pid, NULL, 0);  // Esperar a la mort del fill
 }
 ```
+
+# Signals
