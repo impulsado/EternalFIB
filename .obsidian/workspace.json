@@ -93,7 +93,7 @@
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -130,7 +130,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -148,7 +149,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7db1ba6c3f01a7ed",
+  "active": "3b711df1bfea0580",
   "lastOpenFiles": [
     "attachments/Pasted image 20241008154551.png",
     "logo.jpg",

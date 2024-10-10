@@ -85,8 +85,10 @@ printf("PARE/FILL: Adeu!");
 - **Programació de signals**: Taula que especifica com tractar cada signal. Posterior al fork(), poden modificar aquesta taula de forma independent sense afectar-se.
 - **Màscara de signals**: Determina quins signals estan allow/block. Més info. després.
 
-
-### execlp();
+## Execució de Programes
+### execlp(...);
+Reemplaça el procés actual amb un nou procés especificat.
+❗**NO** crea un nou procés.
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
