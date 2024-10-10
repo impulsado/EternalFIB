@@ -21,6 +21,7 @@ Depen del sistema i de la màquina (NO portable).
 	- (2) Software: PID, planificació, informació sobre l'ús del dispositiu, ...
 	- (3) Hardware: TLB, PC, ...
 
+
 **Concurrència**
 "Paral·lelisme Virtual". Permet executar diversos processos de forma simultània.
 Grau de concurrència: Nº processos concurrents. Només depen del Nº processos.
