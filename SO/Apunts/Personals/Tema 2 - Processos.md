@@ -135,7 +135,8 @@ for (i = 0; i<num_hijos; i++) {
 ```
 
 ### Concurrents
-![[Pasted image 20241010085724.png]]
+Es genera un abre de $2^n+1$ processos.
+ ![[Pasted image 20241010085724.png]]
 
 # Signals
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
