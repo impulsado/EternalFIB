@@ -124,8 +124,12 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 Si volem que un procés pare esperi al fill, podem fer servir funcions de la familia `wait`.
 Normalment s'utilitza per a sincronitzar processos.
 ```C
-/*/
+/* FROMAT */
+pid_t wait(int *status);
+pid_t waitpid(pid_t pid, int *status, int options);
 ```
+- pid:
+	- `-1`
 
 ## Acabar amb Procés
 Un procés pot acabar:
