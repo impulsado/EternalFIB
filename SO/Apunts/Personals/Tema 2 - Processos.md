@@ -176,16 +176,20 @@ void exit(int status);
 
 ```C
 /* FORMAT DE TRACTAMENT*/
-void treat_exit_code(int status) {
-	if (WIFEXITED(status)) {
-		// Mort per un exit(status);
-		int exit_code = WEXITSTATUS(status);
-		printf("Ha mort per culpa d'un exit() amb exit_code = %d\n", exit_code);
-	} else {
-		// Mort per culpa de signal
-		int signal_code = WTERMSIG(status);
-		printf("Ha mort per culpa d'un signal amb signal_code = %d\n", signal_code);
-	}
+void treatDeath(int status) {
+    if (WIFEXITED(status)) {
+        // Mort normal amb exit(status);
+        int exit_code = WEXITSTATUS(status);
+        printf("Ha mort per culpa d'un exit() amb exit_code = %d\n", exit_code);
+    }
+    else if (WIFSIGNALED(status)) {
+        // Mort per signal
+        int signal_code = WTERMSIG(status);
+        printf("Ha mort per culpa d'un signal amb signal_code = %d\n", signal_code);
+    }
+    else {
+        // Altres que encara no hem vist
+    }
 }
 ```
 
