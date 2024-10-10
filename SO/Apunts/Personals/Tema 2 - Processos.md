@@ -170,6 +170,18 @@ void exit(int status);
 ### Gestió acabament
 - `WIFEXITED(status)`: Saber si procés ha mort per `exit(status)`. Sempre col·locar-ho abans de comprovar com ha mort. Retorna `1` o `0`.
 - `WEXITSTATUS(status)`: Saber la causa de la mort. Agafa uns determinats bits del ``status``.
+- `WTERMSIG(status)`: Saber quin signal ha matat al procés.
+
+❗**SEMPRE** haurem de controlar com acaben els nostres programes.
+
+```C
+void treat_exit_code(int status) {
+	if (WIFEXITED(status)) {
+		// Mort per un exit(status);
+		int exit_code = W
+	}
+}
+```
 
 
 ## Seqüencials v.s. Concurrents
