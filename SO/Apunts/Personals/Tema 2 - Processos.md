@@ -15,11 +15,18 @@ Codi i definició de dades que al ficar-ho en execució necessitem:
 
 **PCB (Process Control Bank)**
 Conté informació que el sistema necessita per gestionar un procés.
+Cada vegada que es crea un nou procés es genera un PCB associat. 
+En aquesta estructura de dades es guarda "tota" la informació del programa.
 Depen del sistema i de la màquina (NO portable).
 - Espai d'adreces: (1) Codi, pila, dades, ...
 - Context d'execució:
 	- (2) Software: PID, planificació, informació sobre l'ús del dispositiu, ...
 	- (3) Hardware: TLB, PC, ...
+
+```
+Procés A, Procés B;
+S'executa procés A -> 
+```
 
 
 **Concurrència**
