@@ -128,8 +128,14 @@ Normalment s'utilitza per a sincronitzar processos.
 pid_t wait(int *status);
 pid_t waitpid(pid_t pid, int *status, int options);
 ```
-- pid:
-	- `-1`
+- **pid**: Número de procés que ha d'esperar.
+	- `-1`: Esperar fins que mori el primer fill. No importa quin sigui.
+	- `pid`: Espera fins que mori aquest fill determinat.
+- **\*status**: Punter a variable del tipus int on guardare el valor d'acabament del procés.
+	- `NULL`: No guardar el valor de retorn.
+	- ``&status``: Guarda el valor a la variable ``int status``.
+- **options**: Determinar comportament que ha de tindre el procés mentre espera.
+	- 
 
 ## Acabar amb Procés
 Un procés pot acabar:
@@ -227,7 +233,7 @@ Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura
 
 ### kill(...);
 ```C
-kill(int pid, int signal);
+void kill(int pid, int signal);
 ```
 
 ### struct sigaction;
