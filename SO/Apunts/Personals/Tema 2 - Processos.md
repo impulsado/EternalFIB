@@ -63,16 +63,15 @@ if (pid < 0) {
 	return 1;
 }
 else if (pid == 0) {
-	printf("FILL: El meu PID és %d\n", getpid());
-	printf("FILL: El del meu pare és %d\n", getppid());
+	printf("FILL: El meu PID és %d\n", getpid());  // Saber el PID que li ha donat el SO
+	printf("FILL: El del meu pare és %d\n", getppid());  // Saber el PID del pare
 }
 else {
-	printf("PARE: El meu PID és %d\n", getpid());
-	printf("PARE: El del mey fill és %d\n",pid);
+	printf("PARE: El meu PID és %d\n", getpid());  // Saber el PID que li ha donat el SO
+	printf("PARE: El del mey fill és %d\n",pid);  // Quan s'executa 
 }
 printf("PARE/FILL: Adeu!");
 ```
-
 
 | Fill HEREDA                | Fill NO HEREDA                 |
 | -------------------------- | ------------------------------ |
@@ -81,7 +80,7 @@ printf("PARE/FILL: Adeu!");
 | **Màscara de signals**     | **Alarmes i Signals pendents** |
 | USERID, GROUPID            |                                |
 | Dispositius Virtuals       |                                |
-- Els dispositius virtuals són descriptors de fitxers oberts que representen interfaces per a comunicar-se amb arxius, sockets, pipes, ...
+- **Dispositius virtuals**: Són descriptors de fitxers oberts que representen interfaces per a comunicar-se amb arxius, sockets, pipes, ...
 
 ### execlp();
 
