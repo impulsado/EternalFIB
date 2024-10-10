@@ -139,10 +139,15 @@ pid_t waitpid(pid_t pid, int *status, int options);
 	- `0`: Atura't i espera fins que mori el fill.
 	- ``WNOHANG``: Si el fill encara esta viu, la funció retorna automàticament i continua amb l'execució. No espera.
 
+[//]: ``wait(&st);`` és el mateix que ``waitpid(-1, &st, 0);``
+
 ```C
 // Esperar fins que no hi hagin més fills vius
 while (waitpid(-1,NULL,0)>0);
-// `-1` fa que esperi la mort de qualsevol fil
+// `-1` fa que esperi la mort de qualsevol fill.
+// `NULL` fa que no guardi el valor de retorn.
+// `0` fa que esperi fins la mort
+// Quan no quedin més fills que esperar, waitpid retornarà -1 i sortirà del bucle.
 ```
 
 ## Acabar amb Procés
@@ -161,6 +166,10 @@ void exit(int status);
 | Realitza "neteja"        | Acaba de forma abrupta |
 [//]: Mentre que pare no consulta si fill ha mort, el PCB es manté. Normalment es fa ús de ``waitpid(...)``.
 [//]: Si pare ha mort abans que acabin els fills, `init` els hereda.
+
+### Gestió acabament
+
+
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
