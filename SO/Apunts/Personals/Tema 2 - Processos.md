@@ -122,7 +122,7 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
-Fins que no mor un fill, no pasa a  
+Fins que no ha mort el fill, el pare espera. Això ho fa 
 ```C
 for (i = 0; i<num_hijos; i++) {
 	int pid = fork();
@@ -135,7 +135,7 @@ for (i = 0; i<num_hijos; i++) {
 ```
 
 ### Concurrents
-Es genera un abre de $2^n+1$ processos.
+Es genera un abre de $2^n$ processos.
  ![[Pasted image 20241010085724.png]]
 
 # Signals
