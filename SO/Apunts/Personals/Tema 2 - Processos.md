@@ -25,7 +25,7 @@ Depen del sistema i de la màquina (NO portable).
 
 ```
 Procés A, Procés B;
-S'executa procés A -> 
+S'executa Procés A -> SO decideix que s'ha d'executar Procés B -> Es guarda en la PCB del Procés A la informació -> Es carrega la PCB del Procés B -> S'executa Procés B.
 ```
 
 
