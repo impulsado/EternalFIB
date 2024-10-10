@@ -56,6 +56,7 @@ Procés genera una còpia seva i s'anomena "fill".
 Ara pare i fill s'executen de forma concurrent (Tots dos a l'hora).
 ❗És genera una nova àrea de memòria que és una **còpia** de la del pare.
 
+
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
 Fins que no mor un fill, no pasa a  
@@ -69,6 +70,8 @@ for (i = 0; i<num_hijos; i++) {
 	waitpid(pid, NULL, 0);  // Esperar a la mort del fill
 }
 ```
+
+
 
 # Signals
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
