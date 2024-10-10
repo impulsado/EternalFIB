@@ -87,10 +87,10 @@ printf("PARE/FILL: Adeu!");
 
 ## Mutació d'executable
 ### execlp(...);
-Reemplaça el procés actual amb un nou procés especificat.
+Reemplaça el procés actual amb un nou procés especificat i l'executa.
 - **Canvia**: L'espai de direccions, codi, dades, PC, ...
-- **Manté**: Comptadors ús intern (PID, Fitxers oberts, ...), signals pendents, ...
-❗**NO** crea un nou procés.
+- **Manté**: PID, Recursos Oberts, Signals pendents, ...
+❗**NO** crea un nou procés. ❗**NO** canvia el context. 
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
