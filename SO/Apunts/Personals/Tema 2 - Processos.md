@@ -120,6 +120,9 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 ```
 [//]: Normalment voldrem crear un fill i que aquest executi ``execlp(...)`` perquè quan acabi l'execució d'aquest "nou" procés, el fill morirà i el procés principal (pare) continua.
 
+## Esperar a un Procés
+
+
 ## Acabar amb Procés
 Un procés pot acabar:
 - **Voluntàriament**: Hi ha un ``exit``. S'alliberen recursos i PCB que tenia.
@@ -134,8 +137,8 @@ void exit(int status);
 | ------------------------ | ---------------------- |
 | Funció de llibreria de C | Syscall                |
 | Realitza "neteja"        | Acaba de forma abrupta |
-[//]: Mentre 
-
+[//]: Mentre que pare no consulta si fill ha mort, el PCB es manté. Normalment es fa ús de ``waitpid(...)``.
+[//]: Si pare ha mort abans que acabin els fills, `init` els hereda.
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
 Fins que no ha mort el fill, el pare espera. 
