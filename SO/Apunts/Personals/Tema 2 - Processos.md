@@ -100,6 +100,15 @@ Donat que es canvia l'espai de direccions, el procés "nou" que s'està executan
 
 ❗**NO** crea un nou procés. ❗**NO** canvia el context. 
 
+```C
+// OK
+execl("temp.x", "temp.x", NULL);
+execl("./temp.x", "temp.x", NULL);
+execlp("./temp.x", "temp.x", NULL);
+// KO
+execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
+```
+
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
 Fins que no mor un fill, no pasa a  
