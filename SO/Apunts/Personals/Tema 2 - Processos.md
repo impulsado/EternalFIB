@@ -38,6 +38,7 @@ Grau de paral·lelisme: Nº processos paral·lels. Depen del HW+ Nº processos.
 **Estats d'un procés**
 Un procés no pot estar tota l'estona executant-se.
 És per això que hi ha una classificació dels estats.
+- [ ] FICAR IMATGE
 
 # Gestió de Processos
 ## Seqüencials v.s. Concurrents
