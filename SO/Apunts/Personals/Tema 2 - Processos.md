@@ -122,10 +122,10 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 
 ## Acabar amb Procés
 Un procés pot acabar:
-- **Voluntàriament**: Hi ha un exit. S'alliberen recursos i PCB que tenia.
-- **Involuntàriament**: Un signal 
+- **Voluntàriament**: Hi ha un ``exit``. S'alliberen recursos i PCB que tenia.
+- **Involuntàriament**: Un signal "el mata".
 
-[//]: Realment sempre hi ha un `exit` perquè llibreria de C ho afegeix.
+
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
