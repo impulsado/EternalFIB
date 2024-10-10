@@ -68,7 +68,7 @@ else if (pid == 0) {
 }
 else {
 	printf("PARE: El meu PID és %d\n", getpid());  // Saber el PID que li ha donat el SO
-	printf("PARE: El del mey fill és %d\n",pid);  // Quan s'executa 
+	printf("PARE: El del mey fill és %d\n",pid);  // Quan s'executa fork() retorna automàticament el PID del fill, tot i que no hagi acabat.
 }
 printf("PARE/FILL: Adeu!");
 ```
@@ -80,7 +80,7 @@ printf("PARE/FILL: Adeu!");
 | **Màscara de signals**     | **Alarmes i Signals pendents** |
 | USERID, GROUPID            |                                |
 | Dispositius Virtuals       |                                |
-- **Dispositius virtuals**: Són descriptors de fitxers oberts que representen interfaces per a comunicar-se amb arxius, sockets, pipes, ...
+- **Dispositius virtuals**: Són descriptors de fitxers oberts que representen interfaces per a comunicar-se amb arxius, sockets, pipes, ... Per exemple si pare te un handler per a un fitxer obert, el fill té una copia d'aquest
 
 ### execlp();
 
