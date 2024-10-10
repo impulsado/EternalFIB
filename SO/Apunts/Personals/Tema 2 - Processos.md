@@ -167,7 +167,7 @@ void exit(int status);
 [//]: Mentre que pare no consulta si fill ha mort, el PCB es manté. Normalment es fa ús de ``waitpid(...)``.
 [//]: Si pare ha mort abans que acabin els fills, `init` els hereda.
 
-### Gestió acabament
+### Gestió d'acabament
 - `WIFEXITED(status)`: Saber si procés ha mort per `exit(status)`. Sempre col·locar-ho abans de comprovar com ha mort. Retorna `1` o `0`.
 - `WEXITSTATUS(status)`: Saber la causa de la mort. Agafa uns determinats bits del ``status``.
 - `WTERMSIG(status)`: Saber quin signal ha matat al procés.
@@ -175,18 +175,19 @@ void exit(int status);
 ❗**SEMPRE** haurem de controlar com acaben els nostres programes.
 
 ```C
+/* FORMAT DE TRACTAMENT*/
 void treat_exit_code(int status) {
 	if (WIFEXITED(status)) {
 		// Mort per un exit(status);
 		int exit_code = WEXITSTATUS(status);
-		printf("Ha mort per culpa d'un exit() amb exit_code = %d", exit_code);
+		printf("Ha mort per culpa d'un exit() amb exit_code = %d\n", exit_code);
 	} else {
 		// Mort per culpa de signal
-		printf("Ha mort per culpa d'un signal amb signal_code = %d", signal_code)
+		int signal_code = WTERMSIG(status);
+		printf("Ha mort per culpa d'un signal amb signal_code = %d\n", signal_code);
 	}
 }
 ```
-
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
