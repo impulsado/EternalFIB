@@ -52,7 +52,7 @@ Un procés no pot estar tota l'estona executant-se.
 Cada procés té el seu PID que l'identifica.
 Quan un procés crea un altre, ho fa de forma jeràrquica (Arbre).
 ### fork();
-Procés pare genera un procés fill que còpia exacta seva en el moment de la crida.
+Procés pare **crea** un procés fill que còpia exacta seva en el moment de la crida.
 Pare i fill s'executen de forma concurrent (Tots dos a l'hora) i de forma independent des del mateix punt de crida.
 ❗És genera una nova àrea de memòria per al fill que és una **còpia** de la del pare.
 ```C
@@ -87,16 +87,16 @@ printf("PARE/FILL: Adeu!");
 
 ## Mutació d'executable
 ### execlp(...);
-Reemplaça el procés actual amb un nou procés especificat i l'executa.
+**Reemplaça** el procés actual amb un nou procés especificat i l'executa.
 1. Un programa s'executa i té valors en els seus registres.
 2. Aquest programa executa un `execlp(...)` i si és exitòs, l'espai de direcció és remplaça complemtament (codi i dades). Llavors els registers de la CPU es reinicien per adaptar-se a aquest nou programa. Això implica que NO és mantenen.
-3. Si ``execlp(...)`` falla, aquest retorna al seu estat anterior, mantenint registres i espai de direcció intactes.
-4. Si `execlp()` acaba exitosament, no retorna.
+3. Si ``execlp(...)`` falla, aquest retorna al seu estat anterior (procés original), mantenint registres i espai de direcció intactes. Llavors el procés original executa el codi posterior.
+4. Si `execlp()` acaba exitosament, no retorna al procés original.
 
-Donat que 
+Donat que es canvia l'espai de direccions, el procés "nou" que s'està executant no pot accedir a les dades del procés "original".
 
 - **Canvia**: L'espai de direccions, codi, dades, PC, ...
-- **Manté**: PID, Recursos Oberts, Signals pendents, ...
+- **No Canvia**: PID, Recursos Oberts, Signals pendents, ...
 
 ❗**NO** crea un nou procés. ❗**NO** canvia el context. 
 
