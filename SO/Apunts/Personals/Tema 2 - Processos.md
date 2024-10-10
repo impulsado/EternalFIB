@@ -73,6 +73,8 @@ else {
 printf("PARE/FILL: Adeu!");
 ```
 
+### execlp();
+
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
 Fins que no mor un fill, no pasa a  
