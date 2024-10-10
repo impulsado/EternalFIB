@@ -122,8 +122,9 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
-Fins que no ha mort el fill, el pare espera. Això ho fa 
+Fins que no ha mort el fill, el pare espera. 
 ```C
+int i;
 for (i = 0; i<num_hijos; i++) {
 	int pid = fork();
 	if (pid == 0) {
@@ -136,6 +137,18 @@ for (i = 0; i<num_hijos; i++) {
 
 ### Concurrents
 Es genera un abre de $2^n$ processos.
+```C
+int i;
+for (i = 0; i<num_fills; i++) {
+	int pid = fork();
+	if (pid == 0) {
+		printf("HIJO: %d PID", pid);
+		exit(0);
+	}
+}
+while (waitpid(-1,NULL,0) > 0);
+```
+ 
  ![[Pasted image 20241010085724.png]]
 
 # Signals
