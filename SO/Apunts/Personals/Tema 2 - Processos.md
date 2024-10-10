@@ -123,6 +123,7 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 ## Esperar a un Procés
 Si volem que un procés pare esperi al fill, podem fer servir funcions de la familia `wait`.
 Normalment s'utilitza per a sincronitzar processos.
+Aquesta funció retorna el PID del fill que ha acabat.
 ```C
 /* FROMAT */
 pid_t wait(int *status);
@@ -137,6 +138,12 @@ pid_t waitpid(pid_t pid, int *status, int options);
 - **options**: Determinar comportament que ha de tindre el procés mentre espera.
 	- `0`: Atura't i espera fins que mori el fill.
 	- ``WNOHANG``: Si el fill encara esta viu, la funció retorna automàticament i continua amb l'execució. No espera.
+
+```C
+// Esperar fins que no hi hagin més fills vius
+while (waitpid(-1,NULL,0)>0);
+// `-1` fa que esperi la mort de qualsevol fil
+```
 
 ## Acabar amb Procés
 Un procés pot acabar:
