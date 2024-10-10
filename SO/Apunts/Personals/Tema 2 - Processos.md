@@ -81,7 +81,7 @@ printf("PARE/FILL: Adeu!");
 | **Màscara de signals**     | **Alarmes i Signals pendents** |
 | USERID, GROUPID            |                                |
 | Dispositius Virtuals       |                                |
-
+- Els dispositius virtuals són descriptors de fitxers oberts que representen interfaces per a comunicar-se amb arxius, sockets, pipes, ...
 
 ### execlp();
 
