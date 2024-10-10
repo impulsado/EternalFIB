@@ -125,7 +125,16 @@ Un procés pot acabar:
 - **Voluntàriament**: Hi ha un ``exit``. S'alliberen recursos i PCB que tenia.
 - **Involuntàriament**: Un signal "el mata".
 
+```C
+/* FORMAT */
+void exit(int status);
+```
 
+| exit(int status);        | \_exit(int status);    |
+| ------------------------ | ---------------------- |
+| Funció de llibreria de C | Syscall                |
+| Realitza "neteja"        | Acaba de forma abrupta |
+[//]: Mentre 
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
