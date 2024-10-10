@@ -28,7 +28,6 @@ Procés A, Procés B;
 S'executa Procés A -> SO decideix que s'ha d'executar Procés B -> Es guarda en la PCB del Procés A la informació -> Es carrega la PCB del Procés B -> S'executa Procés B.
 ```
 
-
 **Concurrència**
 "Paral·lelisme Virtual". Permet executar diversos processos de forma simultània.
 Grau de concurrència: Nº processos concurrents. Només depen del Nº processos.
@@ -49,9 +48,14 @@ Un procés no pot estar tota l'estona executant-se.
 - [ ] FICAR IMATGE
 
 # Gestió de Processos
+## Creació de Processos
+Cada procés té el seu PID que l'identifica.
+Quan un procés crea un altre, ho fa de forma jeràrquica (Arbre).
+### fork();
+Crear procés 
 
 ## Seqüencials v.s. Concurrents
-### Sequencial
+### Seqüencial
 Fins que no mor un fill, no pasa a  
 ```C
 for (i = 0; i<num_hijos; i++) {
