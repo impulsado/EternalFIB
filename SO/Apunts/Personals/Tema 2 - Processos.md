@@ -101,6 +101,16 @@ Donat que es canvia l'espai de direccions, el procés "nou" que s'està executan
 ❗**NO** crea un nou procés. ❗**NO** canvia el context. 
 
 ```C
+/* FORMAT */
+execlp("ls", "ls", "-la", NULL);
+// 1. Busca "ls" en tots els programes que hi hagi en el $PATH
+// 2. Carrega la resta d'arguments.
+// 2.1. El primer argument (0) en un programa sempre és el nom d'aquest mateix.
+// 2.2. El segon argument (1) son les opcions que volem executar al programa
+// 3. Fiquem NULL per marcar el final de la llista de paràmetres.
+```
+
+```C
 // OK
 execl("temp.x", "temp.x", NULL);
 execl("./temp.x", "temp.x", NULL);
@@ -110,9 +120,6 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 ```
 [//]: Normalment voldrem crear un fill i que aquest executi ``execlp(...)`` perquè quan acabi l'execució d'aquest "nou" procés, el fill morirà i el procés principal (pare) continua.
 
-```C
-execlp("ls", "ls", "-la", NU)
-```
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
 Fins que no mor un fill, no pasa a  
@@ -217,3 +224,5 @@ if (sigaction(SIGCHLD, &sa, NULL) == -1) {
 
 }
 
+
+```
