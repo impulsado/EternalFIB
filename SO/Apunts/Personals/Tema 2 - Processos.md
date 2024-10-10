@@ -120,10 +120,12 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 ```
 [//]: Normalment voldrem crear un fill i que aquest executi ``execlp(...)`` perquè quan acabi l'execució d'aquest "nou" procés, el fill morirà i el procés principal (pare) continua.
 
-## Esperar Procés
+## Acabar amb Procés
 Un procés pot acabar:
-- **Voluntàriament**: Hi ha un exit(). S'alliberen recursos i PCB que tenia.
+- **Voluntàriament**: Hi ha un exit. S'alliberen recursos i PCB que tenia.
 - **Involuntàriament**: Un signal 
+
+[//]: Realment sempre hi ha un `exit` perquè llibreria de C ho afegeix.
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
