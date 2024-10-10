@@ -89,7 +89,11 @@ printf("PARE/FILL: Adeu!");
 ### execlp(...);
 Reemplaça el procés actual amb un nou procés especificat i l'executa.
 1. Un programa s'executa i té valors en els seus registres.
-2. Aquest programa executa un `execlp(...)` i si és exitòs, l'espai de direcció és remplaça complemtament (codi i dades) 
+2. Aquest programa executa un `execlp(...)` i si és exitòs, l'espai de direcció és remplaça complemtament (codi i dades). Llavors els registers de la CPU es reinicien per adaptar-se a aquest nou programa. Això implica que NO és mantenen.
+3. Si ``execlp(...)`` falla, aquest retorna al seu estat anterior, mantenint registres i espai de direcció intactes.
+4. Si `execlp()` acaba exitosament, no retorna.
+
+Donat que 
 
 - **Canvia**: L'espai de direccions, codi, dades, PC, ...
 - **Manté**: PID, Recursos Oberts, Signals pendents, ...
