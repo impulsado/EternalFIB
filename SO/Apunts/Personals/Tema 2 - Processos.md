@@ -63,11 +63,14 @@ if (pid < 0) {
 	return 1;
 }
 else if (pid == 0) {
-	// Només ho executa el fill.
+	printf("FILL: El meu PID és %d\n", getpid());
+	printf("FILL: El del meu pare és %d\n", getppid());
 }
 else {
-	// Només ho executa el pare.
+	printf("PARE: El meu PID és %d\n", getpid());
+	printf("PARE: El del mey fill és %d\n",pid);
 }
+printf("PARE/FILL: Adeu!");
 ```
 
 ## Seqüencials v.s. Concurrents
