@@ -52,7 +52,9 @@ Un procés no pot estar tota l'estona executant-se.
 Cada procés té el seu PID que l'identifica.
 Quan un procés crea un altre, ho fa de forma jeràrquica (Arbre).
 ### fork();
-Crear procés 
+Procés genera una còpia seva i s'anomena "fill".
+Ara pare i fill s'executen de forma concurrent (Tots dos a l'hora).
+Memòria del fill és una **còpia** de la del pare.
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
