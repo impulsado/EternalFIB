@@ -121,7 +121,11 @@ execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 [//]: Normalment voldrem crear un fill i que aquest executi ``execlp(...)`` perquè quan acabi l'execució d'aquest "nou" procés, el fill morirà i el procés principal (pare) continua.
 
 ## Esperar a un Procés
-
+Si volem que un procés pare esperi al fill, podem fer servir funcions de la familia `wait`.
+Normalment s'utilitza per a sincronitzar processos.
+```C
+/*/
+```
 
 ## Acabar amb Procés
 Un procés pot acabar:
@@ -167,7 +171,6 @@ for (i = 0; i<num_fills; i++) {
 }
 while (waitpid(-1,NULL,0) > 0);
 ```
- 
  ![[Pasted image 20241010085724.png]]
 
 # Signals
