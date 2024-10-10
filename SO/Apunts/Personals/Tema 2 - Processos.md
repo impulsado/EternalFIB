@@ -168,7 +168,7 @@ void exit(int status);
 [//]: Si pare ha mort abans que acabin els fills, `init` els hereda.
 
 ### Gestió acabament
-
+- `WIFEXITED(status)`: Saber si procés ha mort per `exit(status)`. Sempre col·locar-ho abans de comprova
 
 
 ## Seqüencials v.s. Concurrents
