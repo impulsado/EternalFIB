@@ -88,8 +88,12 @@ printf("PARE/FILL: Adeu!");
 ## Mutació d'executable
 ### execlp(...);
 Reemplaça el procés actual amb un nou procés especificat i l'executa.
+1. Un programa s'executa i té valors en els seus registres.
+2. Aquest programa executa un `execlp(...)` i si és exitòs, l'espai de direcció és remplaça complemtament (codi i dades) 
+
 - **Canvia**: L'espai de direccions, codi, dades, PC, ...
 - **Manté**: PID, Recursos Oberts, Signals pendents, ...
+
 ❗**NO** crea un nou procés. ❗**NO** canvia el context. 
 
 ## Seqüencials v.s. Concurrents
