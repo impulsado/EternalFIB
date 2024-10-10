@@ -108,7 +108,7 @@ execlp("./temp.x", "temp.x", NULL);
 // KO
 execlp("temp.x", "temp.x", NULL);  // Cuidado amb el "./"
 ```
-
+[//]: Normalment voldrem crear un fill i que aquest executi ``execlp(...)`` perquè quan acabi l'execució d'aquest "nou" procés, el fill morirà.
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
 Fins que no mor un fill, no pasa a  
