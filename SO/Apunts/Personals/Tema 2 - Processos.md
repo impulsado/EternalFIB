@@ -80,8 +80,11 @@ printf("PARE/FILL: Adeu!");
 | **Màscara de signals**     | **Alarmes i Signals pendents** |
 | USERID, GROUPID            |                                |
 | Dispositius Virtuals       |                                |
+| Variables d'Entorn         |                                |
 - **Dispositius virtuals**: Són descriptors de fitxers oberts que representen interfaces per a comunicar-se amb arxius, sockets, pipes, ... Per exemple si pare te un handler per a un fitxer obert, el fill té una copia d'aquest (El punter al fitxer és el mateix). Això significa que tant pare/fill poden llegir/escriure al mateix fitxer en temps real, però si algún tanca el seu file descriptor, no afectarà a l'altre.
-- **Programació de signals**: Taula que especifica com tractar cada signal. 
+- **Programació de signals**: Taula que especifica com tractar cada signal. Posterior al fork(), poden modificar aquesta taula de forma independent sense afectar-se.
+- **Màscara de signals**: Determina quins signals estan allow/block. Més info. després.
+
 
 ### execlp();
 
