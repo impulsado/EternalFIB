@@ -178,7 +178,11 @@ void exit(int status);
 void treat_exit_code(int status) {
 	if (WIFEXITED(status)) {
 		// Mort per un exit(status);
-		int exit_code = W
+		int exit_code = WEXITSTATUS(status);
+		printf("Ha mort per culpa d'un exit() amb exit_code = %d", exit_code);
+	} else {
+		// Mort per culpa de signal
+		printf("Ha mort per culpa d'un signal amb signal_code = %d", signal_code)
 	}
 }
 ```
