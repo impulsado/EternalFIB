@@ -41,6 +41,7 @@ Un procés no pot estar tota l'estona executant-se.
 - [ ] FICAR IMATGE
 
 # Gestió de Processos
+
 ## Seqüencials v.s. Concurrents
 ### Sequencial
 Fins que no mor un fill, no pasa a  
