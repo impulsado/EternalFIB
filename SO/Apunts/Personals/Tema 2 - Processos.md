@@ -135,7 +135,8 @@ pid_t waitpid(pid_t pid, int *status, int options);
 	- `NULL`: No guardar el valor de retorn.
 	- ``&status``: Guarda el valor a la variable ``int status``.
 - **options**: Determinar comportament que ha de tindre el procés mentre espera.
-	- 
+	- `0`: Atura't i espera fins que mori el fill.
+	- ``WNOHANG``: Si el fill encara esta viu, la funció retorna automàticament i continua amb l'execució. No espera.
 
 ## Acabar amb Procés
 Un procés pot acabar:
@@ -153,6 +154,7 @@ void exit(int status);
 | Realitza "neteja"        | Acaba de forma abrupta |
 [//]: Mentre que pare no consulta si fill ha mort, el PCB es manté. Normalment es fa ús de ``waitpid(...)``.
 [//]: Si pare ha mort abans que acabin els fills, `init` els hereda.
+
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
 Fins que no ha mort el fill, el pare espera. 
@@ -233,7 +235,7 @@ Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura
 
 ### kill(...);
 ```C
-void kill(int pid, int signal);
+int kill(int pid, int signal);
 ```
 
 ### struct sigaction;
