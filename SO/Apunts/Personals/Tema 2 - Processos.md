@@ -55,7 +55,20 @@ Quan un procés crea un altre, ho fa de forma jeràrquica (Arbre).
 Procés pare genera un procés fill que còpia exacta seva en el moment de la crida.
 Pare i fill s'executen de forma concurrent (Tots dos a l'hora) i de forma independent des del mateix punt de crida.
 ❗És genera una nova àrea de memòria per al fill que és una **còpia** de la del pare.
-
+```C
+int ret;
+pid = fork();
+if (pid < 0) {
+	perror("fork() ha fallat!");
+	return 1;
+}
+else if (pid == 0) {
+	// Només ho executa el fill.
+}
+else {
+	// Només ho executa el pare.
+}
+```
 
 ## Seqüencials v.s. Concurrents
 ### Seqüencial
