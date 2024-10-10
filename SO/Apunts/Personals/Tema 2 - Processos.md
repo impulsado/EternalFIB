@@ -73,6 +73,16 @@ else {
 printf("PARE/FILL: Adeu!");
 ```
 
+
+| Fill HEREDA                | Fill NO HEREDA                 |
+| -------------------------- | ------------------------------ |
+| Codi, dades, pila, ...     | PID, PPID                      |
+| **Programació de signals** | Comptadors Interns             |
+| **Màscara de signals**     | **Alarmes i Signals pendents** |
+| USERID, GROUPID            |                                |
+| Dispositius Virtuals       |                                |
+
+
 ### execlp();
 
 ## Seqüencials v.s. Concurrents
