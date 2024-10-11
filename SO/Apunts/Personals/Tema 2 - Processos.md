@@ -201,12 +201,11 @@ void treatDeath(int status) {
 
 ## Seqüencials v.s. Concurrents
 ```ad-attention
-El que importa és ON fas el``waitpid(...)``;
-**DINS == SEQÜENCIAL**: El procés pare (el que genera els fill) estarà esperant fins que fill acabi.
-
-**FORA == CONCURRENT**: El procés pare genera tots els fills i després ja esperarà fins que tots acabin.
+El que importa és ON fas el ``waitpid(...)``;
+- **DINS == SEQÜENCIAL**: El procés pare (el que genera els fill) estarà esperant fins que fill acabi.
+- **FORA == CONCURRENT**: El procés pare genera tots els fills i després ja esperarà fins que tots acabin.
 ```
-
+[//]: Sempre que en el ``waitpid(...)`` fiquem l'opció ``0``.
 ### Seqüencial
 Fins que no ha mort el fill, el pare espera. 
 ```C
@@ -222,7 +221,8 @@ for (i = 0; i<num_hijos; i++) {
 ```
 
 ### Concurrents
-Es genera un abre de $2^n$ processos.
+Es generen X processos i aquests s'executen "en paral·lel".
+❗**NO** és sinònim d'arbre de processos. 
 ```C
 int i;
 for (i = 0; i<num_fills; i++) {
