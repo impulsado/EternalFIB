@@ -220,7 +220,7 @@ for (i = 0; i<num_fills; i++) {
 	int pid = fork();
 	if (pid == 0) {
 		printf("FILL: Tinc el PID %d", pid);
-		// NO FICAR exit() aquí perquè sino no serà concurrent 
+		exit(0); 
 	}
 }
 int pid_child;
