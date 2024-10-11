@@ -226,7 +226,7 @@ for (i = 0; i<num_hijos; i++) {
 ```
 
 ### Concurrents
-Es generen X processos i aquests s'executen "en paral·lel".
+Es generen X processos que s'executen "a l'hora". 
 ❗**NO** és sinònim d'arbre de processos. 
 ```C
 int i;
@@ -242,7 +242,6 @@ while ((pid_child = waitpid(-1,NULL,0)) > 0) {
 	printf("PARE: Ha mort el fill amb PID: %d", pid_child);
 }
 ```
- ![[Pasted image 20241010085724.png]]
 
 # Signals
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
