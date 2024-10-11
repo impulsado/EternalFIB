@@ -226,7 +226,7 @@ for (i = 0; i<num_hijos; i++) {
 ```
 
 ### Concurrents
-Es generen X processos que s'executen "a l'hora". 
+Es generen X processos que s'executen "a l'hora". Poden estar tots actius.
 ❗**NO** és sinònim d'arbre de processos. 
 ```C
 int i;
