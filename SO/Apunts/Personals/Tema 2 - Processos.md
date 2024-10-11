@@ -219,11 +219,14 @@ int i;
 for (i = 0; i<num_fills; i++) {
 	int pid = fork();
 	if (pid == 0) {
-		printf("HIJO: %d PID", pid);
+		printf("FILL: Tinc el PID %d", pid);
 		// NO FICAR exit() aquí perquè sino no serà concurrent 
 	}
 }
-while (waitpid(-1,NULL,0) > 0);
+int pid_child;
+while ((pid_child = waitpid(-1,NULL,0)) > 0) {
+	printf("PARE: Ha mort el fill amb PID: %d", pid_child);
+}
 ```
  ![[Pasted image 20241010085724.png]]
 
