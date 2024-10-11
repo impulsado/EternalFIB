@@ -200,6 +200,13 @@ void treatDeath(int status) {
 ```
 
 ## Seqüencials v.s. Concurrents
+```ad-attention
+El que importa és ON fas el``waitpid(...)``;
+**DINS == SEQÜENCIAL**: El procés pare (el que genera els fill) estarà esperant fins que fill acabi.
+
+**FORA == CONCURRENT**: El procés pare genera tots els fills i després ja esperarà fins que tots acabin.
+```
+
 ### Seqüencial
 Fins que no ha mort el fill, el pare espera. 
 ```C
