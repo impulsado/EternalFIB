@@ -53,6 +53,7 @@ Cada procés té el seu PID que l'identifica.
 Quan un procés crea un altre, ho fa de forma jeràrquica (Arbre).
 ### fork();
 Procés pare **crea** un procés fill que còpia exacta seva en el moment de la crida.
+Retorna el 
 Pare i fill s'executen de forma concurrent (Tots dos a l'hora) i de forma independent des del mateix punt de crida.
 ❗És genera una nova àrea de memòria per al fill que és una **còpia** de la del pare.
 ```C
