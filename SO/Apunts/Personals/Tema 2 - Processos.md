@@ -220,7 +220,7 @@ for (i = 0; i<num_fills; i++) {
 	int pid = fork();
 	if (pid == 0) {
 		printf("HIJO: %d PID", pid);
-		exit(0);
+		// NO FICAR exit() aquí perquè sino no serà concurrent 
 	}
 }
 while (waitpid(-1,NULL,0) > 0);
