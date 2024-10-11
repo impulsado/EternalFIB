@@ -168,9 +168,12 @@ void exit(int status);
 [//]: Si pare ha mort abans que acabin els fills, `init` els hereda.
 
 ### Gestió d'acabament
-- `WIFEXITED(status)`: Saber si procés ha mort per `exit(status)`. Sempre col·locar-ho abans de comprovar com ha mort. Retorna `1` o `0`.
+Saber **com** ha mort:
+- `WIFEXITED(status)`: Saber si procés ha mort per `exit(status)`.
 - ``WIFSIGNALED(status)``: Saber si procés ha mort per signal.
-- `WEXITSTATUS(status)`: Saber la causa de la mort. Agafa uns determinats bits del ``status``.
+
+Saber **causa exacta** de la mort:
+- `WEXITSTATUS(status)`: Saber número del `exit()`. Agafa uns determinats bits del ``status``.
 - `WTERMSIG(status)`: Saber quin signal ha matat al procés.
 
 ❗**SEMPRE** haurem de controlar com acaben els nostres programes.
