@@ -4,14 +4,14 @@ Selecciona les tuples (files) que compleixen la condició.
 Mostra totes les columnes, com si fos un "SELECT \*"
 **Format**: ``R = RELACIO(condicions)``
 **Exemple**: ``R = tPokedex(id=2)``
-
+![[Pasted image 20241012102745.png]]
 ## Projecció (Π)
 Només mostra els atributs (columnes) especificades.
 ❗Elimina tuples repetides.
 **Format**: ``R = RELACIÓ[atribut1,...,atributN]``
 **Exemple**: ``R = tPokedex[id,name]``
 **Exemple2**: ``R = tPokedex(id=2)[name,id]``
-
+![[Pasted image 20241012102756.png]]
 ## Reanomenament (ρ)
 Canviar el nom d'una relació o dels seus atributs.
 **Format**: `R = RELACIO{atribu1->atributA, atribut2->atributB}`
@@ -31,23 +31,23 @@ Elimina tuples repetides (Si estan en la intersecció per exemple).
 ❗Les relacions han de ser compatibles.
 **Format**: ``R = RELACIO1 ∪ RELACIO2``
 **Exemple**: `R = tPokemonsGen1 ∪ tPokemonsGen2`
-
+![[Pasted image 20241012102807.png]]
 ## Intersecció (∩)
 Tuples que tenen en comú les relacions.
 ❗Les relacions han de ser compatibles.
 **Format**: `R = RELACIO1 ∩ RELACIO2`
 **Exemple**: ``R = tPokemonsGen1 ∩ tPokemonsLegend`` 
-
+![[Pasted image 20241012102813.png]]
 ## Diferència (-)
 Agafa les tuples que estan en una relació i no en l'altra.
 ❗Les relacions han de ser compatibles.
 **Format**: `R = RELACIO1 - RELACIO2`
 **Exemple**: `R = (tPokedex(attack>=100)) - (tPokedex(hp<=50))`
-
+![[Pasted image 20241012102820.png]]
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
-
+![[Pasted image 20241012102832.png]]
 
 
 
