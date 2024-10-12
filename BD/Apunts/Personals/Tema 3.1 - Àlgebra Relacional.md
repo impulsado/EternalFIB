@@ -16,9 +16,9 @@ Mostra totes les columnes, com si fos un "SELECT \*"
 ## Projecció (Π)
 Només mostra els atributs (columnes) especificades.
 Elimina tuples repetides.
-**Format**: ``R = tPokedex(id,name)``
-**Exemple**: ``Π_name (Pokemons)``
-**Exemple2**: ``Π_name(σ_type='fire' (Pokemons))``
+**Format**: ``R = RELACIÓ[atribut1,...,atributN]``
+**Exemple**: ``R = tPokedex[id,name]``
+**Exemple2**: ``R = tPokedex(id=2)[name,id]``
 
 # Operadors Binaris
 ## Unió (∪)
