@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md"
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
               }
             }
           }
@@ -150,6 +150,7 @@
   },
   "active": "b136daf344eb0d0f",
   "lastOpenFiles": [
+    "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "Attachments/Pasted image 20241012103903.png",
@@ -167,7 +168,6 @@
     "SO/Apunts/Personals",
     "SO/Apunts",
     "SO",
-    "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
     "BD/README.md",
     "BD/Apunts/Personals",
     "BD/Apunts",
