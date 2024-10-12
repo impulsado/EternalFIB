@@ -55,26 +55,14 @@ Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat 
 ## Combinació (Ģ)
 Relació que combina relacions complint una condició donada.
 **Format**: `R = RELACIO1[condicions]RELACIO2`
-**Exemple**: `R = `
+**Exemple**: `R = tTrainers[name=trainer_name]tTournamentWinners`
 ![[Pasted image 20241012103903.png]]
 # Exemple 
-Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
-1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
-$$
-\text{TOTES\_COMB} = (\text{trainers} \times \text{pokemons})
-$$
-2. Ara seleccionem aquells tuples on la especialitat de l'entrenador sigui la mateixa que el tipus principal del pokemon.
-$$
-\text{NOMES\_ESPECIALISTES} = \sigma_{\text{trainers.specialty} = \text{pokemons.main-type}} (\text{TOTES\_COMB})
-$$
-3. Seleccionem aquells pokemons que siguin forts.
-$$
-\text{FORTS} = \sigma_{\text{pokemons.attac} \geq 150 \wedge \text{pokemons.hp>200}} (\text{NOMES\_ESPECIALISTES})
-$$
-4. Finalment mostrem només el nom de l'entrenador i el nom del pokemon 
-$$
-\Pi_{\text{trainers.name, pokemons.name}}(FORTS)
-$$
+Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200).
+1. Primer agafem totes les possibles combinacions.
+`TOTS = tTrainers × tPokedex`
+2- 
+
 
 # Links
 - Relational Algebra Simplified
