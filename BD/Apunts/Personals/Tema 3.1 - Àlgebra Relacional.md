@@ -28,15 +28,15 @@ Els atributs de les relacions han de ser iguals:
 ## Unió (∪)
 Actua com la unió en "Teoria de Conjunts".
 Elimina tuples repetides (Si estan en la intersecció per exemple).
-
-
-
+❗Les relacions han de ser compatibles.
 **Format**: ``R = RELACIO1 U RELACIO2``
 **Exemple**: `R = tPokemonsGen1 U tPokemonsGen2`
 
 ## Diferència (-)
 Actual igual la diferència en "Teoria de Conjunts".
 Agafa les tuples (files) que estan en una relació i no en l'altra.
+❗Les relacions han de ser compatibles.
+**Format**:
 **Exemple**:
 $$
 \Pi_{name} (\sigma_{main-type='fire'}(\text{Pokemons}) - \Pi_{name} (\sigma_{attack>=100}(\text{Pokemons}))
