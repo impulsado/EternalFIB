@@ -22,10 +22,8 @@ Només mostra els atributs (columnes) especificades.
 
 ## Reanomenament (ρ)
 Canviar el nom d'una relació o dels seus atributs.
-**Format**: `R = RELACIO{atribu1->atributA,}`
-$$
-\text{trainers} = \rho_{\text{trainer\_id/id}} (\text{trainers})
-$$
+**Format**: `R = RELACIO{atribu1->atributA, atribut2->atributB}`
+**Exemple**: ``R = tTrainers{id -> trainer_id}``
 
 # Operadors Binaris
 ## Unió (∪)
