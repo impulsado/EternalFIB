@@ -1,11 +1,3 @@
-# Símbols
-**AND**: ∧  
-**OR**: ∨  
-**NOT**: ¬
-**NULL**: ω
-**full outer join**: ⟗  
-**antijoin**: ▷
-
 # Operadors Unaris
 ## Selecció (σ)
 Selecciona les tuples (files) que compleixen la condició.
@@ -29,8 +21,9 @@ Canviar el nom d'una relació o dels seus atributs.
 ## Unió (∪)
 Actua com la unió en "Teoria de Conjunts".
 Elimina tuples repetides (Si estan en la intersecció per exemple).
-Recorda que qualsevol relació es un conjunt (set).
-**Format**: `Π_<attribute1,attriubte2,...> (Relation_1) ∪ Π_<attribute1,attriubte2,...> (Relation_2)`
+
+
+**Format**: `R = t`
 **Exemple**: 
 $$
 \Pi_{\text{name}} \left( \sigma_{\text{main-type} = 'fire' \land \text{attack} < 100} (\text{Pokemons}) \right) \cup \Pi_{\text{name}} \left( \sigma_{\text{sec-type} = 'bug' \lor \text{type} = 'steel'} (\text{Pokemons}) \right)
