@@ -18,20 +18,21 @@ Canviar el nom d'una relació o dels seus atributs.
 **Exemple**: ``R = tTrainers{id -> trainer_id}``
 
 # Operadors Binaris
+
+```ad-warning
+**Relacions Compatibles**
+Els atributs de les relacions han de ser iguals:
+- Mateixa quantitat d'atributs
+- Cada `i` atribut ha de coincidir en Nom i Tipus de dada.
+```
 ## Unió (∪)
 Actua com la unió en "Teoria de Conjunts".
 Elimina tuples repetides (Si estan en la intersecció per exemple).
 
-```ad-warning
-Els atributs de les relacions han de ser els mateixos:
-- Mateixa quantitat d'atributs
-- Cada `i` atribut ha de coincidir en Nom i Extensió.
-```
+
 
 **Format**: ``R = RELACIO1 U RELACIO2``
 **Exemple**: `R = tPokemonsGen1 U tPokemonsGen2`
-
-
 
 ## Diferència (-)
 Actual igual la diferència en "Teoria de Conjunts".
@@ -45,9 +46,6 @@ $$
 - Nº attributs en les relacions han de ser les mateixes.
 - Tots el i attributs han de ser del mateix domini.
 ```
-
-
-
 
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
