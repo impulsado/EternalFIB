@@ -20,10 +20,10 @@ Canviar el nom d'una relació o dels seus atributs.
 # Operadors Binaris
 
 ```ad-warning
-**Relacions Compatibles**
-Els atributs de les relacions han de ser iguals:
-- Mateixa quantitat d'atributs
-- Cada `i` atribut ha de coincidir en Nom i Tipus de dada.
+**Relacions Compatibles** 
+Les relacions han de tenir el mateix esquema: 
+- Mateixa quantitat d'atributs.
+- Els atributs corresponents han de coincidir en Nom, Tipus de dada i Ordre.
 ```
 ## Unió (∪)
 Actua com la unió en "Teoria de Conjunts".
@@ -36,16 +36,8 @@ Elimina tuples repetides (Si estan en la intersecció per exemple).
 Actual igual la diferència en "Teoria de Conjunts".
 Agafa les tuples (files) que estan en una relació i no en l'altra.
 ❗Les relacions han de ser compatibles.
-**Format**:
-**Exemple**:
-$$
-\Pi_{name} (\sigma_{main-type='fire'}(\text{Pokemons}) - \Pi_{name} (\sigma_{attack>=100}(\text{Pokemons}))
-$$
-
-```ad-important
-- Nº attributs en les relacions han de ser les mateixes.
-- Tots el i attributs han de ser del mateix domini.
-```
+**Format**: `R = RELACIO1 - RELACIO2`
+**Exemple**: `R = (tPokedex(attack>=100)) - (tPokedex)`
 
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
