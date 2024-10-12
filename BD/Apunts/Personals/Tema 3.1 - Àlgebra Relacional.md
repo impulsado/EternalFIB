@@ -59,17 +59,17 @@ Relació que combina relacions complint una condició donada.
 ![[Pasted image 20241012103903.png]]
 # Exemple 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200).
-1. Ens fixem que el nom de l'atribut de l'especialitat dels entrenadors i del tipus del pokemon es diuen igual. Els haurem de canviar per quan fem producte cartesià no hi hagi confusions.
-`ENTRENADORS = tTrainers {type->trainer_type}`
-`POKEMONS = tPokedex {type->pokemon_type}`
+1. Ens fixem que tipus/nom de l'entrenador es diu igual que en la taula pokemon. Els haurem de canviar per quan fem producte cartesià no hi hagi confusions.
+`ENTRENADORS = tTrainers {type->trainer_type, name->trainer_name}`
+`POKEMONS = tPokedex {type->pokemon_type, name->pokemon_name}`
 2. Primer agafem totes les possibles combinacions.
 `TOTS = ENTRENADORS × POKEMONS`
 3. Filtrem per què l'entrenador i el pokemon siguin del mateix tipus.
 `ESPECIALITATS = TOTS(trainer_type=pokemon_type)`
 4. Ara seleccionem aquells pokemons forts.
-`BONS = ESPECIALITATS(`
-
-
+`BONS = ESPECIALITATS(attack>=150 ∧ hp>200)`
+5. Finalment només ens interessen els noms dels pokemons i entrenadors
+`RESULTAT = BONS[`
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
