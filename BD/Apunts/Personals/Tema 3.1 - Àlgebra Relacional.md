@@ -26,18 +26,21 @@ Les relacions han de tenir el mateix esquema:
 - Els atributs corresponents han de coincidir en Nom, Tipus de dada i Ordre.
 ```
 ## Unió (∪)
-Actua com la unió en "Teoria de Conjunts".
+Totes les tuples de
 Elimina tuples repetides (Si estan en la intersecció per exemple).
 ❗Les relacions han de ser compatibles.
-**Format**: ``R = RELACIO1 U RELACIO2``
-**Exemple**: `R = tPokemonsGen1 U tPokemonsGen2`
+**Format**: ``R = RELACIO1 ∪ RELACIO2``
+**Exemple**: `R = tPokemonsGen1 ∪ tPokemonsGen2`
+
+## Intersecció (∩)
+Tuples que tenen en comú les relacions.
+
 
 ## Diferència (-)
-Actual igual la diferència en "Teoria de Conjunts".
 Agafa les tuples (files) que estan en una relació i no en l'altra.
 ❗Les relacions han de ser compatibles.
 **Format**: `R = RELACIO1 - RELACIO2`
-**Exemple**: `R = (tPokedex(attack>=100)) - (tPokedex)`
+**Exemple**: `R = (tPokedex(attack>=100)) - (tPokedex(hp<=50))`
 
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
