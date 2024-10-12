@@ -23,7 +23,9 @@ Actua com la unió en "Teoria de Conjunts".
 Elimina tuples repetides (Si estan en la intersecció per exemple).
 
 ```ad-warning
-- Els atributs de les relacions han de ser els mateixos.
+Els atributs de les relacions han de ser els mateixos:
+- Mateixa quantitat d'atributs
+- Cada `i` atribut ha de coincidir en Nom i Extensió.
 ```
 
 **Format**: ``R = RELACIO1 U RELACIO2``
