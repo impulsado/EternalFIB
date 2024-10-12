@@ -59,9 +59,13 @@ Relació que combina relacions complint una condició donada.
 ![[Pasted image 20241012103903.png]]
 # Exemple 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200).
-1. Primer agafem totes les possibles combinacions.
+1. Ens fixem que el nom de l'atribut de l'especialitat dels entrenadors i del tipus del pokemon es diuen igual.
+`TOTS_IMPROVED = TOTS`
+2. Primer agafem totes les possibles combinacions.
 `TOTS = tTrainers × tPokedex`
-2- 
+
+4. Filtrem per què l'entrenador i el pokemon siguin del mateix tipus.
+`ESPECIALITATS = TOTS(trainer_type `
 
 
 # Links
