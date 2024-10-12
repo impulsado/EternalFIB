@@ -46,7 +46,7 @@ Agafa les tuples que estan en una relació i no en l'altra.
 ![[Pasted image 20241012102820.png]]
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
-Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat pot haver ambiguetat.
+Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat pot haver ambigüitat.
 [//]: Si obs. que pot arribar a passar, haurem de fer prèviament un reanomenament.
 ❗NO cal que siguin compatibles.
 **Format**: ``R = RELACIO1 × RELACIO2``
@@ -59,13 +59,15 @@ Relació que combina relacions complint una condició donada.
 ![[Pasted image 20241012103903.png]]
 # Exemple 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200).
-1. Ens fixem que el nom de l'atribut de l'especialitat dels entrenadors i del tipus del pokemon es diuen igual.
-`TOTS_IMPROVED = TOTS`
+1. Ens fixem que el nom de l'atribut de l'especialitat dels entrenadors i del tipus del pokemon es diuen igual. Els haurem de canviar per quan fem producte cartesià no hi hagi confusions.
+`ENTRENADORS = tTrainers {type->trainer_type}`
+`POKEMONS = tPokedex {type->pokemon_type}`
 2. Primer agafem totes les possibles combinacions.
-`TOTS = tTrainers × tPokedex`
-
-4. Filtrem per què l'entrenador i el pokemon siguin del mateix tipus.
-`ESPECIALITATS = TOTS(trainer_type `
+`TOTS = ENTRENADORS × POKEMONS`
+3. Filtrem per què l'entrenador i el pokemon siguin del mateix tipus.
+`ESPECIALITATS = TOTS(trainer_type=pokemon_type)`
+4. Ara seleccionem aquells pokemons forts.
+`BONS = ESPECIALITATS(`
 
 
 # Links
