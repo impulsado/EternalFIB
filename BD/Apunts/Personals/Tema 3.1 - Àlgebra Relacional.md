@@ -52,7 +52,8 @@ Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat 
 **Format**: ``R = RELACIO1 × RELACIO2``
 **Exemple**: ``R = tTrainers × tPokedex``
 ![[Pasted image 20241012102832.png]]
-## Combinació ()
+## Combinació (Ģ)
+Relació que combina relacions complint una condició donada.
 
 # Exemple 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
