@@ -48,11 +48,13 @@ Agafa les tuples que estan en una relació i no en l'altra.
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat pot haver ambiguetat.
 [//]: Si obs. que pot arribar a passar, haurem de fer prèviament un reanomenament.
+❗NO cal que siguin compatibles.
 **Format**: ``R = RELACIO1 × RELACIO2``
-
+**Exemple**: ``R = tTrainers × tPokedex``
 ![[Pasted image 20241012102832.png]]
+## Combinació ()
 
-**Exemple**: 
+# Exemple 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
 1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
 $$
