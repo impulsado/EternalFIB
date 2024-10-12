@@ -46,11 +46,11 @@ Agafa les tuples que estan en una relació i no en l'altra.
 ![[Pasted image 20241012102820.png]]
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
-Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
+Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat pot haver ambiguetat.
+[//]: Si obs. que pot arribar a passar, haurem de fer prèviament un reanomenament.
+**Format**: ``R = RELACIO1 × RELACIO2``
+
 ![[Pasted image 20241012102832.png]]
-
-
-
 
 **Exemple**: 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
