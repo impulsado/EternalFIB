@@ -26,7 +26,7 @@ Les relacions han de tenir el mateix esquema:
 - Els atributs corresponents han de coincidir en Nom, Tipus de dada i Ordre.
 ```
 ## Unió (∪)
-Totes les tuples de
+Totes les tuples de les relacions.
 Elimina tuples repetides (Si estan en la intersecció per exemple).
 ❗Les relacions han de ser compatibles.
 **Format**: ``R = RELACIO1 ∪ RELACIO2``
@@ -34,10 +34,12 @@ Elimina tuples repetides (Si estan en la intersecció per exemple).
 
 ## Intersecció (∩)
 Tuples que tenen en comú les relacions.
-
+❗Les relacions han de ser compatibles.
+**Format**: `R = RELACIO1 ∩ RELACIO2`
+**Exemple**: ``R = tPokemonsGen1 ∩ tPokemonsLegend`` 
 
 ## Diferència (-)
-Agafa les tuples (files) que estan en una relació i no en l'altra.
+Agafa les tuples que estan en una relació i no en l'altra.
 ❗Les relacions han de ser compatibles.
 **Format**: `R = RELACIO1 - RELACIO2`
 **Exemple**: `R = (tPokedex(attack>=100)) - (tPokedex(hp<=50))`
@@ -45,7 +47,13 @@ Agafa les tuples (files) que estan en una relació i no en l'altra.
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
 Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
-**Exemple**: Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
+
+
+
+
+
+**Exemple**: 
+Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
 1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
 $$
 \text{TOTES\_COMB} = (\text{trainers} \times \text{pokemons})
