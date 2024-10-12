@@ -22,17 +22,14 @@ Canviar el nom d'una relació o dels seus atributs.
 Actua com la unió en "Teoria de Conjunts".
 Elimina tuples repetides (Si estan en la intersecció per exemple).
 
-
-**Format**: `R = t`
-**Exemple**: 
-$$
-\Pi_{\text{name}} \left( \sigma_{\text{main-type} = 'fire' \land \text{attack} < 100} (\text{Pokemons}) \right) \cup \Pi_{\text{name}} \left( \sigma_{\text{sec-type} = 'bug' \lor \text{type} = 'steel'} (\text{Pokemons}) \right)
-$$
-
-```ad-important
-- Nº attributs en les relacions han de ser les mateixes.
-- Tots el i attributs han de ser del mateix domini.
+```ad-warning
+- Els atributs de les relacions han de ser els mateixos.
 ```
+
+**Format**: ``R = RELACIO1 U RELACIO2``
+**Exemple**: `R = tPokemonsGen1 U tPokemonsGen2`
+
+
 
 ## Diferència (-)
 Actual igual la diferència en "Teoria de Conjunts".
