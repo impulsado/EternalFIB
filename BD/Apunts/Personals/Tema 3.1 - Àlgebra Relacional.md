@@ -15,10 +15,16 @@ Mostra totes les columnes, com si fos un "SELECT \*"
 
 ## Projecció (Π)
 Només mostra els atributs (columnes) especificades.
-Elimina tuples repetides.
+❗Elimina tuples repetides.
 **Format**: ``R = RELACIÓ[atribut1,...,atributN]``
 **Exemple**: ``R = tPokedex[id,name]``
 **Exemple2**: ``R = tPokedex(id=2)[name,id]``
+
+## Reanomenament (ρ)
+
+$$
+\text{trainers} = \rho_{\text{trainer\_id/id}} (\text{trainers})
+$$
 
 # Operadors Binaris
 ## Unió (∪)
@@ -50,10 +56,7 @@ $$
 ```
 
 
-## Reanomenament (ρ)
-$$
-\text{trainers} = \rho_{\text{trainer\_id/id}} (\text{trainers})
-$$
+
 
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
