@@ -7,16 +7,16 @@
 **antijoin**: ▷
 
 # Operadors Unàris
-## Select (σ)
+## Selecció (σ)
 Selecciona les tuples (files) que compleixen la condició.
 Mostra totes les columnes, com si fos un "SELECT \*"
-**Format**: ``σ_<select_cond> (Relation)``
-**Exemple**: ``σ_id=2 (Pokemons)``
+**Format**: ``R = RELACIO(condicions)``
+**Exemple**: ``R = tPokedex(id=2)``
 
-## Project (Π)
+## Projecció (Π)
 Només mostra els atributs (columnes) especificades.
 Elimina tuples repetides.
-**Format**: ``Π_<attribute1,attriubte2,...> (Relation)``
+**Format**: ``R = tPokedex(id,name)``
 **Exemple**: ``Π_name (Pokemons)``
 **Exemple2**: ``Π_name(σ_type='fire' (Pokemons))``
 
