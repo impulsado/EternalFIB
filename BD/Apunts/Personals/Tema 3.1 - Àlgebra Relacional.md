@@ -54,7 +54,9 @@ Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat 
 ![[Pasted image 20241012102832.png]]
 ## Combinació (Ģ)
 Relació que combina relacions complint una condició donada.
-
+**Format**: `R = RELACIO1[condicions]RELACIO2`
+**Exemple**: `R = `
+![[Pasted image 20241012103903.png]]
 # Exemple 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
 1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
