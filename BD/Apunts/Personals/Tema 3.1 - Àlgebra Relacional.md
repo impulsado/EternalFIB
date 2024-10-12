@@ -57,6 +57,7 @@ Relació que combina relacions complint una condició donada.
 **Format**: `R = RELACIO1[condicions]RELACIO2`
 **Exemple**: `R = tTrainers[name=trainer_name]tTournamentWinners`
 ![[Pasted image 20241012103903.png]]
+
 # Exemple 
 Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200).
 1. Ens fixem que tipus/nom de l'entrenador es diu igual que en la taula pokemon. Els haurem de canviar per quan fem producte cartesià no hi hagi confusions.
@@ -69,7 +70,10 @@ Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especi
 4. Ara seleccionem aquells pokemons forts.
 `BONS = ESPECIALITATS(attack>=150 ∧ hp>200)`
 5. Finalment només ens interessen els noms dels pokemons i entrenadors
-`RESULTAT = BONS[`
+`RESULTAT = BONS[trainer_name,pokemon_name]`
+
+[//]: OBS: Podrien haver fet servir un "JOIN" en comptes del producte cartesià + selecció.
+
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
