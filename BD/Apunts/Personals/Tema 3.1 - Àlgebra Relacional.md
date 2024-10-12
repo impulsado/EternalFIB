@@ -6,7 +6,7 @@
 **full outer join**: ⟗  
 **antijoin**: ▷
 
-# Operadors Unàris
+# Operadors Unaris
 ## Selecció (σ)
 Selecciona les tuples (files) que compleixen la condició.
 Mostra totes les columnes, com si fos un "SELECT \*"
@@ -21,7 +21,8 @@ Només mostra els atributs (columnes) especificades.
 **Exemple2**: ``R = tPokedex(id=2)[name,id]``
 
 ## Reanomenament (ρ)
-Canviar el nom dels atributs. Útil 
+Canviar el nom d'una relació o dels seus atributs.
+**Format**: `R = RELACIO{atribu1->atributA,}`
 $$
 \text{trainers} = \rho_{\text{trainer\_id/id}} (\text{trainers})
 $$
