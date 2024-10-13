@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bea07364e6ec8988",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
+                "file": "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md"
               }
             }
           }
@@ -149,11 +160,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f0698490ce9f7cb9",
+  "active": "bea07364e6ec8988",
   "lastOpenFiles": [
+    "SO/Apunts/Personals/Tema 2 - Processos.md",
+    "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
+    "Excalidraw/Untitled.md",
     "Attachments/Pasted image 20241013171546.png",
     "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
-    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "Attachments/Pasted image 20241013171426.png",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
     "Excalidraw",
@@ -167,7 +180,6 @@
     "Attachments/Pasted image 20241012102756.png",
     "Attachments/Pasted image 20241012102745.png",
     "Attachments/programa.png",
-    "Attachments/Pasted image 20241010085724.png",
     "Attachments",
     "SO/Apunts/Personals",
     "SO/Apunts",
