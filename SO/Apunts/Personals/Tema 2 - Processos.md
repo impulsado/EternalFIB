@@ -78,7 +78,6 @@ else {
 printf("PARE/FILL: Adeu!");
 ```
 
-
 | Fill HEREDA                | Fill NO HEREDA                 |
 | -------------------------- | ------------------------------ |
 | Codi, dades, pila, ...     | PID, PPID                      |
