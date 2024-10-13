@@ -11,11 +11,9 @@
             "id": "b136daf344eb0d0f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md"
+                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md"
               }
             }
           }
@@ -151,8 +149,10 @@
   },
   "active": "b136daf344eb0d0f",
   "lastOpenFiles": [
-    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+    "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
+    "Excalidraw",
+    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "Attachments/Pasted image 20241012103903.png",
