@@ -44,12 +44,13 @@ Un procés està format per:
 
 Un fil és una tasca que pot ser executada a l'hora amb una altra tasca. (Fer ús paral·lelisme).
 Els fils comparteixen mateixos recursos, llavors els permet intercanviar informació sense ús de crides a sistema.
-Grau de paral·lelisme: Nº processos paral·lels. Depen del HW+ Nº processos.
+Grau de paral·lelisme: Nº processos paral·lels. Depen del HW + Nº processos.
 
 **Estats d'un procés**
 Un procés no pot estar tota l'estona executant-se.
 És per això que hi ha una classificació dels estats.
-![[Pasted image 20241013171426.png]]
+![[Pasted image 20241013171546.png]]
+
 # Gestió de Processos
 ## Creació de Processos
 Cada procés té el seu PID que l'identifica.
