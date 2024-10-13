@@ -49,8 +49,7 @@ Grau de paral·lelisme: Nº processos paral·lels. Depen del HW+ Nº processos.
 **Estats d'un procés**
 Un procés no pot estar tota l'estona executant-se.
 És per això que hi ha una classificació dels estats.
-[[Drawing 2024-10-13 16.04.01.excalidraw]]
-
+![[Pasted image 20241013171426.png]]
 # Gestió de Processos
 ## Creació de Processos
 Cada procés té el seu PID que l'identifica.

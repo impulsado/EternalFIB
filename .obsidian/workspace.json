@@ -11,9 +11,11 @@
             "id": "f0698490ce9f7cb9",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md"
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md"
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
               }
             }
           }
@@ -149,8 +151,9 @@
   },
   "active": "f0698490ce9f7cb9",
   "lastOpenFiles": [
-    "SO/Apunts/Personals/Tema 2 - Processos.md",
+    "Attachments/Pasted image 20241013171426.png",
     "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
+    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
     "Excalidraw",
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
