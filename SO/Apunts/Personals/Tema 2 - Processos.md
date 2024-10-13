@@ -10,8 +10,7 @@ Codi i definició de dades que al ficar-ho en execució necessitem:
 - Oferir accés als dispositius. (Interactuar amb teclat, pantalla, ...)
 
 [//]: Si un programa és simplement una suma de dos números i ja, el SO continua havent d'assignar memòria i inicialitzar registres. 
-
-![[programa.png]]
+![[Pasted image 20241013175251.png]]
 
 **PCB (Process Control Bank)**
 Conté informació que el sistema necessita per gestionar un procés.
