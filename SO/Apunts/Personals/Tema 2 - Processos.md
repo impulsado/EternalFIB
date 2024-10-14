@@ -348,4 +348,7 @@ int sigprocmask(int operation, sigset_t *new_mask, sigset_t *old_mask);
 ```
 Les operacions que es poden fer són:
 - `SIG_BLOCK`: **Afegir** els signals de la nova a la màscara vella.
-- ``SIG_UNBLOCK``: 
+- ``SIG_UNBLOCK``: **Treure** els signals indicats en la nova màscara.
+- `SIG_SETMASK`: **Canviar** la màscara vella per la nova.
+
+### Esperar Signal
