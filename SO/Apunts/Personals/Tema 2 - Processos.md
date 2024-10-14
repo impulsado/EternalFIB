@@ -241,7 +241,8 @@ while ((pid_child = waitpid(-1,NULL,0)) > 0) {
 }
 ```
 
-## Esquema Disseny Progra
+## Esquema disseny programa
+
 
 # Signals
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 

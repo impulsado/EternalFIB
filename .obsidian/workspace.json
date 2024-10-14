@@ -30,9 +30,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "009a25587cec883a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md"
               }
             }
           }
@@ -162,18 +172,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "275c6f6f8bbef44c",
+  "active": "009a25587cec883a",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20241013175251.png",
-    "Attachments/Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
-    "Attachments/Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
+    "Excalidraw/Drawing 2024-10-14 10.24.47.excalidraw.md",
+    "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
+    "Excalidraw",
+    "Attachments/Pasted image 20241013175251.png",
+    "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
+    "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
     "Attachments/Pasted image 20241013175211.png",
     "Excalidraw/Untitled.md",
     "Attachments/Pasted image 20241013171546.png",
     "Attachments/Pasted image 20241013171426.png",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
-    "Attachments/Excalidraw",
+    "Excalidraw",
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "Attachments/Pasted image 20241012103903.png",
@@ -182,7 +195,6 @@
     "Attachments/Pasted image 20241012102813.png",
     "Attachments/Pasted image 20241012102807.png",
     "Attachments/Pasted image 20241012102756.png",
-    "Attachments/Pasted image 20241012102745.png",
     "Attachments",
     "SO/Apunts/Personals",
     "SO/Apunts",
