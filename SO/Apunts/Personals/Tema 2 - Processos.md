@@ -271,7 +271,7 @@ Quan acaba (si sobreviu) continua on estava.
 "SIGUSR1" i "SIGUSR2" són signals que no estan relacionats a un esdeveniment específic.
 ❗"SIGKILL" i "SIGSTOP" **NO** son bloquejables ni capturable. 
 ❗"SIGSEGV", "SIGILL", "SIGFPE" **NO** és poden bloquejar si son per culpa d'una excepció, però si que es poden gestionar.
-Normalment el bloqueig d'un signal es temporal. Dins el mateix procés hi ha un bloqueig i desbloqueig.
+Normalment el bloqueig d'un signal és temporal.
 Si un procés bloqueja X signal, no el rep i el SO el marca com a pendent de tractar. Quan aquest mateix procés el desbloqueja aquest X signal, el rebrà i el tractarà.
 Per determinar quins signals bloqueja i quins permet, es fa ús de la estructura de dades `sigset_t` (màscara de senyals).
 
