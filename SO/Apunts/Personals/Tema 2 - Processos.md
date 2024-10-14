@@ -354,4 +354,10 @@ Les operacions que es poden fer són:
 ### Esperar Signal
 1. La màscara de signals canvia de forma temporal (sense alterar l'original).
 2. El procés queda suspès (Bloquejat) i espera fins que arribi un signal que no estigui bloquejada per la màscara temporal (``mask<num_signal> == 0``).
-3. Quan el reb,
+3. Quan el rep, el procés desperta. Executa el handler específic i la màscara es restaura.
+
+[//]: Ús freqüent per evitar `race conditions`.
+
+```C
+int sigsuspend(sigset_t *temp_mask);
+```
