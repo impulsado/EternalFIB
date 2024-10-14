@@ -333,8 +333,8 @@ sa.handler = custom_handler;
 // Més opcions del comportament del Handler
 sa.sa_flags = SA_RESTART;
 // Signals block durant execució del Handler
-sigemptyset(&sa.sa_mask);  // Només block el signal que s'està tractant
-sigaddset(&sa.sa_mask, SIGINT);  // Afegir el bloqueig del SIGINT mentre custom_handler
+sigemptyset(&sa.sa_mask);  // No bloquejar cap
+sigaddset(&sa.sa_mask, SIGINT);  // Bloquejar SIGINT mentre custom_handler
 
 // Aplicar la configuració a SIGCHLD (Mort d'un fill)
 if (sigaction(SIGCHLD, &sa, NULL) == 0) {
@@ -367,7 +367,7 @@ int sigsuspend(sigset_t *temp_mask);
 sigset_t mask;  // Iniciar màscara
 sigemptyset(&mask);  // Buida
 sigfillset(&mask);  // Plena
-sigaddset(&mask, SIGNUM);  // Afegir bloqueig del signal (1)
-sigdelset(&mask, SIGNUM);  // Treure bloqueig del signal (0)
+sigaddset(&mask, SIGNUM);  // Afegir bloqueig del signal (mask<SIGNUM> = 1)
+sigdelset(&mask, SIGNUM);  // Treure bloqueig del signal (mask<SIGNUM> = 0)
 sigismember(&mask, SIGNUM);  // Saber si esta block (true) o no (false).
 ```
