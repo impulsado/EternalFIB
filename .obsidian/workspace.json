@@ -35,9 +35,11 @@
             "id": "009a25587cec883a",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md"
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -108,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md"
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
               }
             }
           }
@@ -174,8 +176,8 @@
   },
   "active": "009a25587cec883a",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2024-10-14 10.24.47.excalidraw.md",
     "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
+    "Excalidraw/Drawing 2024-10-14 10.24.47.excalidraw.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
     "Excalidraw",
     "Attachments/Pasted image 20241013175251.png",
