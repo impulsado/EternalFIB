@@ -374,6 +374,11 @@ sigdelset(&mask, SIGNUM);  // Treure bloqueig del signal (mask<SIGNUM> = 0)
 sigismember(&mask, SIGNUM);  // Saber si esta block (true) o no (false).
 ```
 
+## Control de temps
+```C
+
+```
+
 ## Sincronització entre processos
 ### Activa
 **Consumeix CPU** així que fer-ho servir quan saps que has d'esperar poc.
