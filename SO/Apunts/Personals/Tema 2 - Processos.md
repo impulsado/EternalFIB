@@ -242,7 +242,7 @@ while ((pid_child = waitpid(-1,NULL,0)) > 0) {
 ```
 
 ## Esquema disseny programa
-
+![[Pasted image 20241014112517.png]]
 
 # Signals
 Notificar events a un procés. Pot enviar-ho {Kernel, Altre procés}. 
