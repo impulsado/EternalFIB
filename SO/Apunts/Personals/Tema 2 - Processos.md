@@ -382,5 +382,7 @@ void config_esperar_alarma() {
 	alarma = 0;
 }
 
-void esperar_alarma
+void esperar_alarma() {
+	while (alarma != 1)
+}
 ```
