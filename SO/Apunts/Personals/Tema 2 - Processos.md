@@ -341,3 +341,11 @@ if (sigaction(SIGCHLD, &sa, NULL) == 0) {
 	perror("ERROR: Ha fallat el sigaction()\n");
 }
 ```
+
+### {Block/Unblock} signals
+```C
+int sigprocmask(int operation, sigset_t *new_mask, sigset_t *old_mask);
+```
+Les operacions que es poden fer són:
+- `SIG_BLOCK`: **Afegir** els signals de la nova a la màscara vella.
+- ``SIG_UNBLOCK``: 
