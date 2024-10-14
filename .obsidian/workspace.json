@@ -11,23 +11,9 @@
             "id": "f0698490ce9f7cb9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bea07364e6ec8988",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md"
               }
             }
           },
@@ -43,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
+                "file": "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md"
               }
             }
           }
@@ -174,15 +159,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "009a25587cec883a",
+  "active": "f0698490ce9f7cb9",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
+    "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
+    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
     "Excalidraw/Drawing 2024-10-14 10.24.47.excalidraw.md",
-    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "Excalidraw",
     "Attachments/Pasted image 20241013175251.png",
-    "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
-    "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
     "Attachments/Pasted image 20241013175211.png",
     "Excalidraw/Untitled.md",
     "Attachments/Pasted image 20241013171546.png",
