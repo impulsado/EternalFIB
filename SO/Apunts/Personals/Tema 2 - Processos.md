@@ -320,7 +320,7 @@ int kill(int pid, int signal);
 int sigaction(int signum, struct sigaction *new_sa,
             struct sigaction *old_sa);
 ```
-
+[//]: `old_sa` pot ser NULL.
 ### Exemple de "struct sigaction" + "sigaction(...)"
 Configurar un handler específic que executarà el pare quan mori un fill. Mentre s'executa aquest ``custom_handler`` no pot ser acabat (Terminate) per un Ctrl+C.
 ```C
