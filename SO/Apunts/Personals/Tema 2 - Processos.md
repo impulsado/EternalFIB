@@ -373,3 +373,14 @@ sigaddset(&mask, SIGNUM);  // Afegir bloqueig del signal (mask<SIGNUM> = 1)
 sigdelset(&mask, SIGNUM);  // Treure bloqueig del signal (mask<SIGNUM> = 0)
 sigismember(&mask, SIGNUM);  // Saber si esta block (true) o no (false).
 ```
+
+## Sincronització entre processos
+### Activa
+**Consumeix CPU** així que fer-ho servir quan saps que has d'esperar poc.
+```C
+void config_esperar_alarma() {
+	alarma = 0;
+}
+
+void esperar_alarma
+```
