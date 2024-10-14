@@ -257,7 +257,12 @@ Els farem servir per:
 - **Control de temps** (alarmes)
 
 ```
-Procés executa codi -> Rep un signal -> Interromp l'execució d'aquest codi -> Salta al handler associat al signal -> Executa el handler -> Quan acaba (si sobreviu) continua on estava. 
+Procés executa codi -> 
+Rep un signal -> 
+Interromp l'execució d'aquest codi -> 
+Salta al handler associat al signal -> 
+Executa el handler -> 
+Quan acaba (si sobreviu) continua on estava. 
 ```
 
 [//]: Recorda que un event és un succés que requereix atenció. Llavors un signal és una forma específica d'event.
