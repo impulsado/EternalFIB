@@ -316,7 +316,8 @@ int kill(int pid, int signal);
 	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mateix signal, "reiniciar" la syscall. 
 
 ### sigaction(...);
-
+```
+```
 
 ### Exemple de "struct sigaction" + "sigaction(...)"
 Configurar un handler específic que executarà el pare quan mori un fill. Mentre s'executa aquest ``custom_handler`` no pot ser acabat (Terminate) per un Ctrl+C.
