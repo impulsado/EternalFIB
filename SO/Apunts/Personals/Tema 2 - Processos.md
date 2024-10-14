@@ -352,3 +352,6 @@ Les operacions que es poden fer són:
 - `SIG_SETMASK`: **Canviar** la màscara vella per la nova.
 
 ### Esperar Signal
+1. La màscara de signals canvia de forma temporal (sense alterar l'original).
+2. El procés queda suspès (Bloquejat) i espera fins que arribi un signal que no estigui bloquejada per la màscara temporal (``mask<num_signal> == 0``).
+3. Quan el reb,
