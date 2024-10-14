@@ -316,7 +316,9 @@ int kill(int pid, int signal);
 	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mateix signal, "reiniciar" la syscall. 
 
 ### sigaction(...);
-```
+```C
+int sigaction(int signum, struct sigaction *new_sa,
+            struct sigaction *old_sa);
 ```
 
 ### Exemple de "struct sigaction" + "sigaction(...)"
