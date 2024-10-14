@@ -309,8 +309,9 @@ int kill(int pid, int signal);
 	- `custom_handler`: Kernel executa funció específica. El SO s'encarrega de passar el nº de signal. Això permet que diversos signals pugin fer servir mateixa funció.
 - **sa_mask**: Màscara de signals que volem {Block/Allow}. Fa un OR de la màscara prèvia (Manté els bloquejats previs).
 	- Buida: Només bloqueja el signal que s'està tractant.
-	- A l'acabar el handler, es restaura la sa_mask prèvia.
+	- En acabar el handler, es restaura la ``sa_mask`` prèvia.
 - **sa_flags**: Configurar opcions adicional que modifiquen com es comporta el handler.
+	- `0`: Configuració per defecte.
 	- `SA_RESETHAND`: Post-tractament, es restaura el handler per defecte.
 	- `SA_RESTART`: Reiniciar "syscall" si és interrompuda pel mateix signal, "reiniciar" la syscall. 
 
