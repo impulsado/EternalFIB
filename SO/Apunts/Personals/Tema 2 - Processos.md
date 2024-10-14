@@ -361,3 +361,9 @@ Les operacions que es poden fer són:
 ```C
 int sigsuspend(sigset_t *temp_mask);
 ```
+
+### Manipulació de la màscara
+```C
+sigset_t mask;  // Iniciar màscara
+sigemptyset(&mask);  // B
+```
