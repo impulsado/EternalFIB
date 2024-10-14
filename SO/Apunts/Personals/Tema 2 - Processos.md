@@ -365,5 +365,8 @@ int sigsuspend(sigset_t *temp_mask);
 ### Manipulació de la màscara
 ```C
 sigset_t mask;  // Iniciar màscara
-sigemptyset(&mask);  // B
+sigemptyset(&mask);  // Buida
+sigfillset(&mask);  // Plena
+sigaddset(&mask, SIGNUM);  // Afegir bloqueig del signal
+sigdelset(&mask, SIGNUM);  // Treure bloqueig del signal
 ```
