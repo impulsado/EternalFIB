@@ -228,6 +228,7 @@ while ((pid_child = waitpid(-1,NULL,0)) > 0) {
 	printf("PARE: Ha mort el fill amb PID: %d", pid_child);
 }
 ```
+[//]: Fixe't que un fill pot passar a ser pare si aquest té fills. 
  ![[Pasted image 20241010085724.png]]
 
 # Signals
