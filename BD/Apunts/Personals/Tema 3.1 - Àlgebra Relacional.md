@@ -1,80 +1,78 @@
-# Símbols
-**AND**: ∧  
-**OR**: ∨  
-**NOT**: ¬
-**NULL**: ω
-**full outer join**: ⟗  
-**antijoin**: ▷
-
-# Operadors Unàris
-## Select (σ)
+# Operadors Unaris
+## Selecció (σ)
 Selecciona les tuples (files) que compleixen la condició.
 Mostra totes les columnes, com si fos un "SELECT \*"
-**Format**: ``σ_<select_cond> (Relation)``
-**Exemple**: ``σ_id=2 (Pokemons)``
-
-## Project (Π)
+**Format**: ``R = RELACIO(condicions)``
+**Exemple**: ``R = tPokedex(id=2)``
+![[Pasted image 20241012102745.png]]
+## Projecció (Π)
 Només mostra els atributs (columnes) especificades.
-Elimina tuples repetides.
-**Format**: ``Π_<attribute1,attriubte2,...> (Relation)``
-**Exemple**: ``Π_name (Pokemons)``
-**Exemple2**: ``Π_name(σ_type='fire' (Pokemons))``
+❗Elimina tuples repetides.
+**Format**: ``R = RELACIÓ[atribut1,...,atributN]``
+**Exemple**: ``R = tPokedex[id,name]``
+**Exemple2**: ``R = tPokedex(id=2)[name,id]``
+![[Pasted image 20241012102756.png]]
+## Reanomenament (ρ)
+Canviar el nom d'una relació o dels seus atributs.
+**Format**: `R = RELACIO{atribu1->atributA, atribut2->atributB}`
+**Exemple**: ``R = tTrainers{id -> trainer_id}``
 
 # Operadors Binaris
+
+```ad-warning
+**Relacions Compatibles** 
+Les relacions han de tenir el mateix esquema: 
+- Mateixa quantitat d'atributs.
+- Els atributs corresponents han de coincidir en Nom, Tipus de dada i Ordre.
+```
 ## Unió (∪)
-Actua com la unió en "Teoria de Conjunts".
+Totes les tuples de les relacions.
 Elimina tuples repetides (Si estan en la intersecció per exemple).
-Recorda que qualsevol relació es un conjunt (set).
-**Format**: `Π_<attribute1,attriubte2,...> (Relation_1) ∪ Π_<attribute1,attriubte2,...> (Relation_2)`
-**Exemple**: 
-$$
-\Pi_{\text{name}} \left( \sigma_{\text{main-type} = 'fire' \land \text{attack} < 100} (\text{Pokemons}) \right) \cup \Pi_{\text{name}} \left( \sigma_{\text{sec-type} = 'bug' \lor \text{type} = 'steel'} (\text{Pokemons}) \right)
-$$
-
-```ad-important
-- Nº attributs en les relacions han de ser les mateixes.
-- Tots el i attributs han de ser del mateix domini.
-```
-
+❗Les relacions han de ser compatibles.
+**Format**: ``R = RELACIO1 ∪ RELACIO2``
+**Exemple**: `R = tPokemonsGen1 ∪ tPokemonsGen2`
+![[Pasted image 20241012102807.png]]
+## Intersecció (∩)
+Tuples que tenen en comú les relacions.
+❗Les relacions han de ser compatibles.
+**Format**: `R = RELACIO1 ∩ RELACIO2`
+**Exemple**: ``R = tPokemonsGen1 ∩ tPokemonsLegend`` 
+![[Pasted image 20241012102813.png]]
 ## Diferència (-)
-Actual igual la diferència en "Teoria de Conjunts".
-Agafa les tuples (files) que estan en una relació i no en l'altra.
-**Exemple**:
-$$
-\Pi_{name} (\sigma_{main-type='fire'}(\text{Pokemons}) - \Pi_{name} (\sigma_{attack>=100}(\text{Pokemons}))
-$$
-
-```ad-important
-- Nº attributs en les relacions han de ser les mateixes.
-- Tots el i attributs han de ser del mateix domini.
-```
-
-
-## Reanomenament (ρ)
-$$
-\text{trainers} = \rho_{\text{trainer\_id/id}} (\text{trainers})
-$$
-
+Agafa les tuples que estan en una relació i no en l'altra.
+❗Les relacions han de ser compatibles.
+**Format**: `R = RELACIO1 - RELACIO2`
+**Exemple**: `R = (tPokedex(attack>=100)) - (tPokedex(hp<=50))`
+![[Pasted image 20241012102820.png]]
 ## Producte Cartesià (×)
 Associa cada tuple de $R_1$ amb cada tupla de $R_2$, sent $R_1 \times R_2$ totes les possibles combinacions de tuples.
-Un problema es que alguns atributs poden estar en $R_1$ i $R_2$, fent que es vegi .
-**Exemple**: Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200)
-1. Primer creem una taula on estiguin totes les possibles combinacions entre entrenadors i pokemons
-$$
-\text{TOTES\_COMB} = (\text{trainers} \times \text{pokemons})
-$$
-2. Ara seleccionem aquells tuples on la especialitat de l'entrenador sigui la mateixa que el tipus principal del pokemon.
-$$
-\text{NOMES\_ESPECIALISTES} = \sigma_{\text{trainers.specialty} = \text{pokemons.main-type}} (\text{TOTES\_COMB})
-$$
-3. Seleccionem aquells pokemons que siguin forts.
-$$
-\text{FORTS} = \sigma_{\text{pokemons.attac} \geq 150 \wedge \text{pokemons.hp>200}} (\text{NOMES\_ESPECIALISTES})
-$$
-4. Finalment mostrem només el nom de l'entrenador i el nom del pokemon 
-$$
-\Pi_{\text{trainers.name, pokemons.name}}(FORTS)
-$$
+Si $R_1$ i $R_2$ tenen un atribut `i` amb el mateix nom, a la relació resultat pot haver ambigüitat.
+[//]: Si obs. que pot arribar a passar, haurem de fer prèviament un reanomenament.
+❗NO cal que siguin compatibles.
+**Format**: ``R = RELACIO1 × RELACIO2``
+**Exemple**: ``R = tTrainers × tPokedex``
+![[Pasted image 20241012102832.png]]
+## Combinació (Ģ)
+Relació que combina relacions complint una condició donada.
+**Format**: `R = RELACIO1[condicions]RELACIO2`
+**Exemple**: `R = tTrainers[name=trainer_name]tTournamentWinners`
+![[Pasted image 20241012103903.png]]
+
+# Exemple 
+Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especialitat i els pokemons siguin forts (atac major o igual que 150 i vida major de 200).
+1. Ens fixem que tipus/nom de l'entrenador es diu igual que en la taula pokemon. Els haurem de canviar per quan fem producte cartesià no hi hagi confusions.
+`ENTRENADORS = tTrainers {type->trainer_type, name->trainer_name}`
+`POKEMONS = tPokedex {type->pokemon_type, name->pokemon_name}`
+2. Primer agafem totes les possibles combinacions.
+`TOTS = ENTRENADORS × POKEMONS`
+3. Filtrem per què l'entrenador i el pokemon siguin del mateix tipus.
+`ESPECIALITATS = TOTS(trainer_type=pokemon_type)`
+4. Ara seleccionem aquells pokemons forts.
+`BONS = ESPECIALITATS(attack>=150 ∧ hp>200)`
+5. Finalment només ens interessen els noms dels pokemons i entrenadors
+`RESULTAT = BONS[trainer_name,pokemon_name]`
+
+[//]: OBS: Podrien haver fet servir un "JOIN" en comptes del producte cartesià + selecció.
 
 # Links
 - Relational Algebra Simplified
