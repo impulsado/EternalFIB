@@ -11,8 +11,12 @@
             "id": "4650d1043cdc6c3c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7325111aac8f52ee",
@@ -82,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
+              }
             }
           },
           {
@@ -152,8 +159,16 @@
   "active": "4650d1043cdc6c3c",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
-    "Excalidraw/Drawing 2024-10-15 10.26.13.excalidraw.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
+    "SO/Apunts/Personals",
+    "SO/Apunts/New folder",
+    "SO/Apunts",
+    "SO/Aputns",
+    "SO/New folder",
+    "SO",
+    "SOo",
+    "New folder",
+    "Excalidraw/Drawing 2024-10-15 10.26.13.excalidraw.md",
     "attachments/Pasted image 20241014112517.png",
     "attachments/Pasted image 20241013175251.png",
     "attachments/Pasted image 20241013175211.png",
@@ -172,13 +187,7 @@
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
-    "SO/Apunts/Personals",
-    "SO/Apunts",
-    "SO",
     "BD/README.md",
-    "BD/Apunts/Personals",
-    "BD/Apunts",
-    "IC/README.md",
-    "BD"
+    "IC/README.md"
   ]
 }
