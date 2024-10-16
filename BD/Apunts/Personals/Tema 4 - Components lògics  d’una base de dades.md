@@ -64,8 +64,13 @@ SQL defineix 9 tipus de Privilegis:
 - **EXECUTE**: Permet executar funcions o procediments.
 - **ALL**: Tot.
 
-Si volem que un usuari pugi concedir el 
+Si volem que un usuari pugi concedir el mateix privilegi a un altre usuari: `WITH GRANT OPTION`.
 
 ```PostgreSQL
-GRANT privilegi ON objecte TO usuari [WITH GRANT OPTION];
+-- Otorgar
+GRANT privilegis ON objectes TO usuaris [WITH GRANT OPTION];
+
+-- Treure
+REVOKE [GRANT OPTION FOR] privilegis ON objectes FROM usuaris {CASCADE | RESTRICT};
 ```
+
