@@ -427,5 +427,10 @@ Gestiona l'ús de la CPU: Qui s'executa, Qui surt d'estar executant-se, Quant de
 Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CPU).
 - **No Preemptiva**: Procés s'executa fins que acaba o passa a "SLEEPING". (FIFO)
 [//]: El SO "no modifica" l'estat del procés.
-- **Preemptiva**: El SO "permet" la CPU a un procés durant X temps. Si aquest es passa del temps, el SO el passa a "READY" i fica un altre. (Round Robbin)
-[//]; 
+- **Preemptiva**: El SO "permet" la CPU a un procés durant X temps. Si aquest es passa del temps, el SO el passa a "READY" i fica un altre. (Round Robbin).
+
+### Tipus de processos
+- **Processos de Càlcul**: Temps Computació > E/S.
+- **Processos d'E/S**: Temps Computació < E/S.
+
+### Mecanismes
