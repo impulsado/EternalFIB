@@ -85,14 +85,24 @@ Hi ha una sala gran, amb una única entrada, i dins una sala petita, amb una ún
 Agrupació de privilegis definit per a un grup d'usuaris específics. Similar a un "grup" en SO.
 ```PostgreSQL
 -- Crear Rol Lector
-CREATE ROLE rol_lector
-GRANT SELECT ON taula1 TO rol_lector
-GRANT SELECT ON taula2 TO rol_lector
+CREATE ROLE rol_lector;
+GRANT SELECT ON taula1 TO rol_lector;
+GRANT SELECT ON taula2 TO rol_lector;
 
 -- Crear Rol Escriptor
-CREATE ROLE rol_escriptor
-GRANT UPDATE ON taula1 TO rol_escriptor
-GRANT UPDATE ON taula2 TO rol_escriptor
+CREATE ROLE rol_escriptor;
+GRANT UPDATE ON taula1 TO rol_escriptor;
+GRANT UPDATE ON taula2 TO rol_escriptor;
 
--- Assignar el Rol de Lector al
+-- Assignar el Rol de Lector al Rol d'Escriptor
+GRANT rol_lector TO rol_escriptor;
+
+-- Assignar Rol a un usuari
+-- 1. Primer l'administrador a d'afegir a l'usuari
+-- DBA:
+GRANT rol_escriptor TO admin_Escriptors WITH GRANT OPTION;
+GRANT rol_escriptor TO usr_Escriptor1;
+-- 2. Posteriorment, l'usuari ha d'activar el rol
+-- USUARI:
+SET ROLE rol_escriptor
 ```
