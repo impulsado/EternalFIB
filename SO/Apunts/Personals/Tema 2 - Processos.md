@@ -407,5 +407,7 @@ Depen del sistema (NO PORTABLE).
 - PID [El sistema necessita saber quin procés ens referim]
 - USERID, GROUPID [Saber quins permisos té el procés i que no pugui accedir a qualsevol recurs]
 - Estat: RUN, READY, ... [Necessitem saber en quin estat estava si ha sigut interromput]
-- Espai per guardar registres de la CPU. [Mantenir el context del procés]
-- 
+- Espai per guardar registres de la CPU. [Mantenir el context del procés tot i que hi hagi canvis]
+- Dades per gestionar signals. [Facilitar comunicació i resposta d'events]
+- Informació sobre la planificació. [Determinar l'ordre d'execució. Sense, el SO seria poc eficient]
+- Informació de gestió de memòria. [Controla assignació i ús de memòria. Sense, podrien haver conflictes o ]
