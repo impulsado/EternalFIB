@@ -80,3 +80,19 @@ A l'hora d'eliminar podem fer servir dues opcions:
 
 Per entendre `RESTRICT` podem pensar:
 Hi ha una sala gran, amb una única entrada, i dins una sala petita, amb una única entrada (que es a través d'aquesta sala gran). Si volen treure la clau de la sala gran no podran perquè si no, perdrien l'accés a la sala petita.
+
+## Rols
+Agrupació de privilegis definit per a un grup d'usuaris específics. Similar a un "grup" en SO.
+```PostgreSQL
+-- Crear Rol Lector
+CREATE ROLE rol_lector
+GRANT SELECT ON taula1 TO rol_lector
+GRANT SELECT ON taula2 TO rol_lector
+
+-- Crear Rol Escriptor
+CREATE ROLE rol_escriptor
+GRANT UPDATE ON taula1 TO rol_escriptor
+GRANT UPDATE ON taula2 TO rol_escriptor
+
+-- Assignar el Rol de Lector al
+```
