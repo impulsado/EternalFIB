@@ -412,4 +412,6 @@ Depèn del sistema (NO PORTABLE).
 - **Informació sobre la planificació:** Determinar l'ordre d'execució; sense això, el SO seria poc eficient.
 - **Informació de gestió de memòria:** Controla l'assignació i l'ús de memòria; sense això, podrien haver conflictes o errors de segmentació.
 - **Informació sobre gestió de l'E/S:** Permet que els processos interaccionin correctament amb els dispositius d'entrada/sortida.
-- **Accounting:** Monitoritzar i controlar els recursos utilitzats; seria impossible gestionar eficientment els recursos sense aquesta informació.
+- **Accounting:** Monitoritzar i controlar els recursos utilitzats; seria impossible gestionar eficientment els recursos.
+
+## Planificació
