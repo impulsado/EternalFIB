@@ -52,3 +52,4 @@ Conté vistes accessibles pels usuaris per exemple:
 ![[Pasted image 20241008154551.png]]
 
 ## Privilegis
+❗Preval el permís **MENYS** reestructiu.
