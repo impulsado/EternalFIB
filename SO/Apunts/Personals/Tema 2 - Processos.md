@@ -449,3 +449,5 @@ Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CP
 ### Round Robbin
 Temps es subdivideix en `quantums`.
 Cada procés té `X quantums` (Tots el mateix `X`).
+Hi ha un ordre circular a l'hora de seleccionar següent procés (Request Queue) --> No importa la prioritat.
+Quan a un procés se li acaba el seu ``quantum`` (i no ha acabat) el scheduler l'interromp i fa "Context Switching".
