@@ -1,5 +1,8 @@
 {
   "cssTheme": "Tokyo Night",
   "accentColor": "#9e51a9",
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "export"
+  ]
 }
