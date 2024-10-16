@@ -52,10 +52,10 @@ Conté vistes accessibles pels usuaris per exemple:
 ![[Pasted image 20241008154551.png]]
 
 ## Privilegis
-❗Preval el permís **MENYS** reestructiu.
+❗Preval el permís **MENYS** reestrictiu.
 SQL defineix 9 tipus de Privilegis:
 - **SELECT**
-- **INSERT**
-- **UPDATE**
-- **DELETE**
-- **REFERENCES**: Permet crear FOREIGN KEYS que referencien a una taula.
+- **INSERT**: Insertar tupla en taula/vista. Es pot selecci
+- **UPDATE**: Actualitzar columna/diverses columnes d'una taula/vista. MOLTES vegades necessitarà el ``SELECT`` per fer referència.
+- **DELETE**: Eliminar tupla d'una taula/vista. MOLTES vegades necessitarà el ``SELECT`` per fer referència.
+- **REFERENCES**: Permet crear FOREIGN KEYS que fan referència a una taula o columna d'una taula.
