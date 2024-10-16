@@ -74,3 +74,6 @@ GRANT privilegis ON objectes TO usuaris [WITH GRANT OPTION];
 REVOKE [GRANT OPTION FOR] privilegis ON objectes FROM usuaris {CASCADE | RESTRICT};
 ```
 
+A l'hora d'eliminar podem fer servir dues opcions:
+- **CASCADE**: Treu els permisos de tota la cadena de persones, a no ser que aquest permís hagi sigut concedit per una altra via. "Com una cascada d'aigua arrolladora"
+- **RESTRICT**: Si hi ha algun permís que depèn d'aquest permís que volem eliminar, no fa res. "Si hi"
