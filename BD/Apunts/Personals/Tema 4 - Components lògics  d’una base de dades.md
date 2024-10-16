@@ -59,4 +59,6 @@ SQL defineix 9 tipus de Privilegis:
 - **UPDATE**: Actualitzar columna/diverses columnes d'una taula/vista. MOLTES vegades necessitarà el ``SELECT`` per fer referència.
 - **DELETE**: Eliminar tupla d'una taula/vista. MOLTES vegades necessitarà el ``SELECT`` per fer referència.
 - **REFERENCES**: Permet crear FOREIGN KEYS que fan referència a una taula o columna d'una taula.
-- **USAGE**: Permet fer ús de certs objectes de la base de dades
+- **USAGE**: Permet fer ús de certs objectes de la base de dades, sense atorgar modificació o accedir als continguts.
+- **TRIGGER**: Dret a definir disparadors sobre una taula.
+- **EXECUTE**: Executar codi.
