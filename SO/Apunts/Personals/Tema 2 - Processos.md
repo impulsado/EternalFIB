@@ -24,7 +24,7 @@ Depen del sistema i de la màquina (NO portable).
 
 ```
 Procés A, Procés B;
-S'executa Procés A -> 
+S'esta executant Procés A -> 
 SO decideix que s'ha d'executar Procés B -> 
 Es guarda en la PCB del Procés A la informació -> 
 Es carrega la PCB del Procés B -> 
@@ -400,3 +400,12 @@ Per gestionar els processos necessitem:
 - **Estructures de gestió**: Organitzar els PCB's en funció del seu estat o necessitats del SO. Normalment són llistes i cues, però poden haver arbres, hash maps, ...
 - **Algorisme/s de planificació**: Com gestionar les estructures.
 - **Mecanismes**: Apliquin les decisions.
+
+## PCB
+Informació associada a cada procés. 
+Depen del sistema (NO PORTABLE).
+- PID
+- USERID, GROUPID
+- Estat: RUN, READY, ...
+- Dades per gestionar signals.
+- 
