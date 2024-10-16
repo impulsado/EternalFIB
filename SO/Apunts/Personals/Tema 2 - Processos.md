@@ -394,4 +394,9 @@ void esperar_alarma() {
 
 # Gestió Interna de Processos
 Per gestionar els processos necessitem:
-- Estructures de dades
+- **Estructures de dades**: 
+	- Representar propietats i recursos --> PCB
+	- Representar i gestionar threads --> Depen del SO
+- **Estructures de gestió**: Organitzar els PCB's en funció del seu estat o necessitats del SO. Normalment són llistes i cues, però poden haver arbres, hash maps, ...
+- **Algorisme/s de planificació**: Com gestionar les estructures.
+- **Mecanismes**: Apliquin les decisions.
