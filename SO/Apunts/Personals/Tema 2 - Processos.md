@@ -435,8 +435,13 @@ Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CP
 
 ### Mecanismes
 **Context Switching**: Procés ha de deixar la CPU i s'ha de carregar un altre.
+[//]: Aquest canvi de context s'executa en mode kernel.
 1. Guardar la informació del procés actual en la seva PCB.
 2. Planificador escull quin es el següent procés.
 3. Es carrega la PCB del nou procés.
 
 ❗Aquest canvi es un temps **NO ÚTIL** de l'aplicació --> Ha de ser ràpid.
+
+### Mètriques
+**Turnaround Time**: Temps **TOTAL** (En tots els estats) des de que procés arriba al SO fins que acaba.
+Temps d'espera: 
