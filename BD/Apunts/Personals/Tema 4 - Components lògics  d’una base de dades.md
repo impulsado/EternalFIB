@@ -53,3 +53,9 @@ Conté vistes accessibles pels usuaris per exemple:
 
 ## Privilegis
 ❗Preval el permís **MENYS** reestructiu.
+SQL defineix 9 tipus de Privilegis:
+- **SELECT**
+- **INSERT**
+- **UPDATE**
+- **DELETE**
+- **REFERENCES**: Permet crear FOREIGN KEYS que referencien a una taula.
