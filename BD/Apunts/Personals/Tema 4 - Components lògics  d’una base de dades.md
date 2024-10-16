@@ -12,7 +12,7 @@ No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 
 ## Connexions
 Associació que es crea entre Client SQL <--> Servidor SQL.
-```SQL
+```PostgreSQL
 -- Connectar-se
 CONNECT TO nom_servidor [AS nom_conexio] [USER username];
 SET SCHEMA nom_esquema;
@@ -20,6 +20,7 @@ SET SCHEMA nom_esquema;
 -- Desconnectar-se
 DISCONNECT nom_conexio {DEFAULT,CURRENT,ALL};
 ```
+
 ## Vistes
 Permeten independència lògica de les dades.
 ❗No es fica ``ORDER BY`` en la vista. 
@@ -30,7 +31,7 @@ Vista SÍ és actualitzable quan:
 - El `SELECT` ha d'incloure tots els camps de la taula que tinguin restriccions de `NOT NULL` i no tinguin valor per defecte.
 - No poden haver `GROUP BY`.
 
-```SQL
+```PostgreSQL
 CREATE VIEW _view_name_ [nom_col1, nom_col2, ...] AS  
 SELECT _column1_, _column2_, ...  
 FROM _table_name_  
