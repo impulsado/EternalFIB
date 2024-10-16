@@ -447,3 +447,5 @@ Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CP
 **Temps d'espera**: Suma del temps que el procés ha estat en "READY".
 
 ### Round Robbin
+Temps es subdivideix en `quantums`.
+Cada procés té `X quantums` (Tots el mateix `X`).
