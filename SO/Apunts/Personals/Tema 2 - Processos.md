@@ -455,3 +455,5 @@ Esdeveniments que activen el Round Robbin:
 - **RUN --> SLEEPING**: Procés passa al final de la cua de "SLEEPING" fins que acaba E/S. (No preemptiu)
 - **RUN --> ZOMBIE**: Procés acaba amb la seva execució. (No preemtiu)
 - **S'acaba el quantum**: Procés passa al final de la cua de "READY". (Preemtiu)
+
+Cap procés espera més de $(N-1)*q$ mil·lisegons. $N$ 
