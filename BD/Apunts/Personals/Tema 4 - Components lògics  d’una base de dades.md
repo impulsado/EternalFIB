@@ -13,11 +13,11 @@ No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 ## Connexions
 
 ## Vistes
-Permeten independencia lògica de les dades.
-No es fica ``ORDER BY`` en la vista. 
-Desde la vista es poden modificar les dades de la taula. Si modifiquem una dada i al treïem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
+Permeten independència lògica de les dades.
+❗No es fica ``ORDER BY`` en la vista. 
+Des de la vista es poden modificar les dades de la taula. Si modifiquem una dada i la treïem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
 Per a evitar-ho, hi ha **algunes** vistes que **no** són **actualitzables**. 
-Si és permet quan:
+Vista SÍ és actualitzable quan:
 - Vista basada en una única taula o una vista si actualitzable. Aquesta no pot tindre `DISTINCT` ni funcions d'agregació (`MAX()`, `COUNT()`, ...).
 - El `SELECT` ha d'incloure tots els camps de la taula que tinguin restriccions de `NOT NULL` i no tinguin valor per defecte.
 - No poden haver `GROUP BY`.
@@ -31,12 +31,12 @@ WHERE _condition_
 ```
 
 ## Esquema d'Informació
-Cada catàleg conté un esquema d'informacio.
+Cada catàleg conté un esquema d'informació.
 Conté noms i atributs de taules, índexs, restriccions de columna,...
-És un esquema dels esquemes.
-Conté vistes accesibles pels usuaris per exemple:
-- SCHEMATA: Informació  de cada esquema del catàleg
-- DOMAINS: Informació del domini.
-- TABLES: Informació sobre les taules.
+"És un esquema dels esquemes".
+Conté vistes accessibles pels usuaris per exemple:
+- **SCHEMATA**: Informació  de cada esquema del catàleg
+- **DOMAINS**: Informació del domini.
+- **TABLES**: Informació sobre les taules.
 
 ![[Pasted image 20241008154551.png]]
