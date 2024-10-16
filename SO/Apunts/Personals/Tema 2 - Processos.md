@@ -425,5 +425,7 @@ Per exemple: Hi ha diverses cues, depenent l'estat i el SO va movent els process
 ### Planificació
 Gestiona l'ús de la CPU: Qui s'executa, Qui surt d'estar executant-se, Quant de temps, ...
 Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CPU).
-- **Preemptiva**: Quan el SO ha de canviar el procés que s'està executant, perquè ha consumit el seu temps.
+- **No Preemptiva**: Procés s'executa fins que acaba o passa a "Wait". 
+[//]: El SO "no modifica" l'estat del procés.
+- **Preemptiva**: El SO "permet" la CPU a un pr
 - 
