@@ -1,4 +1,4 @@
-@media print { body { --font-text-size: 12pt !important; } }
+
 # Conceptes
 **Procés**
 Representació del SO d'un programa en execució.
