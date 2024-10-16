@@ -402,12 +402,14 @@ Per gestionar els processos necessitem:
 - **Mecanismes**: Apliquin les decisions.
 
 ## PCB
-Informació associada a cada procés. 
-Depen del sistema (NO PORTABLE).
-- PID [El sistema necessita saber quin procés ens referim]
-- USERID, GROUPID [Saber quins permisos té el procés i que no pugui accedir a qualsevol recurs]
-- Estat: RUN, READY, ... [Necessitem saber en quin estat estava si ha sigut interromput]
-- Espai per guardar registres de la CPU. [Mantenir el context del procés tot i que hi hagi canvis]
-- Dades per gestionar signals. [Facilitar comunicació i resposta d'events]
-- Informació sobre la planificació. [Determinar l'ordre d'execució. Sense, el SO seria poc eficient]
-- Informació de gestió de memòria. [Controla assignació i ús de memòria. Sense, podrien haver conflictes o ]
+Informació associada a cada procés.  
+Depèn del sistema (NO PORTABLE).
+- **PID:** El sistema necessita saber a quin procés ens referim.
+- **USERID, GROUPID:** Saber quins permisos té el procés per evitar que accedeixi a qualsevol recurs.
+- **Estat: RUN, READY, ...:** Necessitem saber en quin estat està el procés si ha estat interromput.
+- **Espai per guardar registres de la CPU:** Mantenir el context del procés tot i que hi hagi canvis.
+- **Dades per gestionar signals:** Facilitar la comunicació i la resposta a esdeveniments.
+- **Informació sobre la planificació:** Determinar l'ordre d'execució; sense això, el SO seria poc eficient.
+- **Informació de gestió de memòria:** Controla l'assignació i l'ús de memòria; sense això, podrien haver conflictes o errors de segmentació.
+- **Informació sobre gestió de l'E/S:** Permet que els processos interaccionin correctament amb els dispositius d'entrada/sortida.
+- **Accounting:** Monitoritzar i controlar els recursos utilitzats; seria impossible gestionar eficientment els recursos sense aquesta informació.
