@@ -76,4 +76,7 @@ REVOKE [GRANT OPTION FOR] privilegis ON objectes FROM usuaris {CASCADE | RESTRIC
 
 A l'hora d'eliminar podem fer servir dues opcions:
 - **CASCADE**: Treu els permisos de tota la cadena de persones, a no ser que aquest permís hagi sigut concedit per una altra via. "Com una cascada d'aigua arrolladora"
-- **RESTRICT**: Si hi ha algun permís que depèn d'aquest permís que volem eliminar, no fa res. "Si hi"
+- **RESTRICT**: Si hi ha algun permís que depèn d'aquest permís que volem eliminar, no fa res. 
+
+Per entendre `RESTRICT` podem pensar:
+Hi ha una sala gran, amb una única entrada, i dins una sala petita, amb una única entrada (que es a través d'aquesta sala gran). Si volen treure la clau de la sala gran no podran perquè si no, perdrien l'accés a la sala petita.
