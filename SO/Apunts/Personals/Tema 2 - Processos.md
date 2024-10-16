@@ -425,7 +425,7 @@ Per exemple: Hi ha diverses cues, depenent l'estat i el SO va movent els process
 ### Planificació
 Gestiona l'ús de la CPU: Qui s'executa, Qui surt d'estar executant-se, Quant de temps, ...
 Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CPU).
-- **No Preemptiva**: Procés s'executa fins que acaba o passa a "Wait". 
+- **No Preemptiva**: Procés s'executa fins que acaba o passa a "SLEEPING". (FIFO)
 [//]: El SO "no modifica" l'estat del procés.
-- **Preemptiva**: El SO "permet" la CPU a un pr
-- 
+- **Preemptiva**: El SO "permet" la CPU a un procés durant X temps. Si aquest es passa del temps, el SO el passa a "READY" i fica un altre. (Round Robbin)
+[//]; 
