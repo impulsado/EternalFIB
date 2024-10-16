@@ -405,7 +405,7 @@ Per gestionar els processos necessitem:
 Informació associada a cada procés. 
 Depen del sistema (NO PORTABLE).
 - PID [El sistema necessita saber quin procés ens referim]
-- USERID, GROUPID
-- Estat: RUN, READY, ...
-- Dades per gestionar signals.
+- USERID, GROUPID [Saber quins permisos té el procés i que no pugui accedir a qualsevol recurs]
+- Estat: RUN, READY, ... [Necessitem saber en quin estat estava si ha sigut interromput]
+- Espai per guardar registres de la CPU. [Mantenir el context del procés]
 - 
