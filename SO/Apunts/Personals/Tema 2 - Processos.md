@@ -447,7 +447,7 @@ Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CP
 **Temps d'espera**: Suma del temps que el procés ha estat en "READY".
 
 ### Round Robbin
-Temps es subdivideix en intervals fixos anomenats `quantums`.
+Temps es subdivideix en intervals fixos anomenats `quantums`. $10 \leq q \leq 100$ mil·lisegons.
 Cada procés rep el mateix `quantum`.
 Processos s'organitzen en una cua circular (Request Queue) --> No importa la prioritat.
 Quan a un procés se li acaba el seu ``quantum`` (i no ha acabat) el scheduler l'interromp i realitza "Context Switching".
@@ -456,4 +456,6 @@ Esdeveniments que activen el Round Robbin:
 - **RUN --> ZOMBIE**: Procés acaba amb la seva execució. (No preemtiu)
 - **S'acaba el quantum**: Procés passa al final de la cua de "READY". (Preemtiu)
 
-Cap procés espera més de $(N-1)*q$ mil·lisegons. $N$ 
+Cap procés espera més de $(N-1)*q$ mil·lisegons. $N$ nº processos i $q$ quantum.
+- $q$ GRAN --> **Ordre Seqüencial**.
+- $q$ petit --> **Overhead** si el context switching és costós.
