@@ -415,3 +415,11 @@ Depèn del sistema (NO PORTABLE).
 - **Accounting:** Monitoritzar i controlar els recursos utilitzats; seria impossible gestionar eficientment els recursos.
 
 ## Planificació
+### Estructures
+Per exemple: hi ha diverses cues, depenent l'estat i el SO va movent els processos entre cues.
+- **Cua de processos**: Tots els processos creats pel sistema.
+- **Cua de processos READY**.
+- **Cua de processos SLEEPING**.
+
+### Planificació
+Indica com gestionar les estructures.
