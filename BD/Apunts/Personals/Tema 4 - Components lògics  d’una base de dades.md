@@ -25,7 +25,7 @@ DISCONNECT nom_conexio {DEFAULT,CURRENT,ALL};
 Permeten independència lògica de les dades.
 ❗No es fica ``ORDER BY`` en la vista. 
 Des de la vista es poden modificar les dades de la taula. 
-Si modifiquem una dada i la treiem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
+Si modifiquem una dada i la traiem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
 Per a evitar-ho, podem ficar `WITH CHECK OPTION` que no permetrà els `UPDATE` o `INSERT` que post-execució, la dada no estigui "en el forat".
 Vista SÍ és actualitzable quan:
 - Vista basada en una única taula o una vista si actualitzable. Aquesta no pot tindre `DISTINCT` ni funcions d'agregació (`MAX()`, `COUNT()`, ...).
@@ -50,3 +50,5 @@ Conté vistes accessibles pels usuaris per exemple:
 - **TABLES**: Informació sobre les taules.
 
 ![[Pasted image 20241008154551.png]]
+
+## Privilegis
