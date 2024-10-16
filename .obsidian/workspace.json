@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md"
+                "file": "SO/Apunts/Personals/Tema 2 - Processos.md"
               }
             }
           }
@@ -150,8 +150,8 @@
   },
   "active": "0b6867ff7ae2cf2a",
   "lastOpenFiles": [
-    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+    "SO/Apunts/Personals/Tema 2 - Processos.md",
     "M2/Maple.md",
     "Excalidraw/Drawing 2024-10-15 10.26.13.excalidraw.md",
     "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
