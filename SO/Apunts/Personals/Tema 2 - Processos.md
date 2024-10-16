@@ -404,7 +404,7 @@ Per gestionar els processos necessitem:
 ## PCB
 Informació associada a cada procés. 
 Depen del sistema (NO PORTABLE).
-- PID
+- PID [El sistema necessita saber quin procés ens referim]
 - USERID, GROUPID
 - Estat: RUN, READY, ...
 - Dades per gestionar signals.
