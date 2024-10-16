@@ -444,4 +444,6 @@ Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CP
 
 ### Mètriques
 **Turnaround Time**: Temps **TOTAL** (En tots els estats) des de que procés arriba al SO fins que acaba.
-Temps d'espera: 
+**Temps d'espera**: Suma del temps que el procés ha estat en "READY".
+
+### Round Robbin
