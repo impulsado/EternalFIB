@@ -11,7 +11,15 @@ No es poden CREAR, ELIMINAR, MODIFICAR catàlegs.
 ```
 
 ## Connexions
+Associació que es crea entre Client SQL <--> Servidor SQL.
+```SQL
+-- Connectar-se
+CONNECT TO nom_servidor [AS nom_conexio] [USER username];
+SET SCHEMA nom_esquema;
 
+-- Desconnectar-se
+DISCONNECT nom_conexio {DEFAULT,CURRENT,ALL};
+```
 ## Vistes
 Permeten independència lògica de les dades.
 ❗No es fica ``ORDER BY`` en la vista. 
