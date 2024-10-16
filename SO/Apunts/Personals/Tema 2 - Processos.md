@@ -416,10 +416,12 @@ Depèn del sistema (NO PORTABLE).
 
 ## Planificació
 ### Estructures
-Per exemple: hi ha diverses cues, depenent l'estat i el SO va movent els processos entre cues.
+Depèn del SO, hi ha tipus d'estructures diferents.
+Per exemple: Hi ha diverses cues, depenent l'estat i el SO va movent els processos entre cues.
 - **Cua de processos**: Tots els processos creats pel sistema.
 - **Cua de processos READY**.
 - **Cua de processos SLEEPING**.
 
 ### Planificació
-Indica com gestionar les estructures.
+Gestiona l'ús de la CPU: Qui s'executa, Qui surt d'estar executant-se, Quant de temps, ...
+Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CPU).
