@@ -102,7 +102,8 @@ GRANT rol_lector TO rol_escriptor;
 -- DBA:
 GRANT rol_escriptor TO admin_Escriptors WITH GRANT OPTION;
 GRANT rol_escriptor TO usr_Escriptor1;
+
 -- 2. Posteriorment, l'usuari ha d'activar el rol
 -- USUARI:
-SET ROLE rol_escriptor
+SET ROLE rol_escriptor;
 ```
