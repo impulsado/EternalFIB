@@ -391,3 +391,7 @@ void esperar_alarma() {
 	while (alarma != 1)
 }
 ```
+
+# Gestió Interna de Processos
+Per gestionar els processos necessitem:
+- Estructures de dades
