@@ -24,8 +24,9 @@ DISCONNECT nom_conexio {DEFAULT,CURRENT,ALL};
 ## Vistes
 Permeten independència lògica de les dades.
 ❗No es fica ``ORDER BY`` en la vista. 
-Des de la vista es poden modificar les dades de la taula. Si modifiquem una dada i la treïem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
-Per a evitar-ho, hi ha **algunes** vistes que **no** són **actualitzables**. 
+Des de la vista es poden modificar les dades de la taula. 
+Si modifiquem una dada i la treiem del "forat" que permet la vista, al tornar a fer un select semblarà que la dada s'ha eliminat.
+Per a evitar-ho, podem ficar `WITH CHECK OPTION` que no permetrà els `UPDATE` o `INSERT` que post-execució, la dada no estigui "en el forat".
 Vista SÍ és actualitzable quan:
 - Vista basada en una única taula o una vista si actualitzable. Aquesta no pot tindre `DISTINCT` ni funcions d'agregació (`MAX()`, `COUNT()`, ...).
 - El `SELECT` ha d'incloure tots els camps de la taula que tinguin restriccions de `NOT NULL` i no tinguin valor per defecte.
