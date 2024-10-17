@@ -1,4 +1,3 @@
-
 # Conceptes
 **Procés**
 Representació del SO d'un programa en execució.
