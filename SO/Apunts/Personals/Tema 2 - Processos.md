@@ -1,3 +1,4 @@
+
 # Conceptes
 **Procés**
 Representació del SO d'un programa en execució.
@@ -24,7 +25,7 @@ Depen del sistema i de la màquina (NO portable).
 
 ```
 Procés A, Procés B;
-S'executa Procés A -> 
+S'esta executant Procés A -> 
 SO decideix que s'ha d'executar Procés B -> 
 Es guarda en la PCB del Procés A la informació -> 
 Es carrega la PCB del Procés B -> 
@@ -374,11 +375,6 @@ sigdelset(&mask, SIGNUM);  // Treure bloqueig del signal (mask<SIGNUM> = 0)
 sigismember(&mask, SIGNUM);  // Saber si esta block (true) o no (false).
 ```
 
-## Control de temps
-```C
-
-```
-
 ## Sincronització entre processos
 ### Activa
 **Consumeix CPU** així que fer-ho servir quan saps que has d'esperar poc.
@@ -391,3 +387,71 @@ void esperar_alarma() {
 	while (alarma != 1)
 }
 ```
+
+# Gestió Interna de Processos
+Per gestionar els processos necessitem:
+- **Estructures de dades**: 
+	- Representar propietats i recursos --> PCB
+	- Representar i gestionar threads --> Depen del SO
+- **Estructures de gestió**: Organitzar els PCB's en funció del seu estat o necessitats del SO. Normalment són llistes i cues, però poden haver arbres, hash maps, ...
+- **Algorisme/s de planificació**: Com gestionar les estructures.
+- **Mecanismes**: Apliquin les decisions.
+
+## PCB
+Informació associada a cada procés.  
+Depèn del sistema (NO PORTABLE).
+- **PID:** El sistema necessita saber a quin procés ens referim.
+- **USERID, GROUPID:** Saber quins permisos té el procés per evitar que accedeixi a qualsevol recurs.
+- **Estat: RUN, READY, ...:** Necessitem saber en quin estat està el procés si ha estat interromput.
+- **Espai per guardar registres de la CPU:** Mantenir el context del procés tot i que hi hagi canvis.
+- **Dades per gestionar signals:** Facilitar la comunicació i la resposta a esdeveniments.
+- **Informació sobre la planificació:** Determinar l'ordre d'execució; sense això, el SO seria poc eficient.
+- **Informació de gestió de memòria:** Controla l'assignació i l'ús de memòria; sense això, podrien haver conflictes o errors de segmentació.
+- **Informació sobre gestió de l'E/S:** Permet que els processos interaccionin correctament amb els dispositius d'entrada/sortida.
+- **Accounting:** Monitoritzar i controlar els recursos utilitzats; seria impossible gestionar eficientment els recursos.
+
+## Planificació
+### Estructures
+Depèn del SO, hi ha tipus d'estructures diferents.
+Per exemple: Hi ha diverses cues, depenent l'estat i el SO va movent els processos entre cues.
+- **Cua de processos**: Tots els processos creats pel sistema.
+- **Cua de processos READY**.
+- **Cua de processos SLEEPING**.
+
+### Planificació
+Gestiona l'ús de la CPU: Qui s'executa, Qui surt d'estar executant-se, Quant de temps, ...
+Cada X temps, en la interrupció de rellotge, es comprova (Evitar monopoli de CPU).
+- **No Preemptiva**: Procés s'executa fins que acaba o passa a "SLEEPING". (FIFO)
+[//]: El SO "no modifica" l'estat del procés.
+- **Preemptiva**: El SO "permet" la CPU a un procés durant X temps. Si aquest es passa del temps, el SO el passa a "READY" i fica un altre. (Round Robbin).
+
+### Tipus de processos
+- **Processos de Càlcul**: Temps Computació > E/S.
+- **Processos d'E/S**: Temps Computació < E/S.
+
+### Mecanismes
+**Context Switching**: Procés ha de deixar la CPU i s'ha de carregar un altre.
+[//]: Aquest canvi de context s'executa en mode kernel.
+1. Guardar la informació del procés actual en la seva PCB i passa a estar en "READY".
+2. Planificador escull quin es el següent procés.
+3. Es carrega la PCB del nou procés i aquest està en "RUN".
+
+❗Aquest canvi es un temps **NO ÚTIL** de l'aplicació --> Ha de ser ràpid.
+
+### Mètriques
+**Turnaround Time**: Temps **TOTAL** (En tots els estats) des de que procés arriba al SO fins que acaba.
+**Temps d'espera**: Suma del temps que el procés ha estat en "READY".
+
+### Round Robbin
+Temps es subdivideix en intervals fixos anomenats `quantums`. $10 \leq q \leq 100$ mil·lisegons.
+Cada procés rep el mateix `quantum`.
+Processos s'organitzen en una cua circular (Request Queue) --> No importa la prioritat.
+Quan a un procés se li acaba el seu ``quantum`` (i no ha acabat) el scheduler l'interromp i realitza "Context Switching".
+Esdeveniments que activen el Round Robbin:
+- **RUN --> SLEEPING**: Procés passa al final de la cua de "SLEEPING" fins que acaba E/S. (No preemptiu)
+- **RUN --> ZOMBIE**: Procés acaba amb la seva execució. (No preemtiu)
+- **S'acaba el quantum**: Procés passa al final de la cua de "READY". (Preemtiu)
+
+Cap procés espera més de $(N-1)*q$ mil·lisegons. $N$ nº processos i $q$ quantum.
+- $q$ GRAN --> **Ordre Seqüencial**.
+- $q$ petit --> **Overhead** si el context switching és costós.
