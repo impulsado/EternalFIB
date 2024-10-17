@@ -142,7 +142,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -156,7 +157,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4650d1043cdc6c3c",
+  "active": "c157750cf1847e72",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
