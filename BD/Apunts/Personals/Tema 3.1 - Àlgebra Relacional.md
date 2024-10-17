@@ -74,6 +74,11 @@ Seleccionar el nom dels entrenadors i pokemons on siguin del mateix tipus/especi
 
 [//]: OBS: Podrien haver fet servir un "JOIN" en comptes del producte cartesià + selecció.
 
+Ordre que dona millor resultat
+1. Fer Filtre
+2. Fer Join
+3. Fer Projecció
+
 # Links
 - Relational Algebra Simplified
 https://youtube.com/playlist?list=PLdnwl-gHn1DFIbW82OIyO21lke98MAOKk&si=-b8thTrxwJ55ossO
