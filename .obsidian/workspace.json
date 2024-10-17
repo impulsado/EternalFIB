@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "Tema 2 - Processos"
             }
-          },
-          {
-            "id": "bc62a2ca62523330",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.4"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,7 +175,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc62a2ca62523330",
+  "active": "4650d1043cdc6c3c",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
