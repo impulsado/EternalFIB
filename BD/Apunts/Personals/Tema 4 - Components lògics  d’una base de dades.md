@@ -1,4 +1,3 @@
-
 # Components Lògics de Dades
 ## Esquemes
 Unitat administrativa per agrupar un conjunt components.
