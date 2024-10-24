@@ -9,4 +9,10 @@ Ficar totes les PK de les entitats que associa i atributs.
 Seleccionar l'entitat amb `*` i una de les `0..1` i seleccionar les seves PK per formar la PK de la entitat.
 Ficar a on referencia cada PK.
 La/les PKs de la taula que **NO** hem seleccionat hem d'especificar que `NOT NULL`
-Crear reestricció `UNIQUE()` de la/les 
+Crear reestricció `UNIQUE()` de la/les PKs de l'entitat amb `*` i la/les PKs de l'entitat que no hem seleccionat.
+
+## 3. Crear Relacions 1:1
+Escollir una entitat i ficar la PK de l'altra entitat com a referencia.
+
+## 4. Crear Relacions 1:*
+Afegir la PK de la relació `1` com a referencia en la relació `*`
