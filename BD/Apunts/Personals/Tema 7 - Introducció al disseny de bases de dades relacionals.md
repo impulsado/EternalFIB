@@ -10,6 +10,7 @@ Afegir atributs simples si en te.
 
 ## 3. Crear Relacions 1:1
 Escollir una entitat i ficar la PK de l'altra entitat com a referència.
+La FK ha de ser `UNIQUE`. Això serveix per limitar que es converteixi en `*`.
 Afegir atributs simples si en te.
 
 ## 4. Crear Relacions 1:*
