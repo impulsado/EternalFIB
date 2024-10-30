@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 7 - Introducció al disseny de bases de dades relacionals.md",
+                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tema 7 - Introducció al disseny de bases de dades relacionals"
+              "title": "Tema 4 - Components lògics  d’una base de dades"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md"
+                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Tema 3.1 - Àlgebra Relacional"
+              "title": "Outline of Tema 4 - Components lògics  d’una base de dades"
             }
           },
           {
@@ -156,12 +156,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,9 +176,10 @@
   },
   "active": "4650d1043cdc6c3c",
   "lastOpenFiles": [
+    "BD/Apunts/Personals/Tema 3.2 - SQL.md",
+    "BD/Apunts/Personals/Tema 7 - Introducció al disseny de bases de dades relacionals.md",
     "BD/README.md",
     "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
-    "BD/Apunts/Personals/Tema 7 - Introducció al disseny de bases de dades relacionals.md",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
     "conflict-files-obsidian-git.md",
@@ -207,7 +207,6 @@
     "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
     "Excalidraw",
     "attachments",
-    "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "IC/README.md"
   ]
 }
