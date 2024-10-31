@@ -174,8 +174,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4650d1043cdc6c3c",
+  "active": "275c6f6f8bbef44c",
   "lastOpenFiles": [
+    "EDA/Algoritmes/quickSort.cpp",
+    "EDA/Algoritmes/mergeSortVector.cpp",
+    "EDA/Algoritmes/insertionSort.cpp",
+    "EDA/Algoritmes/selectionSort.cpp",
+    "EDA/Algoritmes",
+    "EDA",
     "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
@@ -188,9 +194,6 @@
     "SO/Apunts",
     "SO/Aputns",
     "SO/New folder",
-    "SO",
-    "SOo",
-    "New folder",
     "Excalidraw/Drawing 2024-10-15 10.26.13.excalidraw.md",
     "attachments/Pasted image 20241014112517.png",
     "attachments/Pasted image 20241013175251.png",
@@ -205,8 +208,6 @@
     "Excalidraw/Drawing 2024-10-14 10.24.23.excalidraw.md",
     "Excalidraw/Drawing 2024-10-13 17.47.30.excalidraw.md",
     "Excalidraw/Drawing 2024-10-13 16.04.01.excalidraw.md",
-    "Excalidraw",
-    "attachments",
     "IC/README.md"
   ]
 }
