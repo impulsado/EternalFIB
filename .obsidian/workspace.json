@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+                "file": "BD/Apunts/Personals/Tema 3.2 - SQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tema 4 - Components lògics  d’una base de dades"
+              "title": "Tema 3.2 - SQL"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md"
+                "file": "BD/Apunts/Personals/Tema 3.2 - SQL.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Tema 4 - Components lògics  d’una base de dades"
+              "title": "Outline of Tema 3.2 - SQL"
             }
           },
           {
@@ -176,11 +176,11 @@
   },
   "active": "4650d1043cdc6c3c",
   "lastOpenFiles": [
-    "BD/Apunts/Personals/Tema 3.2 - SQL.md",
+    "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "BD/Apunts/Personals/Tema 4 - Components lògics  d’una base de dades.md",
+    "BD/Apunts/Personals/Tema 3.2 - SQL.md",
     "BD/Apunts/Personals/Tema 7 - Introducció al disseny de bases de dades relacionals.md",
     "BD/README.md",
-    "BD/Apunts/Personals/Tema 3.1 - Àlgebra Relacional.md",
     "SO/Apunts/Personals/Tema 2 - Processos.md",
     "conflict-files-obsidian-git.md",
     "SO/Apunts/Personals",
