@@ -1,3 +1,12 @@
+/*
+Script generació de Dades d'Encriptació
+Autor: Pau Bru, Maria Arques, Pol Altimira
+Descripció: Aquest script genera 25 fitxers de mides [1,25] MB aleatoriament.
+            Posteriorment els encripta 5 vegades amb cada mètode {RSA-256, AES-256}.
+            Les dades de temps les guarda en un CSV.
+Compliar: g++ -o encriptar.exe encriptar.cpp -lssl -lcrypto
+*/
+
 #include <iostream>
 #include <fstream>
 #include <vector>

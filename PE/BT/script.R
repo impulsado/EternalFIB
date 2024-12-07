@@ -1,25 +1,35 @@
-# 0. Instal·lar paquets necessaris (si no estan instal·lats)
-install.packages("ggplot2")
-install.packages("dplyr")
-install.packages("readxl")
-# Instal·lar el paquet tidyr (si no està instal·lat)
-install.packages("tidyr")
+############################################
+# Script d'Anàlisi de Dades d'Encriptació
+# Autor: Pau Bru, Maria Arques, Pol Altimira
+# Descripció: Aquest script llegeix dades d'encriptació (AES vs RSA),
+#              calcula estadístiques descriptives, verifica premisses,
+#              aplica transformacions i crea gràfics.
+############################################
 
-# Carregar el paquet tidyr
-library(tidyr)
+#-------------------------------------------
+# 0. Instal·lar paquets (només si no estan instal·lats)
+# Comenta aquestes línies si ja tens els paquets instal·lats
+# install.packages("ggplot2")
+# install.packages("dplyr")
+# install.packages("readxl")
+# install.packages("tidyr")
 
-
-# 1. Carregar paquets
+#-------------------------------------------
+# 1. Carregar llibreries
 library(ggplot2)
 library(dplyr)
 library(readxl)
 library(tidyr)
 
-# 2. Carregar dades des del fitxer CSV
-dades <- read_excel("C:/Users/copit/Desktop/dades.xlsx")
+#-------------------------------------------
+# 2. Carregar les dades des del fitxer Excel
+# Actualitza la ruta del fitxer segons convingui
+dades <- read_excel("C:/Users/impu/Desktop/dades.xlsx")
 
-# 3. Preparar variables estadístiques
-# Calcular estadístics per cada combinació Metode-Mida_MB
+# Esperem trobar columnes: Metode, Mida_MB, Repeticio, Temps_Segons
+
+#-------------------------------------------
+# 3. Calcular estadístiques agregades per Mida_MB i Metode
 dades_estadistiques <- dades %>%
   group_by(Metode, Mida_MB) %>%
   summarise(
@@ -29,48 +39,64 @@ dades_estadistiques <- dades %>%
     SE = Temps_SD / sqrt(N),
     IC_inf = Temps_Mitjana - qt(0.975, df = N-1) * SE,
     IC_sup = Temps_Mitjana + qt(0.975, df = N-1) * SE,
-    Temps_Min = min(Temps_Segons),
-    Temps_Max = max(Temps_Segons)
-  ) %>%
-  ungroup()
+    .groups = "drop"
+  )
 
-# 4. Mostrar els estadístics obtinguts
-print(n= 50,dades_estadistiques)
-
-# INTERVAL DE CONFIANÇA
-mitjana_AES <- mean(dades$Temps_Segons[dades$Metode == "AES-256"])
-mitjana_RSA <- mean(dades$Temps_Segons[dades$Metode == "RSA-256"])
-
-diferencia_mitjanes <- mitjana_RSA - mitjana_AES
-
-t_test_result <- t.test(
-  dades$Temps_Segons[dades$Metode == "RSA-256"],
-  dades$Temps_Segons[dades$Metode == "AES-256"],
-  var.equal = FALSE  # Si no s'assumeix igualtat de variàncies
-)
-print(t_test_result)
-
-# Suposant que les dades estan aparellades per mida de fitxer
-dades_parellades <- dades %>%
-  pivot_wider(names_from = Metode, values_from = Temps_Segons) %>%
+# A partir d'aquest resum podem crear el dataset aparellat (AES vs RSA)
+dades_parellades <- dades_estadistiques %>%
+  select(Metode, Mida_MB, Temps_Mitjana) %>%
+  pivot_wider(names_from = Metode, values_from = Temps_Mitjana) %>%
   drop_na()
 
-# Realitzar el test de t aparellat
-t_test_parellat <- t.test(
-  dades_parellades$`RSA-256`,
-  dades_parellades$`AES-256`,
-  paired = TRUE
-)
+#-------------------------------------------
+# 4. Comprovar normalitat de la diferència sense transformació
+diferencia_sense_log <- dades_parellades$`RSA-256` - dades_parellades$`AES-256`
 
-# Mostrar els resultats del test
-print(t_test_parellat)
+# QQ-Plot sense transformació
+qqnorm(diferencia_sense_log, 
+       main = "QQ-Plot de les Diferències (Sense Transformació)",
+       xlab = "Quantils teòrics de la Normal",
+       ylab = "Quantils de les Diferències")
+qqline(diferencia_sense_log, col = "red")
 
-diferencia_temps <- dades_parellades$`RSA-256` - dades_parellades$`AES-256`
-qqnorm(diferencia_temps)
-qqline(diferencia_temps, col = "red")
+#-------------------------------------------
+# 5. Aplicar transformació logarítmica
+# Treballem amb la diferència dels logaritmes
+diferencia_log <- log(dades_parellades$`RSA-256`) - log(dades_parellades$`AES-256`)
 
+# QQ-Plot amb transformació logarítmica
+qqnorm(diferencia_log, 
+       main = "QQ-Plot de les Diferències Logarítmiques",
+       xlab = "Quantils teòrics de la Normal",
+       ylab = "Quantils de les Diferències (log)")
+qqline(diferencia_log, col = "red")
 
-# 5. Gràfic 1: Temps d'Encriptació vs Grandària d'Arxiu amb IC
+#-------------------------------------------
+# 6. Test t aparellat amb dades log-transformades
+test_log <- t.test(log(dades_parellades$`RSA-256`), 
+                   log(dades_parellades$`AES-256`), 
+                   paired = TRUE)
+
+print(test_log)
+
+diferencia_log_mitjana <- test_log$estimate
+IC_log <- test_log$conf.int
+
+#-------------------------------------------
+# 7. Interpretació: passem de diferències log a factor multiplicatiu
+factor_mitjana <- exp(diferencia_log_mitjana)
+factor_IC <- exp(IC_log)
+
+cat("Mitjana del factor multiplicatiu (RSA/AES):", factor_mitjana, "\n")
+cat("IC(95%) del factor multiplicatiu:", factor_IC, "\n")
+
+#-------------------------------------------
+# 8. Gràfics de Resultats
+
+# Estil global dels gràfics (opcional)
+theme_set(theme_minimal(base_size = 14))
+
+# Gràfic 1: Temps d'Encriptació vs Mida d'Arxiu amb IC
 ggplot(dades_estadistiques, aes(x = Mida_MB, y = Temps_Mitjana, color = Metode)) +
   geom_line(size = 1) +
   geom_point(size = 2) +
@@ -79,49 +105,22 @@ ggplot(dades_estadistiques, aes(x = Mida_MB, y = Temps_Mitjana, color = Metode))
   labs(title = "Temps d'Encriptació vs Grandària d'Arxiu",
        x = "Mida del Fitxer (MB)",
        y = "Mitjana Temps d'Encriptació (s)",
-       color = "Mètode") +
-  theme_minimal()
+       color = "Mètode")
 
-# Guardar Gràfic 1
-ggsave("temps_vs_mida_IC.png")
-
-# 6. Gràfic 2: Comparativa de Temps entre AES-256 i RSA-256 amb IC
-ggplot(dades_estadistiques %>% filter(Metode %in% c("AES-256", "RSA-256")), 
-       aes(x = Metode, y = Temps_Mitjana, fill = Metode)) +
-  geom_bar(stat = "identity", position = position_dodge()) +
-  geom_errorbar(aes(ymin = IC_inf, ymax = IC_sup), width = 0.2, position = position_dodge(0.9)) +
-  facet_wrap(~ Mida_MB, scales = "free_y") +
-  labs(title = "Comparativa de Temps entre AES-256 i RSA-256",
-       x = "Mètode",
-       y = "Mitjana de Temps d'Encriptació (s)") +
-  theme_minimal() +
-  theme(legend.position = "none")
-
-# Guardar Gràfic 2
-ggsave("comparativa_temps_IC.png")
-
-# 7. Gràfic 3: Boxplot de Temps d'Encriptació per Mètode
+# Gràfic 2: Boxplot de Temps d'Encriptació per Mètode
 ggplot(dades, aes(x = Metode, y = Temps_Segons, fill = Metode)) +
   geom_boxplot(alpha = 0.7) +
-  labs(title = "Boxplot de Temps d'Encriptació per Mètode",
+  labs(title = "Boxplot del Temps d'Encriptació per Mètode",
        x = "Mètode",
        y = "Temps d'Encriptació (s)") +
-  theme_minimal() +
   theme(legend.position = "none")
 
-# Guardar Gràfic 3
-ggsave("boxplot_temps.png")
-
-# 8. Gràfic 4: Comparativa de Desviacions Estàndard entre Mètodes i Mides
+# Gràfic 3: Comparativa de la Desviació Estàndard
 ggplot(dades_estadistiques, aes(x = Mida_MB, y = Temps_SD, color = Metode)) +
   geom_line(size = 1) +
   geom_point(size = 2) +
   scale_x_continuous(breaks = seq(1, 25, by = 1)) +
-  labs(title = "Comparativa de Desviacions Estàndard entre Mètodes i Mides",
-       x = "Mida Fitxer (MB)",
-       y = "Desviació Estàndard del Temps d'Encriptació (s)",
-       color = "Mètode") +
-  theme_minimal()
-
-# Guardar Gràfic 4
-ggsave("comparativa_SD.png")
+  labs(title = "Comparativa de la Desviació Estàndard vs Mida d'Arxiu",
+       x = "Mida del Fitxer (MB)",
+       y = "Desviació Estàndard del Temps (s)",
+       color = "Mètode")
