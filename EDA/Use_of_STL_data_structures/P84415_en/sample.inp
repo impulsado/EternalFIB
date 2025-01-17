@@ -1,0 +1,15 @@
+minimum?
+store hi
+minimum?
+delete bye
+store hi
+maximum?
+minimum?
+store bye
+minimum?
+delete bye
+delete hi
+delete hi
+maximum?
+delete hi
+maximum?

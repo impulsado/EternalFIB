@@ -1,0 +1,6 @@
+(hola,adeu,hi)
+(hola,hi,adeu)
+(adeu,hola,hi)
+(adeu,hi,hola)
+(hi,hola,adeu)
+(hi,adeu,hola)

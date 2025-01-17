@@ -1,0 +1,6 @@
+PLAY omer petit
+LOGIN omer
+PLAY omer petit
+LOGIN omer
+LOGOUT omer
+GET_ELO omer

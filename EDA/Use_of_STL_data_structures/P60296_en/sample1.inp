@@ -1,0 +1,16 @@
+LOGIN destello
+LOGIN fxtr
+PLAY destello fxtr
+PLAY destello fxtr
+LOGIN carokhan
+GET_ELO destello
+GET_ELO fxtr
+LOGOUT destello
+PLAY carokhan fxtr
+LOGOUT fxtr
+LOGIN cerebrus
+LOGOUT cerebrus
+LOGIN grassman
+PLAY destello grassman
+PLAY grassman destello
+LOGIN cusell

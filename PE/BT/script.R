@@ -1,6 +1,6 @@
 ############################################
 # Script d'Anàlisi de Dades d'Encriptació
-# Autor: Pau Bru, Maria Arques, Pol Altimira
+# Autor: Pau Bru, Maria Arques
 # Descripció: Aquest script llegeix dades d'encriptació (AES vs RSA),
 #              calcula estadístiques descriptives, verifica premisses,
 #              aplica transformacions i crea gràfics.
