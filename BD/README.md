@@ -2,7 +2,7 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Bases de Dades](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/BD) | BD | Q3 | 6 | 7/10 | 7/10 | x |
+| [Bases de Dades](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/BD) | BD | Q3 | 6 | 7/10 | 7/10 | 8.6 |
 
 <br>
 

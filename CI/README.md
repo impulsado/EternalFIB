@@ -2,7 +2,7 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Interfícies de Computadors](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/CI) | CI | Q3 | 6 | 6/10 | 7.5/10 | x |
+| [Interfícies de Computadors](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/CI) | CI | Q3 | 6 | 6/10 | 7.5/10 | 7.8 |
 
 <br>
 
@@ -24,3 +24,5 @@ No significa que els exàmens siguin pràctics, sinó que pregunten coses relaci
 ## Recomanacions
 1. Esforçat en el laboratori.
 2. Intenta entendre el perquè de les coses i així no hauràs de recordar molta teoria. Simplement sabràs què fer millor.
+En l'examen poden preguntar-te alguna configuració que no hagis vist mai abans, i si ho has entés, no et suposarà cap problema.
+3. Recomano bastant els meus apunts. Han ajudat a aprobar a força companys.

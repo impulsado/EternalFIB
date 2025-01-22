@@ -2,7 +2,7 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Estructures de Dades i Algorismes](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/EDA) | EDA | Q3 | 6 | 8/10 | 5/10 | x |
+| [Estructures de Dades i Algorismes](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/EDA) | EDA | Q3 | 6 | 8/10 | 5/10 | 9.63 |
 
 <br>
 
