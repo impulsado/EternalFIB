@@ -11,14 +11,10 @@
             "id": "4650d1043cdc6c3c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BD/Apunts/Personals/Tema 7 - Introducció al disseny de bases de dades relacionals.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Tema 7 - Introducció al disseny de bases de dades relacionals"
+              "title": "New tab"
             }
           }
         ]
@@ -138,11 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "BD/Apunts/Personals/Tema 7 - Introducció al disseny de bases de dades relacionals.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of Tema 7 - Introducció al disseny de bases de dades relacionals"
+              "title": "Outline"
             }
           },
           {
