@@ -11,14 +11,12 @@
             "id": "4650d1043cdc6c3c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "BD/Apunts/Personals/Tema 3.2 - SQL.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.7.7"
               },
               "icon": "lucide-file",
-              "title": "Tema 3.2 - SQL"
+              "title": "Release Notes 1.7.7"
             }
           }
         ]
@@ -175,7 +173,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "275c6f6f8bbef44c",
+  "active": "4650d1043cdc6c3c",
   "lastOpenFiles": [
     "PE/BT/grafics/grafic3.png",
     "PE/BT/grafics/grafic4.png",
