@@ -10,6 +10,7 @@ Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
 
 # 📹 YOUTUBE
 - [YT | RESUM - Primer Any](https://youtu.be/ofNDwrA_IAE?si=fqjr-DZFdj3dNx6Y)
+- [YT | RESUM - Segón Any](https://youtu.be/Oo6HUfUtjuE?si=2mMLibJnwygjNFxQ)
 
 <br>
 
