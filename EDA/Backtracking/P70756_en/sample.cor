@@ -1,0 +1,12 @@
+subset 1: {hello,bye}
+subset 2: {}
+
+subset 1: {hello}
+subset 2: {bye}
+
+subset 1: {bye}
+subset 2: {hello}
+
+subset 1: {}
+subset 2: {hello,bye}
+
