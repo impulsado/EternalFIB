@@ -8,6 +8,12 @@ Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
 
 <br>
 
+# 📹 YOUTUBE
+- [YT | RESUM - Primer Any](https://youtu.be/ofNDwrA_IAE?si=fqjr-DZFdj3dNx6Y)
+- [YT | RESUM - Segón Any](https://youtu.be/Oo6HUfUtjuE?si=2mMLibJnwygjNFxQ)
+
+<br>
+
 # 📚 ASSIGNATURES
 ## Quatrimestre 1
 - [Física](https://github.com/impulsado/EternalFIB/tree/main/F)
@@ -20,6 +26,13 @@ Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
 - [Matemàtiques 1](https://github.com/impulsado/EternalFIB/tree/main/M1)
 - [Matemàtiques 2](https://github.com/impulsado/EternalFIB/tree/main/M2)
 - [Programació 2](https://github.com/impulsado/EternalFIB/tree/main/PRO2)
+
+## Quatrimestre 3
+- [Bases De Dades](https://github.com/impulsado/EternalFIB/tree/main/BD)
+- [Computer Interfaces](https://github.com/impulsado/EternalFIB/tree/main/CI)
+- [Estructures de Dades i Algorismia](https://github.com/impulsado/EternalFIB/tree/main/EDA)
+- [Probabilitat i Estadística](https://github.com/impulsado/EternalFIB/tree/main/PE)
+- [Sistemes Operatius](https://github.com/impulsado/EternalFIB/tree/main/SO)
 
 <br>
 
