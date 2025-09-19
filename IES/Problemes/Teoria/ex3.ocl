@@ -1,0 +1,22 @@
+// AltaServeiVols
+context: Sistema::AltaServei(nom_Companyia : string, nom_TipusServei : TServ) : Servei
+pre:
+    ProgramaDeFidelitzacio.size() < 20
+post:
+
+context: Sistema::AltaVol(codi_Vol : string, data_Vol : date) : Vol
+pre:
+
+post:
+    Vol.
+
+
+context: Sistema::AltaVolAlServei(s : Servei, v : Vol, nom_Continent : string)
+pre:
+    Servei.allInstances()->exists(s_i | s_i.nom_Companyia = s.nom_Companyia AND s_i.nom_TipusServei = s.nom_TipusServei)
+    Vol.allInstances()->exists(v | v.codi = codi_Vol and v.data = data_Vol)
+    if (s.TipusServei.nom = "transoceanic") then
+        Continent.allInstances()->exists(c | c.nom = nom_Continent)
+    endif
+post: 
+

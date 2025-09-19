@@ -1,0 +1,108 @@
+/////////////////////
+// AltaPlatIndividual
+/////////////////////
+// Alta Plat Individual
+context:
+    Sistema::altaPlatIndividual(
+        codiProducte : String, nomProducte : String,
+        receptaPlat : String
+    ) : PlatIndividual
+pre:
+    // RT_OCL_0: Res
+post:
+    PlatIndividual.allInstances()->exists(pi |
+        pi.oclIsNew() AND
+        pi.codi = codiProducte AND pi.nom = nomProducte AND
+        pi.recepta = receptaPlat AND
+        pi = result
+    )
+
+// Assignar Ingredients Plat [Bucle 1..30]
+context:
+    Sistema::assignarIngredientPlat(
+        objPlatIndiv : PlatIndividual,
+        nomIngredient : String,
+        quantitatMesura : Int, unitatMesura : String
+    )
+pre:
+    // RT_OCL_0: Res
+post:
+    Mesura.allInstances()->exists(m |
+        m.oclIsNew() AND
+        m.platIndividual = objPlatIndiv AND m.ingredient.nom = nomIngredient AND
+        m.quantitat = quantitatMesura AND m.unitatDeMesura = unitatMesura
+    )
+
+/////////////////////
+// ConfeccióMenúDiari
+/////////////////////
+// Alta Menu
+context:
+    Sistema::crearMenuDiari(
+        codiProducte : String, nomProducte : String
+    ) : Menu
+pre:
+    // RT_OCL_1: No pot oferir >50 menus diferents
+    // Això ha ho fa la RT2
+
+    // RT_OCL_2: No es pot donar alta menu si >100 plats indiv.
+    PlatIndividual->size()<=100
+post:
+    Menu.allInstances()->exists(m |
+        m.oclIsNew() AND
+        m.codi = codiProducte AND m.nom = nomProducte AND
+        m = result
+    )
+
+// Assignar Plats al Menu [Bucle 2..*]
+context:
+    Sistema::assignarPlatIndiv(
+        objMenu : Menu,
+        nomPlatIndiv : String
+    )
+pre:
+    // RT_OCL_0: Res
+    // NOTA: Supossem que plat indiv. ja existeix diu enunciat
+post:
+    Menu.allInstances()->exists(m |
+        m = objMenu AND m.platIndividual.nom = nomPlatIndiv
+    )
+
+//////////////////////
+// ConsultaPlatsOferts
+//////////////////////
+context:
+    Sistema::consultaPlatsOferts(
+        dataIniciConsulta : Date,
+        dataFiConsulta: Date,
+        nomRestaurantConsulta : String
+    )
+    : Set(TupleType(sNomPlat : String, sNomIngredients : Set(String)))
+pre:
+    // PRE_OCL_1: Dates correctes
+    dataIniciConsulta <= dataFiConsulta AND
+    // PRE_OCL_2-3 : Dates Existeixen
+    Data.allInstances()->exists(d | d.data = dataIniciConsulta) AND
+    Data.allInstances()->exists(d | d.data = dataFiConsulta) AND
+    // PRE_OCL_4: Ofereix minim 10 menus a preu inferior 10€
+    MenuDiariOfert.allInstances()->select(mdo |
+        mdo.restaurant.nom = nomRestaurantConsulta AND
+        mdo.preu < 10 
+    )->size()>=10
+body:
+    // NOTA: Deduït com es fa de "https://www.omg.org/spec/OCL/2.4/PDF" pag. 45
+    let SetPlatsOferts : Set(MenuDiariOfert) = MenuDiariOfert.allInstances()->select(mdo |
+        mdo.restaurant.nom = nomRestaurantConsulta AND
+        dataIniciConsulta <= mdo.data.data AND 
+        mdo.data.data <= dataFiConsulta AND
+    )
+
+    in SetPlatsOferts
+    ->collect(mdo | mdo.menu.platIndividual)  // Obtinc només els plats individuals (Ara es una bag)
+    ->asSet()  // Ho faig Set per eliminar diferents menus amb mateixos plats individuals (Repetits)
+    ->collect(spi |  // Ara ja tinc un set amb plats individuals
+        Tuple{
+            sNomPlat = spi.nom,
+            sNomIngredients = spi.ingredient.nom
+        }
+    )  

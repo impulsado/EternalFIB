@@ -1,0 +1,94 @@
+//////////////////////
+// Alta de Subscriptor
+//////////////////////
+// Alta Subscriptor
+context:
+    Sistema::altaSubscriptor (
+        nomUsuari : String, IBANSubscriptor : String
+        esPremium : Boolean
+    ) : Subscriptor
+pre:
+
+post:
+    Subscriptor.allInstances()->exists(s | 
+        s.oclIsNew() AND
+        s.usuari = nomUsuari AND s.iban = IBANSubscriptor AND
+        IF (esPremium) THEN
+            s.oclIsTypeOf(SubscriptorPremium)
+        END
+        s = result
+    )
+
+// Alta Perfil [Bucle 1..*]
+context:
+    Sistema::altaPerfil (
+        nomPerfil : String, esAdult : Boolean,
+        objSubscriptor : Subscriptor
+    ) : Perfil
+pre:
+
+post:
+    Perfil.allInstances()->exists(p |
+        p.oclIsNew() AND
+        p.nom = nomPerfil AND p.adult = esAdult AND
+        p.subscriptor = objSubscriptor
+        p = result
+    )
+
+
+////////////////////////
+// Visionat de Contingut
+////////////////////////
+// Visionar Contingut
+context:
+    Sistema::visionarContingut (
+        ultimaData : Date, puntuacioContingut : TPuntuacio, comentarisContingut : String,
+        usuariSubscriptor : String, nomPerfil : String, titolContingut : String
+    )
+pre:
+    // NOTA: La RT que diu ja fa referencia a la RT4
+    Perfil.allInstances()->exists(p | p.nom = nomPerfil AND p.subscriptor.usuari = usuariSubscriptor) AND
+    Contingut.allInstances()->exists(c | c.titol = titolContingut)
+post:
+    ContingutVisionat.allInstances()->exists(cv |
+        IF NOT (ContingutVisionat.allInstances()@pre->exists(cv2 | cv2.perfil.nom = nomPerfil AND cv2.perfil.subscriptor.nom = usuariSubscriptor AND cv2.contingut.titol = titolContingut)) THEN
+            cv.oclIsNew()
+        END
+        cv.perfil.nom = nomPerfil AND cv.perfil.subscriptor.usuari = usuariSubscriptor AND cv.contingut.titol = titolContingut AND
+        cv.dataUltimVisionat = ultimaData AND cv.puntacio = puntuacioContingut AND cv.comentaris = comentarisContingut
+    )
+
+
+//////////////////////
+// Categories Exitoses
+//////////////////////
+// NOTA: No sé si es correcte xd
+context:
+    Sistema::getCategoriesExitoses(
+        dataIniciConsulta : Date, dataFiConsulta : Date
+    )
+    : Set(TupleType(sTitol : String, sCategories : Set(String), sPreuTotal : Int))
+pre:
+    dataIniciConsulta <= dataFiConsulta AND
+    Data.allInstances()->exists(d | d.date = dataIniciConsulta) AND
+    Data.allInstances()->exists(d | d.date = dataFiConsulta) AND
+    // Hi ha més de 3 continguts descarregat entre dates
+    ContingutDescarregat.allInstances()->select(cd |
+        dataIniciConsulta <= cd.data.date AND cd.data.date <= dataFiConsulta
+    )->size()>3
+body:
+    let setCategoriesExitoses : Set(ContingutDescarregat) = ContingutDescarregat.allInstances()->select(cd |
+        dataIniciConsulta <= cd.data.date AND cd.data.date <= dataFiConsulta
+    )  // Aqui tinc tots els Continguts Descarregats dins l'interval
+    in setCategoriesExitoses->collect(cd | cd.contingutpremium)->asSet()  // Aqui tinc tots els continguts premiums unics descarregats
+    // Miro al meu set general si, per cada contingut premium que ha sigut descarregat, aquest ha sigut més de 5 vegades 
+    ->select(cp | setCategoriesExitoses->select(sce | sce.contingutpremium = cp)->size()>5)
+    // Ara ja agafo per cada contingut premium la seva informacio
+    ->collect(cp |
+        Tuple {
+            sTitol = cp.titol,
+            sCategories = cp.categoria.nom,
+            // Agafo dins el meu set general, una bag que te el contingut premium
+            sPreu = cp.preu * setCategoriesExitoses->select(sce | sce.contingutpremium = cp)->size()
+        }
+    )

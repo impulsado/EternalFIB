@@ -1,0 +1,109 @@
+/////////////////////
+// Alta de Restaurant
+/////////////////////
+context:
+    Sistema::altaRestaurant(nomRestaurant : String, nomAdreça : String) : Restaurant
+pre:
+    // Menys de 100 restaurants
+    Restaurant.allInstances()->size() < 100 AND
+    // NOTA: Això ho faig aquí pq. diu que no es pot fer la operació si passa això.
+    // Podria ser que haguessim creat un restaurant i quedi buit.
+    NOT Restaurant.allInstances()->exists(r | r.sala->size() >5)
+post:
+    Restaurant.allInstances()->exists(r |
+        r.oclIsNew() AND
+        r.nom = nomRestaurant AND r.adreça = nomAdreça AND
+        r = result
+    )
+
+context:
+    Sistema::altaSala(objRestaurant : Restaurant, numeroSala : Integer, capacitatSala : Integer) : Sala    
+pre:
+
+post:
+    Sala.allInstances()->exists(s | 
+        s.oclIsNew() AND
+        s.numero = numeroSala AND s.capacitat = capacitatSala AND
+        s.restaurant = objRestaurant AND
+        s = result
+    )
+
+///////////////////////////
+// Alta Festa d'Aniversari
+///////////////////////////
+context:
+    Sistema::altaFestaAniversari(
+        nomRestaurant : String, dataFesta : data, nomEmpresa : String, 
+        horaIniciFesta : Int, edatFesta : Int,
+        nomPersona : String,
+        nomTipusFesta : String
+    ) : Aniversari
+pre:
+    Restaurant.allInstances()->exists(r | r.nom = nomRestaurant) AND
+    Data.allInstances()->exists(d | d.data = dataFesta) AND
+    Empresa.allInstances()->exists(e | e.nom = nomEmpresa) AND
+    TipusDeFesta.allInstances()->exists(tdf | tdf.nom = nomTipusFesta) AND
+    Persona.allInstances()->exists(p | p.nom = nomPersona)
+    // NOTA: La pre que diu ho limita la RT4
+post:
+    Aniversari.allInstances()->exists(a |
+        a.oclIsNew() AND
+        a.horaInici = horaIniciFesta AND a.edat = edatFesta AND
+        a.restaurant.nom = nomRestaurant AND a.data.data = dataFesta AND a.empresa.nom = nomEmpresa AND
+        a.tipusDeFesta.nom = nomTipusFesta AND
+        a.homenatjada.nom = nomPersona AND
+
+        Assistent.allInstances()->exists(as | 
+            as.oclIsNew() AND
+            as.pagado = true AND 
+            as.persona.nom = nomPersona AND as.fiesta = a
+        ) AND
+
+        a.organitzadors->exists(o | o.nom = nomPersona) AND
+        result = a
+    )
+
+context:
+    Sistema::altaOrganitzadors(objFesta : Festa, nomPersona : String)
+pre:
+    Persona.allInstances()->exists(p |p.nom = nomPersona)
+post:
+    objFesta.organitzades->exists(o | o.nom = nomPersona) AND
+    Assistent.allInstances()->exists(a |
+        a.oclIsNew() AND 
+        a.persona.nom = nomPersona AND
+        a.festa = objFesta AND
+        a.pagat = true
+    )
+    
+////////////////////////////////
+// Consulta Aniversaris Estranys
+////////////////////////////////
+context:
+    // NOTA: Necessitem "Sequence" o "Bag" donat que nom Persona es pot repetir.
+    Sistema::consultaAniversarisEstranys(nomEmpresa : String)
+    : Sequence(TupleType(sNomPersona : String, setOrganitzadors : Set(String)))
+pre:
+    Empresa.allInstances()->exists(e |
+        e.nom = nomEmpresa AND
+        e.tipusDeFesta->forAll(tf | 
+            e.festa->exists(f | f.tipusDeFesta(tf))
+        )
+    )
+    // NOTA: e.festa.tipusDeFesta tinc un "bag" de tipus de festa (repetits)
+    // Si volem únics fem : e.festa.tipusDeFesta->asSet()
+
+
+body:
+    let SeqAniversaris : Sequence(Aniversari) = Aniversari.allInstances()->select(a |
+        a.empresa.nom = nomEmpresa AND
+        a.participacions->size() > 30 AND
+        a.participacions->excludes(a.homenatjada) 
+    )
+
+    in SeqAniversaris->collect(sa | 
+        Tuple {
+            sNomPersona = sa.homenatjada.nom,
+            setOrganitzadors = sa.organitzades.nom
+        }
+    )

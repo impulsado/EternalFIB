@@ -1,0 +1,109 @@
+//////////////
+// Alta Animal
+//////////////
+context:
+    Sistema::altaAnimal(
+        nomEspecie : String,
+        nomPersona : String, nomPoblacio : String,
+        nomAnimal : String, sexeAnimal : TSexe, esAgressiu : Boolean) : Animal
+pre:
+    // Ha d'existir l'espècie
+    Especie.allInstances()->exists(e | e.nom = nomEspecie)
+
+post:
+    // S'ha creat l'animal correctament
+    Animal.allInstances()->exists(a |
+        a.oclIsNew() AND 
+        // a = result --> Això només és per quan retornes un resultat. Aqui no retornem res.
+        a.nom = nomAnimal AND a.sexe = sexeAnimal AND 
+        // NOTA: No importa comprovar abans si s'ha creat la persona o després --> "Es fa tot a la vegada"
+        // NOTA: Fer comprovació amb el nom de rol de la relació.
+        a.especie.nom = nomEspecie AND a.propietari.nom = nomPersona AND
+        IF (nomEspecie = "Gos") THEN
+            // Comprovar que sigui un gos 
+            a.oclIsTypeOf(Gos) AND
+            // NOTA: a.agressiu = esAgressiu --> !NO!. Has de fer un "cast"
+            // "a.oclAsType(Perro)" obtinc un gos (i no un amimal)
+            a.oclAsType(Perro).agressiu = esAgressiu 
+        END
+    ) AND
+    // Si no existia en la PRE, ara ha d'exisitir la persona
+    IF (Peronsa.allInstances()@pre->exists(p1 | p1.nom = nomPersona)) THEN
+        Peronsa.allInstances()->exists(p |
+            p.oclIsNew() AND
+            p.nom = nomPersona AND p.poblacio = nomPoblacio AND
+        )
+    END
+
+////////////////////////
+// Alta Operació Urgent
+////////////////////////
+// NOTA: Sempre intentar arribar al final de la jerarquia perque jo vaig cap amunt pero no cap avall.
+// NOTA: Quan hi ha "1..*" sabem que obligatoriament s'ha de ficar 1, pero pot haver N --> Fer un bucle.
+
+context:
+    Sistema::altaOperacioUrgent( ... ) 
+    : OperacioFinalitzada
+
+pre:
+    Data.allInstances()->exists(f | f.data = dataData) AND
+    Animal.allInstances()->exists(a | a.nom = nomAnimal) AND
+    Veterinari.allInstances()->exists(vet | 
+        vet.numCol = numColVeterinari AND
+        // Mirar si el veterinari es especialista en la especie del animal
+        vet.especie->includes(
+            Animal.allInstances()->select(a | a.nom = nomAnimal).especie
+        )
+    )
+    // ALERTA: NO comprovar horaFi > horaInici perquè ja és una RT.
+    // ALERTA: NO comprovar les operacions del Veterinari perquè ja és una RT.
+
+post:
+    OperacioFinalitzada.allInstances()->exists(of |
+        of.oclIsNew() AND
+        of.exitoas = esExitosa AND of.horaFi = horaFiOperacio AND of.horaInici = horaIniciOperacio AND of.motiu = motiuOperacio AND
+        of.animal.nom = nomAnimal AND of.dataOp.data = dataOperacio AND of.veterinari.nomCol = nomColVeterinari
+
+    )
+
+context:
+    Sistema::afegeixMedicamentOperacio(nomMedicament : String, opFinalitzada : OperacioFinalitzada, dosisMedicamentAdmin: Int)
+pre:
+    Medicament.allInstances()->exists(m | m.nom = nomMedicament) 
+post:
+    MedicamentAdministrat.allInstances()->exists(ma |
+        ma.oclIsNew() AND
+        ma.dosis = dosisMedicamentAdmin AND ma.medicament.nom = nomMedicament
+        ma.operaciofinalitzada = opFinalitzada
+    )
+
+//////////////////////////////////////////////
+// Consulta Gossos Perillosos no Esterilitzats
+//////////////////////////////////////////////
+context:
+    Sistema::perrosPeligrosos(nomPoblacio : String)
+    : Set( TupleType(sNomGos : String, sNomPropietari : String, sEsVeterinari : Boolean) )
+
+pre:
+    // Ha d'haver alguna persona amb animal
+    Persona.allInstances()->exists(p |
+        p.poblacio = nomPoblacio AND p.animal->notEmpty()
+    )
+
+body:
+    // Guardar informació
+    let SetGossosPerillosos : Set(Gos) = Gossos.allInstances()->select(g |
+        g.propietari.poblacio = nomPoblacio AND
+        g.sexo = TSexe::mascle AND
+        g.agressiu = true AND
+        NOT g.operacio->exists(op | op.motiu = "Esterilització")
+    )
+
+    // Mostrar informació
+    in SetGossosPerillosos->collect(gp | 
+        Tuple{
+            sNomGos = gp.nom,
+            sNomPropietari = gp.propietari.nom,
+            sEsVeterinari = gp.propietari.oclIsTypeOf(Veterinari),  // Aixo retorna cert o fals
+        }
+    )

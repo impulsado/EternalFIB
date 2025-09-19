@@ -1,0 +1,126 @@
+/////////////////
+// Alta de Llibre
+/////////////////
+// Alta d'Autor
+context:
+    Sistema::altaDeAutor(
+        nomAutor : String,
+        tipus : TipusAutor,
+        llenguaAutor : String
+    ) : Autor
+pre:
+    Llengua.allInstances()->exists(l | l.nom = llenguaAutor)
+post:
+    IF NOT (Autor.allInstances()@pre->exists(a1 | a1.nom = nomAutor)) THEN
+        IF (Traductor.allInstances()@pre->exists(t1 | t1.nom = nomAutor)) THEN
+            Traductor.allInstances()->exists(t |
+                t.nom = nomAutor AND
+                // Mirar que traductor tradueix en aquesta llengua (És un conjunt i select retorna l'objecte)
+                t.llengua->includes(
+                    Llengua.allInstances()->select(l | l.nom = llenguaAutor)
+                )
+            )
+        END 
+        AND
+        Autor.allInstances()->exists(a |
+            a.oclIsNew() AND
+            a.nom = nomPersona AND a.tipus = TipusAutor AND
+            a.llengua.nom = llenguaAutor AND
+            a = result
+        )
+    ELSE
+        // Si existia doncs el retornem i au
+        Autor.allInstances()->exists(a | a.nom = nomPersona AND a = result)
+    END
+
+
+// Alta de Llibre
+context:
+    Sistema::altaDeLlibre(
+        titolLlibre : String, sinposiLlibre : String,
+        objAutor : Autor
+    ) : Llibre
+pre:
+
+post:
+    Llibre.allInstances()->exists(l |
+        l.oclIsNew() AND
+        l.titol = titolLlibre AND l.sinposi = sinposiLlibre AND
+        l.autor = objAutor AND
+        l = result
+    )
+
+
+///////////////////////////////////
+// Adquisició de Dret de Publicació
+///////////////////////////////////
+// Obtenció Dret Publicació
+context:
+    Sistema::obtencioDretPublicacio(
+        titolLlibre : String, dataPublicacio : Date, nomSegell : nom,
+        dataFiPublicacio : Date, isbnPublicacio : Int
+    ) : DretPublicacio
+pre:
+    LLibre.allInstances()->exists(l | l.nom = titolLlibre) AND
+    Data.allInstances()->exists(d | d.data = dataPublicacio) AND
+    SegellEditorial.allInstances()->exists(se | se.nom = nomSegell)
+post:
+    DretPublicacio.allInstances()->exists(dp |
+        dp.oclIsNew() AND
+        dp.dataFi = dataFiPublicacio AND dp.isbn = isbnPublicacio AND
+        dp.llibre.titol = titolLlibre AND dp.dataInici.data = dataPublicacio AND dp.segelleditorial.nom = nomSegell AND
+        dp = result
+    )
+
+// Entrar Dates de Publicacions [BUCLE]
+context:
+    Sistema::crearEdicions(
+        tiradaEdicio : Int, preuEdicio : Int,
+        objDretPublicacio : DretPublicacio,
+        dataEdicio : Date
+    ) : Edicio
+pre:
+    Data.allInstances->exists(d | d.nom = dataEdicio)
+post:
+    Edicio.allInstances()->exists(e |
+        e.oclIsNew() AND
+        e.tirada = tiradaEdicio AND e.preu = preuEdicio AND
+        // Comprovacio "Dret Publicacio"
+        e.dretpublicacio = objDretPublicacio
+        // Comprovació "Data"
+        e.datesEdicions.data = dataEdicio AND
+        e = result
+    )
+
+
+///////////////////////////////
+// Consulta Drets de Publicació
+///////////////////////////////
+context:
+    Sistema::consulaDretsPubli(
+        nomSegell : String, dataIniciPubli : Date, dataFiPubli : Date
+    ) 
+    : Set(TupleType(sTitol : String, sISBN : Int, sSetDatesEdicions : Set(Data)))
+pre:
+    dataIniciPubli <= dataFiPubli AND
+    Data.allInstances()->exists(d | d.data = dataInici) AND
+    Data.allInstances()->exists(d | d.data = dataFi) AND
+    DretPublicacio.allInstances()->select(dp |
+        dp.segelleditorial.nom = nomSegell AND
+        dp.dataInici.data >= dataIniciPubli AND
+        dp.dataFi <= dataFiPubli
+    ).llibre->asSet()->size() >= 10
+body:
+    let SetDrets : Set(DretPublicacio) = DretPublicacio.allInstances()->select(dp |
+        dp.segelleditorial.nom = nomSegell AND
+        dp.dataInici.data >= dataIniciPubli AND
+        dp.dataFi <= dataFiPubli AND
+        dp.datesEdicions->size() > 5
+    )
+    in SetDrets->collect(sd |
+        Tuple {
+            sTitol = sd.llibre.titol,
+            sISBN = dp.isbn,
+            sSetDatesEdicions = sd.datesEdicions
+        }
+    )

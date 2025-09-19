@@ -1,0 +1,96 @@
+////////////////////
+// Alta d’Inscripció
+////////////////////
+context:
+    Sistema::altaInscripcio(
+        dniPersona : String, nomPersona : String, dataInscripcio : Date,
+        nomTaller : String, 
+        avalParticipant : TPuntuacio
+    )
+pre:
+    Participant.allInstances()->exists(p | p.dni = dniPersona) AND
+    Taller.allInstances()->exists(t | t.nom = nomTaller AND t.dataInici > dataInscripcio)
+post:
+    Inscripcio.allInstances()->exists(i |
+        i.oclIsNew() AND
+        i.taller.nom = nomTaller AND i.participant.dni = dniPersona AND
+        IF (TallerDePagament.allInstances()->exists(t | t.nom = nomTaller)) THEN
+            i.oclIsTypeOf(InscripcioDePagament) AND
+            i.oclAsType(InscripcioDePagament).pagada = false AND
+            i.oclAsType(InscripcioDePagament).avaluacioPreu = avalParticipant
+        END
+    )
+
+
+///////////////////
+// Alta de Reserva
+///////////////////
+// altaReserva
+context
+    Sistema::altaReserva(
+        codiSala : String, objDataHora : DataHora, nomTaller : String
+        duradaReserva : Int
+    ) : Reserva
+pre:
+    Sala.allInstances()->exists(s | s.codi = codiSala) AND
+    DataHora.allInstances()->exists(dh | dh = objDataHora) AND
+    Taller.allInstances()->exists(t | t.nom = nomTaller)
+post:
+    Reserva.allInstances()->exists(r |
+        r.oclIsNew() AND
+        r.sala.codi = codiSala AND r.datahora = objDataHora AND r.taller.nom = nomTaller AND
+        r.durada = duradaReserva AND
+        r = result
+    )
+
+
+// assignarRequeriments [Bucle 0..*]
+context:
+    Sistema::assignarRequeriments(
+        objReserva : Reserva,
+        codiRecurs : String, tipusRecRecurs : String
+    )
+pre:
+
+post:
+    IF NOT (Recurs.allInstances()@pre->exists(r1 | r1.codi = codiRecurs)) THEN
+        Recurs.allInstances()->exists(r |
+            r.oclIsNew() AND
+            r.codi = codiRecurs AND r.tipusRec = tipusRecRecurs
+        )
+    END
+    AND
+    Reserva.allInstances()->exists(r |
+        r = objReserva AND
+        r.recurs.codi = codiRecurs
+    )
+
+
+/////////////////////////////
+// Consulta Reserves Exitoses
+/////////////////////////////
+context:
+    Sistema::getReservesExitoses(
+        nomTaller : String
+    )
+    : Set(TupleType(sCodiSala : String, sDataInici : Date, sHoraInici : Hour, sCorreusE : Set(String)))
+pre:
+    InscripcioDePagament.allInstances()->select(idp |
+        idp.taller.nom = nomTaller AND
+        idp.taller.oclIsTypeOf(TallerDePagament) AND 
+        idp.pagada = true AND 
+        idp.avaluacioPreu = TPreu::Barat
+    )->size() >= 3
+body:
+    let setReservesExitoses : Set(Reserva) = Reserva.allInstances()->select(r |
+        r.taller.nom = nomTaller AND
+        r.valoracio->select(v | v.puntuacio = TPuntuacio::5 AND v.reserva = r)->size() > 5
+    )
+    in setReservesExitoses->collect(sre |
+        Tuple {
+            sCodiSala = sre.sala.codi,
+            sDataInici = sre.inici.data,
+            sHoraInici = sre.inici.hora,
+            sCorreusE = sre.taller.participant.correuE
+        }
+    )

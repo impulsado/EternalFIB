@@ -1,0 +1,29 @@
+context:
+    Sistema::getCategrories(
+        nomRestaurantConsulta,
+        dataIniciConsulta , dataFiConsulta
+    )
+    : Set(TupleType(sCodi : Int, sIngredients : Set(String)))
+pre:
+    // Check Dates OK i que existeixin
+    MenuDiariOfert.allInstances()->select(mdo |
+        mdo.restaurant.nom = nomRestaurantConsulta AND
+        mdo.preu < 10
+    )->size() >= 10
+body:
+    let setPlats : Set(MenuDiariOfert) = MenuDiariOfert.allInstances()->select(mdo |
+        mdo.restaurant.nom = nomRestaurantConsulta AND
+        // Dates en interval
+    )
+
+    in
+        setPlats->collect(mdo | mdo.menu.platindividual)
+        ->asSet()
+        ->collect(pi |
+            tuple{
+                pi.codi,
+                sIngredients = pi.ingredient.nom
+
+            }
+
+        )
