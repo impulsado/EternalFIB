@@ -34,6 +34,20 @@ Feel free d'agafar-ho tot i ensenyar-li a qui ho necessiti. <br>
 - [Probabilitat i Estadística](https://github.com/impulsado/EternalFIB/tree/main/PE)
 - [Sistemes Operatius](https://github.com/impulsado/EternalFIB/tree/main/SO)
 
+## Quatrimestre 4
+- [Arquitectura de Computadors](https://github.com/impulsado/EternalFIB/tree/main/AC)
+- [Empresa i Entorn Econòmic](https://github.com/impulsado/EternalFIB/tree/main/EEE)
+- [Interacció i Disseny D'interfícies](https://github.com/impulsado/EternalFIB/tree/main/IDI)
+- [Introducció a l'Enginyeria del Software](https://github.com/impulsado/EternalFIB/tree/main/IES)
+- [Xarxes de Computadors](https://github.com/impulsado/EternalFIB/tree/main/XC)
+
+## Quatrimestre 5
+- [Bases De Dades](https://github.com/impulsado/EternalFIB/tree/main/BD)
+- [Computer Interfaces](https://github.com/impulsado/EternalFIB/tree/main/CI)
+- [Estructures de Dades i Algorismia](https://github.com/impulsado/EternalFIB/tree/main/EDA)
+- [Probabilitat i Estadística](https://github.com/impulsado/EternalFIB/tree/main/PE)
+- [Sistemes Operatius](https://github.com/impulsado/EternalFIB/tree/main/SO)
+
 <br>
 
 # 🌐 WEBS
