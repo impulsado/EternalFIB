@@ -2,7 +2,7 @@
 # GENERAL
 | NOM | CODI | DATA | CRÈDITS | DIFICULTAT | CÀRREGA TREBALL | NOTA |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Administració de Sistemes Operatius](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/ASO) | ASO | 2024-25 | 6 | 5.0/10 | 3.5/10 | 7.3 |
+| [Administració de Sistemes Operatius](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/ASO) | ASO | 2025 QT | 6 | 5.0/10 | 3.5/10 | 7.3 |
 
 <br>
 
